@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="myweibo:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="myweibo.war">
+      <element id="artifact" artifact-name="myweibo:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,88 @@
+*{
+    color: #2e3238;
+    font-family: "Microsoft YaHei UI";
+}
+html,body{
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+.backgroundJumb{
+    height: 100%;
+    background-color: #F7FAFC;
+    margin:0;
+}
+.particles-js-canvas-el{
+    position: absolute;
+    z-index: 0;
+    top:0;
+    left:0;
+}
+.indexWin{
+    margin-top:15%;
+    width:300px;
+    position: relative;
+    z-index: 1;
+}
+.logo{
+    background-image: url("../imgs/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 130px auto;
+    width:300px;
+    height: 80px;
+}
+.slogan{
+    font-size: 15px;
+    text-align: center;
+}
+.formbox{
+    margin-top:25px;
+    width:300px;
+}
+.formContent{
+    border-top:none;
+}
+.formContent .input-group{
+    margin-bottom:10px;
+}
+.formContent input[type='submit']{
+    width: 100%;
+}
+.registerForm{
+    display: none;
+}
+.validateImg{
+    display: inline-block;
+    height: 30px;
+    width:100px;
+    background-image: url("../validateImg");
+}
+.validateImgBox{
+    padding:0;
+}
+.linksBox{
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    opacity: 0.8;
+    -moz-opacity: 0.8;
+}
+.linksBox a{
+    color: #2e3238;
+}
+.linksBox a:hover{
+    color: #5CB85C;
+}
+
+
+
+
+
+
+
+
+
+
