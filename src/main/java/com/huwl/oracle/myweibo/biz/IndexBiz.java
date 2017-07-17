@@ -1,5 +1,6 @@
 package com.huwl.oracle.myweibo.biz;
 
+import com.huwl.oracle.myweibo.pojo.User;
 import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
@@ -69,5 +70,10 @@ public class IndexBiz extends BaseBiz{
     }
     private  Color getRandomColor(){
         return new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255));
+    }
+
+    public User login(String username, String password) {
+
+        return null;
     }
 }

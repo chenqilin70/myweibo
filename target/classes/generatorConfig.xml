@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <classPathEntry
+               location="D:/WorkFile/program/OpenSource/mysql-connector-java-5.1.18/mysql-connector-java-5.1.18-bin.jar"/>
+    <context id="DB2Tables" targetRuntime="MyBatis3Simple">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://120.24.244.103:3306/MyWeibo"
+                        userId="MyWeibo"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaTypeResolver >
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.huwl.oracle.myweibo.pojo"
+                            targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mybatis.xml"  targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.huwl.oracle.myweibo.wrapper"
+                             targetProject="./src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <table  tableName="USERS" domainObjectName="User" ></table>
+        <table  tableName="WEI_BO" domainObjectName="Weibo" ></table>
+        <table  tableName="LIKES" domainObjectName="Like" ></table>
+        <table  tableName="COMMENTS" domainObjectName="Comment" ></table>
+        <table  tableName="REPLAY" domainObjectName="Replay" ></table>
+        <table  tableName="USER_GROUP" domainObjectName="UserGroup" ></table>
+        <table  tableName="RELATIONSHIP" domainObjectName="Repationship" ></table>
+
+    </context>
+</generatorConfiguration>

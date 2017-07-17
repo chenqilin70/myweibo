@@ -1,5 +1,6 @@
 <%@ page import="java.util.Date" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -49,24 +50,27 @@
                                     </div>
                                     <input type="submit" class="btn btn-success" value="登录"/>
                                 </form>
-                                <form class="registerForm">
+                                <form class="registerForm" action="<%=request.getContextPath()%>/register" method="post">
+                                    <div class="errorMessage"></div>
                                     <div class="input-group">
                                         <span class="input-group-addon" >
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="用户名" name="username" aria-describedby="basic-addon1">
                                     </div>
+                                    <div class="errorMessage"></div>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
                                         </span>
-                                        <input type="password" class="form-control" placeholder="密码（不少于6位）" aria-describedby="basic-addon1">
+                                        <input type="password" class="form-control" placeholder="密码（不少于6位）" name="password" aria-describedby="basic-addon1">
                                     </div>
+                                    <div class="errorMessage">${requestScope.registerError_validate }</div>
                                     <div class="input-group">
                                         <span class="input-group-addon validateImgBox">
                                             <i class="validateImg"></i>
                                         </span>
-                                        <input type="password" class="form-control" placeholder="请输入验证码" aria-describedby="basic-addon1">
+                                        <input type="password" class="form-control" placeholder="请输入验证码" name="validateCode" aria-describedby="basic-addon1">
                                     </div>
                                     <input type="submit" class="btn btn-success" value="注册"/>
                                 </form>
@@ -80,7 +84,6 @@
             友情链接/使用技术：
             <a target="_blank" href="https://getbootstrap.com/">Bootstrap</a>&nbsp;|&nbsp;<a target="_blank" href="https://spring.io">Spring
             </a>&nbsp;|&nbsp;<a target="_blank" href="https://github.com/spring-projects/spring-mvc-showcase">Spring-MVC
-            </a>&nbsp;|&nbsp;<a target="_blank" href="https://github.com/mybatis/mybatis-3">Mybatis
             </a>&nbsp;|&nbsp;<a target="_blank" href="https://github.com/mybatis/mybatis-3">Mybatis
             </a>&nbsp;|&nbsp;<a target="_blank" href="https://redis.io/">Redis
             </a>&nbsp;|&nbsp;<a target="_blank" href="http://jquery.com/">jQuery
