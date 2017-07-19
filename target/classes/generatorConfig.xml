@@ -24,7 +24,8 @@
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mybatis.xml"  targetProject="./src/main/resources">
+        <sqlMapGenerator targetPackage="com.huwl.oracle.myweibo.wrapper"
+                         targetProject="./src/main/resources">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
 

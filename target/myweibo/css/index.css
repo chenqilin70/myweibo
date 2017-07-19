@@ -57,6 +57,7 @@ html,body{
     height: 30px;
     width:100px;
     background-image: url("../validateImg");
+    cursor: pointer;
 }
 .validateImgBox{
     padding:0;

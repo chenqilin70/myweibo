@@ -1,0 +1,2 @@
+user.id.*(userid)  ==>用户信息  hash
+user.exist.*(nickname)  ==>用户是否存在  string

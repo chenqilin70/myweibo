@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.Writer;
 
 @Controller
 public class IndexController {
@@ -26,6 +25,7 @@ public class IndexController {
         try {
             out=response.getOutputStream();
             String code=indexBiz.getRandomValidateCode();
+            System.out.println(code+"<--验证码");
             session.setAttribute("validateCode",code);
             byte[] img=indexBiz.getValidateImg(code);
             out.write(img);
@@ -54,16 +54,29 @@ public class IndexController {
             , HttpSession session, HttpServletRequest request){
         String code= (String) session.getAttribute("validateCode");
         session.invalidate();
-        if(validateCode.equals(code)){
-            User user=indexBiz.login(username,password);
-            return "test";
+        if(validateCode.equalsIgnoreCase(code)){
+            User user=indexBiz.register(username,password);
+            if(user==null){
+                request.setAttribute("registerError_nickname","用户名已存在！");
+                return "index";
+            }else{
+                return "test";
+            }
+
         }else{
-            request.setAttribute("registerError_validate","验证码输入错误");
+            request.setAttribute("registerError_validate","验证码输入错误！");
             return "index";
         }
-
-
     }
+    @RequestMapping(value="existNickname")
+    public void existNickname(@Param("nickname") String nickname,HttpServletResponse response){
+        boolean flag=indexBiz.existNickname(nickname);
+        response.getWriter().write(""+flag);
+    }
+
+
+
+
 }
 
 

@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 @Service
@@ -72,8 +72,19 @@ public class IndexBiz extends BaseBiz{
         return new Color(random.nextInt(255),random.nextInt(255),random.nextInt(255));
     }
 
-    public User login(String username, String password) {
-
+    public User register(String nickname, String password) {
+        Boolean flag=userCacheDao.existNickname(nickname);
+        if(!flag){
+            flag=userDao.existNickname(nickname);
+            if(!flag){
+                User user=new User(null,nickname,null,null,null,null,password);
+                user=userDao.addUser(user);
+                if(user!=null){
+                    userCacheDao.addUser(user);
+                    return user;
+                }
+            }
+        }
         return null;
     }
 }

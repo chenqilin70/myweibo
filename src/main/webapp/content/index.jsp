@@ -22,6 +22,7 @@
     <![endif]-->
 </head>
 <body>
+<input type="hidden" id="contextPath" value="<%=request.getContextPath()%>"/>
     <div class="jumbotron backgroundJumb" id="particles-js">
         <div class="container">
             <div class="row" align="center">
@@ -51,14 +52,15 @@
                                     <input type="submit" class="btn btn-success" value="登录"/>
                                 </form>
                                 <form class="registerForm" action="<%=request.getContextPath()%>/register" method="post">
-                                    <div class="errorMessage"></div>
+                                    <div class="errorMessage">${requestScope.registerError_nickname}</div>
                                     <div class="input-group">
                                         <span class="input-group-addon" >
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="用户名" name="username" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control"
+                                               placeholder="用户名/昵称" name="username"
+                                               aria-describedby="basic-addon1" id="registerUsername">
                                     </div>
-                                    <div class="errorMessage"></div>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
@@ -68,9 +70,9 @@
                                     <div class="errorMessage">${requestScope.registerError_validate }</div>
                                     <div class="input-group">
                                         <span class="input-group-addon validateImgBox">
-                                            <i class="validateImg"></i>
+                                            <i class="validateImg" title="看不清？点击刷新验证码。"></i>
                                         </span>
-                                        <input type="password" class="form-control" placeholder="请输入验证码" name="validateCode" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="请输入验证码" name="validateCode" aria-describedby="basic-addon1">
                                     </div>
                                     <input type="submit" class="btn btn-success" value="注册"/>
                                 </form>
