@@ -4,10 +4,15 @@
     <insert id="insert"  parameterType="com.huwl.oracle.myweibo.pojo.User"
             useGeneratedKeys="true" keyProperty="userId">
         insert into USERS values(
-        #{userId},#{nickName},#{birthday}
-        ,#{intro},#{sex},#{address},#{password})
+        #{userId},#{nickName},#{password},#{birthday}
+        ,#{intro},#{sex},#{address})
     </insert>
     <select id="existNickname" resultType="int">
         select count(*) from USERS where NICK_NAME=#{nickname}
+    </select>
+    <select id="getUserByCondition"
+            resultType="com.huwl.oracle.myweibo.pojo.User" parameterType="com.huwl.oracle.myweibo.pojo.User">
+        select * from USERS
+        where NICK_NAME=#{nickName} and PASSWORD=#{password}
     </select>
 </mapper>

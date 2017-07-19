@@ -43,7 +43,7 @@ public class IndexBiz extends BaseBiz{
     public byte[] getValidateImg(String code) {
         BufferedImage codeImg=new  BufferedImage(100, 30, BufferedImage.TYPE_INT_RGB);
         Graphics g=codeImg.getGraphics();
-        g.setFont(new Font("微软雅黑", Font.ITALIC, 30));
+        g.setFont(new Font("微软雅黑", Font.ITALIC, 25));
         g.setColor(new Color(238,238,238));
         g.fillRect(0, 0, 105, 40);
         for(int i=0;i<=3;i++){
@@ -73,18 +73,34 @@ public class IndexBiz extends BaseBiz{
     }
 
     public User register(String nickname, String password) {
+        if(!existNickname(nickname)){
+            User user=new User(null,nickname,null,null,null,null,password);
+            user=userDao.addUser(user);
+            if(user!=null){
+                userCacheDao.addUser(user);
+                userCacheDao.addExistUser(nickname);
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public boolean existNickname(String nickname) {
         Boolean flag=userCacheDao.existNickname(nickname);
         if(!flag){
             flag=userDao.existNickname(nickname);
             if(!flag){
-                User user=new User(null,nickname,null,null,null,null,password);
-                user=userDao.addUser(user);
-                if(user!=null){
-                    userCacheDao.addUser(user);
-                    return user;
-                }
+                return false;
             }
         }
-        return null;
+        return true;
+    }
+
+    public User login(String nickname, String password) {
+        User user=userDao.getUserByNicknameAndPwd(nickname,password);
+        if(user!=null){
+            user.setPassword("******");
+        }
+        return user;
     }
 }

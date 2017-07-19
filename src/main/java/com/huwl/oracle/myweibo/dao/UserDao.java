@@ -9,4 +9,6 @@ public interface UserDao extends BaseDao{
     User addUser(User user);
 
     Boolean existNickname(String nickname);
+
+    User getUserByNicknameAndPwd(String nickname, String password);
 }

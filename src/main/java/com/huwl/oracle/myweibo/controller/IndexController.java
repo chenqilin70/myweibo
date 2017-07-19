@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.Writer;
 
 @Controller
 public class IndexController {
@@ -53,13 +54,14 @@ public class IndexController {
             , @Param("username") String password, @Param("validateCode") String validateCode
             , HttpSession session, HttpServletRequest request){
         String code= (String) session.getAttribute("validateCode");
-        session.invalidate();
+        session.removeAttribute("validateCode");
         if(validateCode.equalsIgnoreCase(code)){
             User user=indexBiz.register(username,password);
             if(user==null){
                 request.setAttribute("registerError_nickname","用户名已存在！");
                 return "index";
             }else{
+                session.setAttribute("user",user);
                 return "test";
             }
 
@@ -71,7 +73,46 @@ public class IndexController {
     @RequestMapping(value="existNickname")
     public void existNickname(@Param("nickname") String nickname,HttpServletResponse response){
         boolean flag=indexBiz.existNickname(nickname);
-        response.getWriter().write(""+flag);
+        try {
+            response.getWriter().write(""+flag);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @RequestMapping("isValidateCodeRight")
+    public void isValidateCodeRight(@Param("validateCode") String validateCode,HttpSession session,HttpServletResponse response) {
+        String codeInSession= (String) session.getAttribute("validateCode");
+        Writer writer=null;
+        try {
+            writer=response.getWriter();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if(codeInSession.equalsIgnoreCase(validateCode)){
+            try {
+                writer.write("true");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else{
+            try {
+                writer.write("false");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    @RequestMapping("login")
+    public String login(@Param("nickname") String nickname,String password
+            ,HttpSession session,HttpServletRequest request){
+        User user=indexBiz.login(nickname,password);
+        if(user==null){
+            request.setAttribute("loginError","用户名或密码错误！");
+            return "index";
+        }else{
+            session.setAttribute("user",user);
+            return "test";
+        }
     }
 
 

@@ -16,6 +16,6 @@ public class TestCenter {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-*.xml");
         final RedisTemplate<Serializable, Serializable> redisTemplate= (RedisTemplate<Serializable, Serializable>) ctx.getBean("redisTemplate");
         UserDao userDao= (UserDao) ctx.getBean("userDao");
-        System.out.println(userDao.existNickname("kylin"));
+        System.out.println(userDao.getUserByNicknameAndPwd("CHEN","123456"));
     }
 }

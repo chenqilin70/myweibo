@@ -8,4 +8,6 @@ import java.util.List;
 public interface UserMapper  extends BaseMapper<User>{
 
     int existNickname(String nickname);
+
+    User getUserByCondition(User user);
 }

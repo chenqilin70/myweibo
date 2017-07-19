@@ -17,4 +17,8 @@ public class UserCacheDao extends BaseCacheDao{
     public Boolean existNickname(String nickname) {
         return (Boolean) redisTemplate.opsForValue().get(USER_EXIST_NICKNAME+nickname)==null?false:true;
     }
+
+    public void addExistUser(String nickname) {
+        redisTemplate.opsForValue().set(USER_EXIST_NICKNAME+nickname,true);
+    }
 }

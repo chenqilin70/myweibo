@@ -26,4 +26,11 @@ public class UserDaoImpl extends BaseDaoImpl implements UserDao{
     public Boolean existNickname(String nickname) {
         return mapper.existNickname(nickname)>0?true:false;
     }
+
+    public User getUserByNicknameAndPwd(String nickname, String password) {
+        User user=new User();
+        user.setNickName(nickname);
+        user.setPassword(password);
+        return mapper.getUserByCondition(user);
+    }
 }

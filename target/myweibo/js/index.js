@@ -29,17 +29,137 @@ $(".registerAction").click(function(){
 $(".validateImg").click(function(){
     $(this).css("background-image","url('"+contentPath+"/validateImg?time="+new Date().getTime()+"')")
 });
-$("#registerUsername").blur(function(){
+var $registerUsername=$("#registerUsername");
+$registerUsername.blur(function(){
+    var $message=$(".nicknameError");
+    if(validateNickname()){
+        existNickname(function(data){
+            if(data=="true"){
+                $message.text("用户名已存在！");
+            }else{
+                $message.text("");
+            }
+        });
+    }else{
+        $message.text("用户名不能为空，且长度应小于20!");
+    }
+});
+var $registerPassword=$("#registerPassword");
+$registerPassword.blur(function(){
+    if(!validatePassword()){
+        $(".passwordError").text("密码长度必须在6位到20位之间！");
+    }else{
+        $(".passwordError").text("");
+    }
+});
+function validatePassword(){
+    var len=$registerPassword.val().length;
+    return (len>=6 && len<20);
+}
+function validateNickname(){
+    var val=$registerUsername.val().replace(" ","");
+    if(val=="" || val.length>20){
+        return false;
+    }else{
+        return true;
+    }
+}
+function existNickname(callback) {
+    var nickname = $registerUsername.val();
     $.ajax({
-        url:contentPath+"/existNickname",
-        data:{
-            "nickname":$(this).text()
+        url: contentPath + "/existNickname",
+        data: {
+            "nickname": nickname
         },
-        error:function(){
+        error: function () {
             alert("请检查网络！")
         },
-        success:function(data){
-            console.log(data)
+        success: function (data) {
+            callback(data);
         }
-    })
+    });
+}
+$("#validateCodeInput").blur(function () {
+    isValidateCodeRight(function(data){
+        var $validateCodeError=$(".validateCodeError");
+        if(data=="false"){
+            $validateCodeError.text("验证码输入错误！");
+        }else if(data=="true"){
+            $validateCodeError.text("")
+        }
+    });
 });
+    function isValidateCodeRight(callback){
+        var input=$("#validateCodeInput").val();
+        $.ajax({
+            url: contentPath + "/isValidateCodeRight",
+            data: {
+                "validateCode": input
+            },
+            error: function () {
+                alert("请检查网络！")
+            },
+            success: function (data) {
+                callback(data);
+            }
+        });
+    }
+    $("#registerBtn").click(function(){
+        var $btn=$(this);
+        var $nicknameMessage=$(".nicknameError");
+        if(validateNickname()){
+            existNickname(function(data){
+                if(data=="true"){
+                    $nicknameMessage.text("用户名已存在！");
+                }else{
+                    $nicknameMessage.text("");
+                    var $passwordMessage=$(".passwordError");
+                    if(validatePassword()){
+                        $passwordMessage.text("");
+                        isValidateCodeRight(function(data){
+                            var $validateCodeError=$(".validateCodeError");
+                            if(data=="false"){
+                                $validateCodeError.text("验证码输入错误！");
+                            }else if(data=="true"){
+                                $validateCodeError.text("");
+                                $btn.parent().submit();
+                            }
+                        });
+                    }else{
+                        $passwordMessage.text("密码长度必须在6位到20位之间！");
+                    }
+                }
+            });
+        }else{
+            $nicknameMessage.text("用户名不能为空，且长度应小于20");
+        }
+        return false;
+    });
+    $("#loginNicknameInput , #loginPasswordInput").blur(function () {
+        var val=$("#loginNicknameInput").val().replace(" ","");
+        var $loginError=$(".loginError");
+        if(val==""){
+            $loginError.text("昵称不能为空！")
+        }else{
+            if($("#loginPasswordInput").val()==""){
+                $loginError.text("密码不能为空！");
+            }else{
+                $loginError.text("");
+            }
+        }
+    });
+    $("#loginBtn").click(function(){
+        var val=$("#loginNicknameInput").val().replace(" ","");
+        var $loginError=$(".loginError");
+        if(val==""){
+            $loginError.text("昵称不能为空！")
+        }else{
+            if($("#loginPasswordInput").val()==""){
+                $loginError.text("密码不能为空！");
+            }else{
+                $loginError.text("");
+                return true;
+            }
+        }
+        return false;
+    });

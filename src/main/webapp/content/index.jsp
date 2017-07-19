@@ -36,23 +36,26 @@
                         </ul>
                         <div class="panel panel-default formContent">
                             <div class="panel-body">
-                                <form class="loginForm">
+                                <form class="loginForm" action="<%=request.getContextPath()%>/login"  method="post">
+                                    <div class="errorMessage loginError"></div>
                                     <div class="input-group">
                                         <span class="input-group-addon" >
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control" placeholder="用户名" name="nickname"
+                                               aria-describedby="basic-addon1" id="loginNicknameInput">
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
                                         </span>
-                                        <input type="password" class="form-control" placeholder="密码（不少于6位）" aria-describedby="basic-addon1">
+                                        <input type="password" class="form-control" placeholder="密码（不少于6位）"
+                                               aria-describedby="basic-addon1" id="loginPasswordInput" name="password">
                                     </div>
-                                    <input type="submit" class="btn btn-success" value="登录"/>
+                                    <input type="submit" class="btn btn-success" value="登录" id="loginBtn" />
                                 </form>
                                 <form class="registerForm" action="<%=request.getContextPath()%>/register" method="post">
-                                    <div class="errorMessage">${requestScope.registerError_nickname}</div>
+                                    <div class="errorMessage nicknameError">${requestScope.registerError_nickname}</div>
                                     <div class="input-group">
                                         <span class="input-group-addon" >
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
@@ -61,20 +64,25 @@
                                                placeholder="用户名/昵称" name="username"
                                                aria-describedby="basic-addon1" id="registerUsername">
                                     </div>
+                                    <div class="errorMessage passwordError"></div>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
                                         </span>
-                                        <input type="password" class="form-control" placeholder="密码（不少于6位）" name="password" aria-describedby="basic-addon1">
+                                        <input type="password" class="form-control"
+                                               placeholder="密码（不少于6位）" name="password"
+                                               aria-describedby="basic-addon1" id="registerPassword">
                                     </div>
-                                    <div class="errorMessage">${requestScope.registerError_validate }</div>
+                                    <div class="errorMessage validateCodeError">${requestScope.registerError_validate }</div>
                                     <div class="input-group">
                                         <span class="input-group-addon validateImgBox">
                                             <i class="validateImg" title="看不清？点击刷新验证码。"></i>
                                         </span>
-                                        <input type="text" class="form-control" placeholder="请输入验证码" name="validateCode" aria-describedby="basic-addon1">
+                                        <input type="text" class="form-control"
+                                               placeholder="请输入验证码" name="validateCode"
+                                               aria-describedby="basic-addon1" id="validateCodeInput">
                                     </div>
-                                    <input type="submit" class="btn btn-success" value="注册"/>
+                                    <input type="submit" class="btn btn-success" value="注册" id="registerBtn"/>
                                 </form>
                             </div>
                         </div>
