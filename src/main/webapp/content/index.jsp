@@ -37,7 +37,7 @@
                         <div class="panel panel-default formContent">
                             <div class="panel-body">
                                 <form class="loginForm" action="<%=request.getContextPath()%>/login"  method="post">
-                                    <div class="errorMessage loginError"></div>
+                                    <div class="errorMessage loginError">${sessionScope.loginError}</div>
                                     <div class="input-group">
                                         <span class="input-group-addon" >
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
@@ -55,7 +55,7 @@
                                     <input type="submit" class="btn btn-success" value="登录" id="loginBtn" />
                                 </form>
                                 <form class="registerForm" action="<%=request.getContextPath()%>/register" method="post">
-                                    <div class="errorMessage nicknameError">${requestScope.registerError_nickname}</div>
+                                    <div class="errorMessage nicknameError">${sessionScope.registerError_nickname}</div>
                                     <div class="input-group">
                                         <span class="input-group-addon" >
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
@@ -73,7 +73,7 @@
                                                placeholder="密码（不少于6位）" name="password"
                                                aria-describedby="basic-addon1" id="registerPassword">
                                     </div>
-                                    <div class="errorMessage validateCodeError">${requestScope.registerError_validate }</div>
+                                    <div class="errorMessage validateCodeError">${sessionScope.registerError_validate }</div>
                                     <div class="input-group">
                                         <span class="input-group-addon validateImgBox">
                                             <i class="validateImg" title="看不清？点击刷新验证码。"></i>

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Writer;
-
+@RequestMapping
 @Controller
 public class IndexController {
     @Autowired
@@ -50,24 +50,39 @@ public class IndexController {
         }
     }
     @RequestMapping(value="register")
-    public String register(@Param("username") String username
+    public void register(@Param("username") String username
             , @Param("username") String password, @Param("validateCode") String validateCode
-            , HttpSession session, HttpServletRequest request){
-        String code= (String) session.getAttribute("validateCode");
+            , HttpSession session, HttpServletRequest request,HttpServletResponse response) {
+        String code = (String) session.getAttribute("validateCode");
         session.removeAttribute("validateCode");
-        if(validateCode.equalsIgnoreCase(code)){
-            User user=indexBiz.register(username,password);
-            if(user==null){
-                request.setAttribute("registerError_nickname","用户名已存在！");
-                return "index";
-            }else{
-                session.setAttribute("user",user);
-                return "test";
+        session.removeAttribute("registerError_nickname");
+        session.removeAttribute("registerError_validate");
+        String contextPath=request.getContextPath();
+        if (validateCode.equalsIgnoreCase(code)) {
+            User user = indexBiz.register(username, password);
+            if (user == null) {
+                session.setAttribute("registerError_nickname", "用户名已存在！");
+                try {
+                    response.sendRedirect(contextPath+"/index");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                session.setAttribute("user", user);
+                try {
+                    response.sendRedirect(contextPath+"/inner/home");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
 
-        }else{
-            request.setAttribute("registerError_validate","验证码输入错误！");
-            return "index";
+        } else {
+            session.setAttribute("registerError_validate", "验证码输入错误！");
+            try {
+                response.sendRedirect(contextPath+"/index");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
     @RequestMapping(value="existNickname")
@@ -103,15 +118,23 @@ public class IndexController {
         }
     }
     @RequestMapping("login")
-    public String login(@Param("nickname") String nickname,String password
-            ,HttpSession session,HttpServletRequest request){
+    public void login(@Param("nickname") String nickname,String password
+            ,HttpSession session,HttpServletRequest request,HttpServletResponse response){
         User user=indexBiz.login(nickname,password);
+        String contextPath=request.getContextPath();
+        String path="";
+        session.removeAttribute("loginError");
         if(user==null){
-            request.setAttribute("loginError","用户名或密码错误！");
-            return "index";
+            session.setAttribute("loginError","用户名或密码错误！");
+            path=contextPath+"/index";
         }else{
             session.setAttribute("user",user);
-            return "test";
+            path=contextPath+"/inner/home";
+        }
+        try {
+            response.sendRedirect(path);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

@@ -69,6 +69,16 @@ public class User  implements Serializable {
      *
      * @mbggenerated Tue Jul 18 08:02:56 CST 2017
      */
+    private String headImg;
+
+    public String getHeadImg() {
+        return headImg;
+    }
+
+    public void setHeadImg(String headImg) {
+        this.headImg = headImg;
+    }
+
     public Integer getUserId() {
         return userId;
     }

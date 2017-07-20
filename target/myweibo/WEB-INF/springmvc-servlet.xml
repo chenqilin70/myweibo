@@ -15,6 +15,12 @@
         <property name="suffix" value=".jsp"></property>
         <property name="prefix" value="/content/"></property>
     </bean>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/inner/*"/>
+            <bean class="com.huwl.oracle.myweibo.Interceptor.LoginHandlerInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
     <mvc:default-servlet-handler/>
     <mvc:annotation-driven/>
 
