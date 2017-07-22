@@ -1,3 +1,7 @@
+*{
+    font-family: "Microsoft YaHei UI";
+    color: #222222;
+}
 .brandIcon,.userHead{
     height: 100%;
 }
@@ -10,3 +14,93 @@
 .userHeadBox{
     float: right;
 }
+.indexA{
+    margin-right:15px;
+}
+.contentContainer{
+    padding-top:50px;
+}
+.navbar-fixed-top li{
+    text-align: center;
+}
+.what_to_say{
+    height: 20px
+}
+.weiboInputBox,.userInfo{
+    margin-top: 10px;
+}
+#imageFile{
+    display: none;
+}
+
+.sendBody .thumbnail{
+    display: none;
+}
+.sendBtn{
+    float: right;
+    position: relative;
+    top:-7px;
+}
+.willSendImgTable{
+    width: 100%;
+    table-layout: fixed;
+    margin-top:10px;
+}
+.testDIV{
+    width: 100px;
+    height: 200px;
+    background-color: red;
+}
+.willSendImg{
+    background-size: cover;
+    display: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.userHeadProtrait{
+    width: 100%;
+}
+.numInfo{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.num{
+    font-size: 30px;
+    color: #5CB85C;
+    line-height: 40px;
+}
+.dataType{
+    font-size: 18px;
+    line-height: 0px;
+}
+.contentCol{
+    float: right;
+}
+.weiboBox{
+    width: 100%;
+}
+.weiboHead{
+    width: 10%;
+    height: 200px;
+    float: left;
+
+}
+.weiboBody{
+    width: 90%;
+    height: 200px;
+    float: left;
+}
+.user_head{
+    width: 50px;
+    height: 50px;
+}
+.user_name{
+    font-size: 14px;
+}
+
+
+
+
