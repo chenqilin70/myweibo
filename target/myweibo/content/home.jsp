@@ -106,51 +106,44 @@
             <div id="tree" class="userInfo"></div>
         </div>
         <div class="col-sm-9 col-xs-12 contentCol">
-            <div class="panel panel-success weiboInputBox">
-                <!-- Default panel contents -->
-                <div class="panel-heading">
-                    <img class="what_to_say" src="<%=request.getContextPath()%>/imgs/what_to_say.png">
-                    <button type="button" class="btn btn-success sendBtn">发布</button>
-                </div>
-                <div class="panel-body sendBody">
-                    <div class="sendWeiboDiv">
-                        <!-- 加载编辑器的容器 -->
-                        <script id="container" name="content" type="text/plain"></script>
-                        <!-- 配置文件 -->
+            <button class="publishBtn">发<br>布</button>
+            <div class="sendWeiboDiv">
+                <!-- 加载编辑器的容器 -->
+                <script id="container" name="content" type="text/plain"></script>
+                <!-- 配置文件 -->
 
-                        <script type="text/javascript" src="<%=request.getContextPath()%>/js/ueditor/ueditor.config.js"></script>
-                        <!-- 编辑器源码文件 -->
-                        <script type="text/javascript" src="<%=request.getContextPath()%>/js/ueditor/ueditor.all.js"></script>
-                        <script type="text/javascript" src="<%=request.getContextPath()%>/js/ueditor/lang/zh-cn/zh-cn.js"></script>
-                        <!-- 实例化编辑器 -->
-                        <script type="text/javascript">
-                            var ue = UE.getEditor('container',{
-                                toolbars:[['emotion']],
-                                elementPathEnabled:false,
-                                maximumWords:140,
-                                wordCount:false
-                            });
-                        </script>
-                    </div>
-
-
-                    <table class="willSendImgTable" cellspacing="1" cellpadding="0" border="0">
-                        <tbody>
-                        <tr>
-                            <c:forEach begin="1" end="9" step="1" varStatus="status">
-                                <td>
-                                    <div class="willSendImg" title="点击删除"
-                                         index="${status.index}" hasimg="false"
-                                         data-toggle="modal" data-target="#myModal"></div>
-                                </td>
-                            </c:forEach>
-                        </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-                <input type="file" id="imageFile" name="img" multiple="multiple"/>
+                <script type="text/javascript" src="<%=request.getContextPath()%>/js/ueditor/ueditor.config.js"></script>
+                <!-- 编辑器源码文件 -->
+                <script type="text/javascript" src="<%=request.getContextPath()%>/js/ueditor/ueditor.all.js"></script>
+                <script type="text/javascript" src="<%=request.getContextPath()%>/js/ueditor/lang/zh-cn/zh-cn.js"></script>
+                <!-- 实例化编辑器 -->
+                <script type="text/javascript">
+                    var ue = UE.getEditor('container',{
+                        toolbars:[['emotion']],
+                        elementPathEnabled:false,
+                        maximumWords:140,
+                        wordCount:false
+                    });
+                </script>
             </div>
+
+
+            <table class="willSendImgTable" cellspacing="1" cellpadding="0" border="0">
+                <tbody>
+                <tr>
+                    <c:forEach begin="1" end="9" step="1" varStatus="status">
+                        <td>
+                            <div class="willSendImg" title="点击删除"
+                                 index="${status.index}" hasimg="false"
+                                 data-toggle="modal" data-target="#myModal"></div>
+                        </td>
+                    </c:forEach>
+                </tr>
+
+                </tbody>
+            </table>
+            <input type="file" id="imageFile" name="img" multiple="multiple" />
+            <hr/>
             <div class="weiboBox">
                 <div class="weiboHead" align="center">
                     <img class="user_head" src="<%=request.getContextPath()%>/imgs/head/default.jpg">
@@ -160,13 +153,148 @@
                     <div class="weibo_text">
                         #文澜贴士# 【今日大暑，全年最热的时候来了！】①太阳到达黄经120°时为大暑；②“小暑连大暑，热得无处躲”，大暑时节晴朗时酷热难耐，阴雨时闷得难受；③饮食要多咸少甜，不宜进补；④养生以养“心”为主，心态要平和，睡眠要充足。一年中最热的时候来了，你准备好没？ ​​​​
                     </div>
+                    <table class="weibo_img_table" cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                            <tr>
+                                <td rowspan="2" class="mainImgTd">
+                                    <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/1.jpg')"></div>
+                                </td>
+                                <td class="smallImgTd">
+                                    <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/2.jpg')"></div>
+                                </td>
+                                <td class="smallImgTd">
+                                    <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/3.jpg')"></div>
+                                </td>
+                                <td class="smallImgTd">
+                                    <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/4.jpg')"></div>
+                                </td>
+                                <td class="smallImgTd">
+                                    <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/5.jpg')"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="smallImgTd">
+                                    <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/6.jpg')"></div>
+                                </td>
+                                <td class="smallImgTd">
+                                    <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/7.jpg')"></div>
+                                </td>
+                                <td class="smallImgTd">
+                                    <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/8.jpg')"></div>
+                                </td>
+                                <td class="smallImgTd" >
+                                    <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/9.jpg')"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="optionBox">
+                        <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    </div>
+                    <div class="who_like">
+                        &nbsp;<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="#">张三</a>、
+                        <a href="#">李四</a>、
+                        <a href="#">王五</a>
+                    </div>
+                    <div class="commentBox">
+                        <ul>
+                            <li>张三：********************
+                                <ul>
+                                    <li>李四回复张三：********************</li>
+                                    <li>王五回复李四：********************</li>
+                                </ul>
+                            </li>
+                            <li>张三：********************
+                                <ul>
+                                    <li>李四回复张三：********************</li>
+                                    <li>王五回复李四：********************</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-
             </div>
-
+            <hr/>
+            <!--重复开始-->
+            <div class="weiboBox">
+                <div class="weiboHead" align="center">
+                    <img class="user_head" src="<%=request.getContextPath()%>/imgs/head/default.jpg">
+                </div>
+                <div class="weiboBody">
+                    <div class="user_name">陈麒麟</div>
+                    <div class="weibo_text">
+                        #文澜贴士# 【今日大暑，全年最热的时候来了！】①太阳到达黄经120°时为大暑；②“小暑连大暑，热得无处躲”，大暑时节晴朗时酷热难耐，阴雨时闷得难受；③饮食要多咸少甜，不宜进补；④养生以养“心”为主，心态要平和，睡眠要充足。一年中最热的时候来了，你准备好没？ ​​​​
+                    </div>
+                    <table class="weibo_img_table" cellpadding="0" cellspacing="0" border="0">
+                        <tbody>
+                        <tr>
+                            <td rowspan="2" class="mainImgTd">
+                                <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/1.jpg')"></div>
+                            </td>
+                            <td class="smallImgTd">
+                                <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/2.jpg')"></div>
+                            </td>
+                            <td class="smallImgTd">
+                                <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/3.jpg')"></div>
+                            </td>
+                            <td class="smallImgTd">
+                                <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/4.jpg')"></div>
+                            </td>
+                            <td class="smallImgTd">
+                                <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/5.jpg')"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="smallImgTd">
+                                <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/6.jpg')"></div>
+                            </td>
+                            <td class="smallImgTd">
+                                <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/7.jpg')"></div>
+                            </td>
+                            <td class="smallImgTd">
+                                <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/8.jpg')"></div>
+                            </td>
+                            <td class="smallImgTd" >
+                                <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/9.jpg')"></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="optionBox">
+                        <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    </div>
+                    <div class="who_like">
+                        &nbsp;<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="#">张三</a>、
+                        <a href="#">李四</a>、
+                        <a href="#">王五</a>
+                    </div>
+                    <div class="commentBox">
+                        <ul>
+                            <li>张三：********************
+                                <ul>
+                                    <li>李四回复张三：********************</li>
+                                    <li>王五回复李四：********************</li>
+                                </ul>
+                            </li>
+                            <li>张三：********************
+                                <ul>
+                                    <li>李四回复张三：********************</li>
+                                    <li>王五回复李四：********************</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            <!--重复结束-->
         </div>
     </div>
-</div>
+    </div>
 
 <!-- 模态框（Modal） -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -194,6 +322,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
 </div>
+</div>
 <!-- /模态框（Modal）结束 -->
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -201,6 +330,8 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/bootstrap-treeview.min.js"></script>
+<script src="<%=request.getContextPath()%>/js/ajaxfileupload.js"></script>
+
 <script src="<%=request.getContextPath()%>/js/home.js"></script>
 </body>
 </html>

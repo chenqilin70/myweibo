@@ -23,14 +23,13 @@
 </head>
 <body>
 
-<div id="tree"></div>
+this is test page
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<%=request.getContextPath()%>/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
-<script src="<%=request.getContextPath()%>/js/bootstrap-treeview.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/test.js"></script>
 </body>
 </html>
