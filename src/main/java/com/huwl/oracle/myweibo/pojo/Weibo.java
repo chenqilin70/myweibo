@@ -81,8 +81,9 @@ public class Weibo  implements Serializable {
      *
      * @mbggenerated Tue Jul 18 08:02:56 CST 2017
      */
-    public void setWeiboId(Integer weiboId) {
+    public Weibo setWeiboId(Integer weiboId) {
         this.weiboId = weiboId;
+        return this;
     }
 
     /**
@@ -105,8 +106,9 @@ public class Weibo  implements Serializable {
      *
      * @mbggenerated Tue Jul 18 08:02:56 CST 2017
      */
-    public void setUserId(Integer userId) {
+    public Weibo setUserId(Integer userId) {
         this.userId = userId;
+        return this;
     }
 
     /**
@@ -129,8 +131,9 @@ public class Weibo  implements Serializable {
      *
      * @mbggenerated Tue Jul 18 08:02:56 CST 2017
      */
-    public void setWeiboContent(String weiboContent) {
+    public Weibo setWeiboContent(String weiboContent) {
         this.weiboContent = weiboContent == null ? null : weiboContent.trim();
+        return this;
     }
 
     /**
@@ -153,8 +156,9 @@ public class Weibo  implements Serializable {
      *
      * @mbggenerated Tue Jul 18 08:02:56 CST 2017
      */
-    public void setPublishTime(Date publishTime) {
+    public Weibo setPublishTime(Date publishTime) {
         this.publishTime = publishTime;
+        return this;
     }
 
     /**
@@ -177,8 +181,9 @@ public class Weibo  implements Serializable {
      *
      * @mbggenerated Tue Jul 18 08:02:56 CST 2017
      */
-    public void setReadTimes(Integer readTimes) {
+    public Weibo setReadTimes(Integer readTimes) {
         this.readTimes = readTimes;
+        return this;
     }
 
     /**
@@ -201,8 +206,9 @@ public class Weibo  implements Serializable {
      *
      * @mbggenerated Tue Jul 18 08:02:56 CST 2017
      */
-    public void setIsRepost(Boolean isRepost) {
+    public Weibo setIsRepost(Boolean isRepost) {
         this.isRepost = isRepost;
+        return this;
     }
 
     /**
@@ -225,7 +231,8 @@ public class Weibo  implements Serializable {
      *
      * @mbggenerated Tue Jul 18 08:02:56 CST 2017
      */
-    public void setRepostId(Integer repostId) {
+    public Weibo setRepostId(Integer repostId) {
         this.repostId = repostId;
+        return this;
     }
 }

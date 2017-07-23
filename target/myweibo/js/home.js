@@ -134,10 +134,10 @@ $("#imageFile").change(function(){
                     var $targetImg=$(".willSendImg[index='"+j+"']")
                     var hasimg=$targetImg.attr("hasimg");
                     if(hasimg=="false"){
-                        $targetImg.css("background-image","url("+dataURL+")")
+                        $targetImg.css("background-image","url(\""+dataURL+"\")")
                             .css("display","block").css("height",$innerDiv.css("width"))
                             .css("border","1px solid #fff").attr("hasimg","true");
-                        weiboFormData.append(dataURL, fileObj.files[i], fileObj.files[i].filename);
+                        weiboFormData.set("url(\""+dataURL+"\")", fileObj.files[i], fileObj.files[i].filename);
                         break;
                     }
                 }
@@ -157,6 +157,7 @@ $("#imageFile").change(function(){
         imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
         imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
     }
+    $file.val("")
 });
 function getUserableImgNum(){
     var count=0;
@@ -174,11 +175,12 @@ $innerDiv.click(function(){
     var $this=$(this);
     var targetIndex=$(this).attr("index");
     $(".deleteImgBtn").one("click",function(){
+        weiboFormData.delete($this.css("background-image"));
         var imgs=new Array();
         $this.attr("hasimg","false").css("background-image","");
 
         var $willSendImgTable=$(".willSendImgTable");
-        $innerDiv.each(function(){
+        $innerDiv.each(function(){//收集所有存在的url
             var $div=$(this);
             var bkimg=$div.css("background-image");
             if(bkimg!="" && bkimg!=undefined && bkimg!="none"){
@@ -186,53 +188,45 @@ $innerDiv.click(function(){
             }
         });
         $willSendImgTable.find(".willSendImg").css("background-image","none").attr("hasimg","false");
-        for(var i=0;i<imgs.length;i++){
+        for(var i=0;i<imgs.length;i++){//按顺序重新放进去
             var $i=$willSendImgTable.find(".willSendImg[index='"+(i+1)+"']");
             $i.css("background-image",imgs[i]).attr("hasimg","true");
         }
-
         $(this).parent().find(".hideModelBtn").trigger("click");
 
     })
 });
-$(".publishBtn").click(function(){
-    for (var key of weiboFormData.keys()) {
-        console.log(key);
+function createXHR(){
+    var xhr = null;
+    if(window.XMLHttpRequest){
+        xhr=new XMLHttpRequest();
+    }else if(window.ActiveXObject){
+        xhr=new ActiveXObject('Microsoft.XMLHTTP');
     }
-
-    /*
-    $.ajaxFileUpload
-    (
-        {
-            url:contextPah+'/inner/publishWeibo',//用于文件上传的服务器端请求地址
-            secureuri:false,//一般设置为false
-            fileElementId:'myChooser',//文件上传控件的id属性  <input type="file" id="file" name="file" />
-            data:{
-                height:offset.height,
-                width:offset.width,
-                top:offset.top,
-                left:offset.left,
-                imageName:document.getElementById("myChooser").files[0].name
-            },
-            dataType: 'json',//返回值类型 一般设置为json
-            success: function (data,status)  //服务器成功响应处理函数
-            {
-                var message=JSON.parse(data);
-                $submitBtn.css("display","block");
-                $uploadWaiting.css("display","none");
-                $(".chooserMask").css("display","none");
-                if(message.isSuccess){
-                    $(".profileImg , .userHeadInHead , .lisenerHead").attr("src","/music_view/img/listener_head/"+message.head+"?time="+new Date().getTime());
-                }else{
-                    alert("请检查网络");
-                }
-            },
-            error: function (data, status, e)//服务器响应失败处理函数
-            {
-                alert("请检查网络");
-            }
+    return xhr;
+}
+$(".publishBtn").click(function(){
+    var formData=new FormData();
+    formData.set("weiboContent",UE.getEditor('container').getContent())
+    var keys=weiboFormData.keys();
+    while(true){
+        var key=keys.next().value
+        if(key==undefined)break;
+        formData.append("pics",weiboFormData.get(key),weiboFormData.get(key).name)
+    }
+    // 创造xhr
+    var xhr=createXHR();
+    // 打开连接
+    xhr.open('post',contextPah+'/inner/publishWeibo',true);
+    // 建议这边就绑定
+    xhr.onreadystatechange = function(){
+        if (this.readyState == 4) {
+            console.log(this.responseText);
         }
-    );*/
+    }
+    // 发送请求，这里开始和get不一样了,post需要发送表单填写的
+    xhr.send(formData);
+
 });
 function deepClone(o){
     var result;

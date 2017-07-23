@@ -270,7 +270,7 @@
     <index id="68" parent="11" name="REPOST_ID">
       <ColNames>REPOST_ID</ColNames>
     </index>
-    <index id="69" parent="11" name="USER_ID">
+    <index id="69" parent="11" name="fk_weibo_user">
       <ColNames>USER_ID</ColNames>
     </index>
     <key id="70" parent="11" name="PRIMARY">
@@ -278,7 +278,7 @@
       <ColNames>WEIBO_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="71" parent="11" name="WEI_BO_ibfk_2">
+    <foreign-key id="71" parent="11" name="WEI_BO_ibfk_3">
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>MyWeibo</RefSchemaName>
       <RefTableName>USERS</RefTableName>
