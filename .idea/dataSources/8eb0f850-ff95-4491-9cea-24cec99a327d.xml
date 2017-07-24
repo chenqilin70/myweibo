@@ -267,24 +267,28 @@
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="68" parent="11" name="REPOST_ID">
+    <column id="68" parent="11" name="PICS">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="69" parent="11" name="REPOST_ID">
       <ColNames>REPOST_ID</ColNames>
     </index>
-    <index id="69" parent="11" name="fk_weibo_user">
+    <index id="70" parent="11" name="fk_weibo_user">
       <ColNames>USER_ID</ColNames>
     </index>
-    <key id="70" parent="11" name="PRIMARY">
+    <key id="71" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>WEIBO_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="71" parent="11" name="WEI_BO_ibfk_3">
+    <foreign-key id="72" parent="11" name="WEI_BO_ibfk_3">
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>MyWeibo</RefSchemaName>
       <RefTableName>USERS</RefTableName>
       <RefColNames>USER_ID</RefColNames>
     </foreign-key>
-    <foreign-key id="72" parent="11" name="WEI_BO_ibfk_1">
+    <foreign-key id="73" parent="11" name="WEI_BO_ibfk_1">
       <ColNames>REPOST_ID</ColNames>
       <RefSchemaName>MyWeibo</RefSchemaName>
       <RefTableName>WEI_BO</RefTableName>

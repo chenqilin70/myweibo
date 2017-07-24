@@ -65,7 +65,10 @@
                     <p class="navbar-text navbar-right">
 
                         <input type="hidden" value="${sessionScope.user.headImg}" id="userImgHidden"/>
-                        <a href="#" class="navbar-link"><span class="userHead" style=""></span>&nbsp;${sessionScope.user.nickName}</a>
+                        <a href="<%=request.getContextPath()%>/inner/user_center" class="navbar-link">
+                            <span class="userHead" style=""></span>
+                            &nbsp;${sessionScope.user.nickName}
+                        </a>
                     </p>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -330,8 +333,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/bootstrap-treeview.min.js"></script>
-<script src="<%=request.getContextPath()%>/js/ajaxfileupload.js"></script>
-
 <script src="<%=request.getContextPath()%>/js/home.js"></script>
 </body>
 </html>

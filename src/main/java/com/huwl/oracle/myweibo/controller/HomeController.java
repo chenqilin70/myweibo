@@ -36,9 +36,10 @@ public class HomeController {
     public void publishWeibo(@RequestParam(value="pics",required = false) CommonsMultipartFile[] pics
             ,@RequestParam("weiboContent")String weiboContent
             ,HttpServletResponse response,HttpServletRequest request){
-        Integer userid=((User)request.getSession().getAttribute("user")).getUserId();
-        homeBiz.publishWeibo(weiboContent,pics,userid);
-
+        String imgPath=request.getServletContext().getRealPath("imgs/weibo");
+        homeBiz.publishWeibo(weiboContent,pics
+                ,((User)request.getSession().getAttribute("user"))
+                ,imgPath);
         try {
             response.getWriter().write("sdfsdfdsfdsf");
         } catch (IOException e) {

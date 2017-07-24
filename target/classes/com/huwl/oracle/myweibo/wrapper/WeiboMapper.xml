@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.huwl.oracle.myweibo.wrapper.WeiboMapper" >
-
+    <insert id="insert"
+            parameterType="com.huwl.oracle.myweibo.pojo.Weibo"
+            useGeneratedKeys="true" keyProperty="weiboId">
+        insert into WEI_BO values(#{weiboId},#{user.userId},#{weiboContent}
+        ,#{publishTime},#{readTimes},#{isRepost},#{repostId},#{pics});
+    </insert>
+    <resultMap id="weiboMap" type="com.huwl.oracle.myweibo.pojo.Weibo">
+        <id property="weiboId" column="WEIBO_ID"></id>
+        <result property="weiboContent" column="WEIBO_CONTENT"></result>
+        <result property="publishTime" column="PUBLISH_TIME"></result>
+        <result property="readTimes" column="READ_TIMES"></result>
+        <result property="isRepost" column="IS_REPOST"></result>
+        <result property="repostId" column="REPOST_ID"></result>
+        <result property="pics" column="PICS"></result>
+        <association property="user" javaType="com.huwl.oracle.myweibo.pojo.User">
+            <id property="userId" column="USER_ID"></id>
+            <result property="nickName" column="NICK_NAME"></result>
+        </association>
+    </resultMap>
+    <select id="getWeiboByPage" resultMap="weiboMap">
+        select w.WEIBO_ID as WEIBO_ID  ,w.WEIBO_CONTENT as WEIBO_CONTENT
+        ,w.PUBLISH_TIME as PUBLISH_TIME  ,w.READ_TIMES as READ_TIMES
+        ,w.IS_REPOST as IS_REPOST  ,w.REPOST_ID as REPOST_ID  ,w.PICS as PICS
+        ,u.USER_ID as USER_ID,u.NICK_NAME as NICK_NAME
+        from WEI_BO w left join USERS u
+        on w.USER_ID=u.USER_ID
+        <where>
+          u.USER_ID=#{param2}
+        </where>
+          limit #{param1.offsetInDB},#{param1.pageSize}
+    </select>
 </mapper>

@@ -75,7 +75,7 @@ public class IndexBiz extends BaseBiz{
     public User register(String nickname, String password) {
         if(!existNickname(nickname)){
             User user=new User(null,nickname,null,null,null,null,password);
-            user=userDao.addUser(user);
+            userMapper.insert(user);
             if(user!=null){
                 userCacheDao.addUser(user);
                 userCacheDao.addExistUser(nickname);
@@ -88,7 +88,8 @@ public class IndexBiz extends BaseBiz{
     public boolean existNickname(String nickname) {
         Boolean flag=userCacheDao.existNickname(nickname);
         if(!flag){
-            flag=userDao.existNickname(nickname);
+
+            flag=userMapper.existNickname(nickname)>0?true:false;
             if(!flag){
                 return false;
             }
@@ -97,7 +98,10 @@ public class IndexBiz extends BaseBiz{
     }
 
     public User login(String nickname, String password) {
-        User user=userDao.getUserByNicknameAndPwd(nickname,password);
+        User user=new User();
+        user.setNickName(nickname);
+        user.setPassword(password);
+        user=userMapper.getUserByCondition(user);
         if(user!=null){
             user.setPassword("******");
         }

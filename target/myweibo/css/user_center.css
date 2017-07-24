@@ -1,0 +1,146 @@
+.brandIcon,.userHead{
+    height: 100%;
+}
+.userHeadProtrait{
+    width: 100%;
+    border-radius: 3px;
+}
+.numInfo{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.num{
+    font-size: 30px;
+    color: #5CB85C;
+    line-height: 40px;
+}
+.dataType{
+    font-size: 18px;
+    line-height: 0px;
+}
+.contentCol{
+    float: right;
+    margin-top:10px;
+}
+.userInfo{
+    margin-top: 10px;
+}
+.contentContainer{
+    padding-top:50px;
+}
+.weiboBox{
+    margin-top: 35px;
+    width: 100%;
+    margin-bottom: 35px;
+}
+.weiboHead{
+    width: 9%;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+.weiboBody{
+    width: 89%;
+    display: inline-block;
+}
+.user_head{
+    width: 50px;
+    height: 50px;
+    border-radius:3px;
+}
+.user_name{
+    font-size: 14px;
+}
+.weibo_img_table{
+    width: 100%;
+    height: 100px;
+}
+.mainImgTd{
+    width:33.3% ;
+    border: 3px solid #ffffff;
+
+}
+.smallImgTd{
+    width:16.6%;
+    border: 3px solid #ffffff;
+}
+
+.mainImgTd div ,.smallImgTd div{
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    -webkit-background-size:cover;
+    background-size:cover;
+}
+.optionBox{
+    font-size: 15px;
+}
+.optionBox span{
+    cursor: pointer;
+}
+.who_like , .commentBox{
+    background-color: #eeeeee;
+    font-size: 12px;
+    line-height: 20px;
+    border-radius: 5px;
+}
+.who_like .glyphicon{
+    font-size: 15px;
+    vertical-align: -4px;
+}
+.who_like a{
+    color: #222222;
+}
+.who_like a:hover{
+    text-decoration: underline;
+}
+.commentBox{
+    margin-top: 3px;
+}
+.commentBox ul{
+    list-style: none;
+}
+.sendWeiboDiv{
+    margin-top:10px;
+    display: inline-block;
+    width: 90%;
+}
+/***********************************************/
+.infoItem{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+.addressIcon{
+    font-size: 16px;
+    margin-left: -2px;
+}
+.birthIcon{
+    font-size: 19px;
+    margin-left: -4px;
+}
+.introIcon{
+    font-size: 18px;
+    margin-left: -3px;
+}
+.userInfo hr{
+    margin-top:100px;
+}
+.sexIcon{
+    font-size: 14px;
+}
+.nicknameIcon{
+    font-size: 14px;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover
+, .nav-pills > li.active > a:focus{
+    background-color: #5CB85C;
+}

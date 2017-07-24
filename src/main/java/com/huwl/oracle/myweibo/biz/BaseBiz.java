@@ -1,20 +1,18 @@
 package com.huwl.oracle.myweibo.biz;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.huwl.oracle.myweibo.cache_dao.UserCacheDao;
-import com.huwl.oracle.myweibo.dao.UserDao;
+import com.huwl.oracle.myweibo.wrapper.UserMapper;
+import com.huwl.oracle.myweibo.wrapper.WeiboMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
-
-import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Map;
 
 public class BaseBiz {
     @Autowired
-    protected UserDao userDao;
+    protected UserMapper userMapper;
     @Autowired
     protected UserCacheDao userCacheDao;
+    @Autowired
+    protected WeiboMapper  weiboMapper;
+
 
 
 

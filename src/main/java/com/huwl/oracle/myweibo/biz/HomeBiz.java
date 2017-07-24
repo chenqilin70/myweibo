@@ -1,12 +1,16 @@
 package com.huwl.oracle.myweibo.biz;
 
+import com.huwl.oracle.myweibo.pojo.User;
 import com.huwl.oracle.myweibo.pojo.Weibo;
 import org.apache.commons.io.FileUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.UUID;
 
 @Controller("homeBiz")
 public class HomeBiz extends BaseBiz{
@@ -16,20 +20,37 @@ public class HomeBiz extends BaseBiz{
         return null;
     }
 
-    public void publishWeibo(String weiboContent, CommonsMultipartFile[] pics,Integer userid) {
-        Weibo weibo=new Weibo();
-        weibo.setIsRepost(false)
-             .setPublishTime(new Date())
-             .setReadTimes(0)
-             .setUserId(userid)
-             .setWeiboContent(weiboContent);
-        for(CommonsMultipartFile file:pics){
+    public void publishWeibo(String weiboContent, CommonsMultipartFile[] pics
+            , User user, String imgPath) {
+        File root=new File(imgPath);
+        if(!root.exists())root.mkdirs();
+        StringBuffer uuids=null;
+        if(pics!=null && pics.length>0){
+            uuids=new StringBuffer("");
             try {
-                FileUtils.copyInputStreamToFile(file.getInputStream()
-                        ,new File("D:/tempFile/"+new Date().getTime()));
+                for(CommonsMultipartFile p:pics){
+                   String originName=p.getFileItem().getName();
+                   if(originName.lastIndexOf(".")==-1)
+                   String suffix=originName.substring(?:);
+                    String filename=UUID.randomUUID().toString()+p.getFileItem().getName().subs;
+                    uuids.append(filename+",");
+                    File file=new File(root.getAbsolutePath(), ""+filename);
+                    FileUtils.copyInputStreamToFile(p.getInputStream(),file);
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            System.out.println("before-->"+uuids);
+            uuids.substring(0,uuids.lastIndexOf(","));
+            System.out.println("after-->"+uuids);
         }
+        Weibo weibo=new Weibo();
+        weibo.setIsRepost(false)
+                .setPublishTime(new Date())
+                .setReadTimes(0)
+                .setUser(user)
+                .setWeiboContent(weiboContent)
+                .setPics(uuids==null?null:uuids.toString());
+       weiboMapper.insert(weibo);
     }
 }
