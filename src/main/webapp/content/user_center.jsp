@@ -15,6 +15,9 @@
     <!-- Bootstrap -->
     <link href="<%=request.getContextPath()%>/css/bootstrap.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/user_center.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/css/head.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/css/weibo.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,75 +29,7 @@
 </head>
 <body>
 <input type="hidden" id="contextPath" value="<%=request.getContextPath()%>">
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target-menu">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<%=request.getContextPath()%>/index">
-                        <img alt="Brand" class="brandIcon" src="<%=request.getContextPath()%>/imgs/logo_white.png">
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="target-menu" align="center">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                               role="button" aria-haspopup="true" aria-expanded="false">
-                                <span class="glyphicon glyphicon-tags" aria-hidden="true"></span>
-                                &nbsp;全部微博
-                                <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">点赞</a></li>
-                                <li><a href="#">评论</a></li>
-                                <li><a href="#">转发</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form class="navbar-form navbar-left hidden-xs" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="搜索微博/用户">
-                        </div>
-                        <button type="submit" class="btn btn-success">搜索</button>
-                    </form>
-                    <p class="navbar-text navbar-right">
-                        <input type="hidden" value="${sessionScope.user.headImg}" id="userImgHidden"/>
-                        <a href="<%=request.getContextPath()%>/inner/user_center" class="navbar-link">
-                            <span class="userHead" style=""></span>
-                            &nbsp;${sessionScope.user.nickName}
-                        </a>
-                    </p>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">
-                                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                                &nbsp;消息<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">点赞</a></li>
-                                <li><a href="#">评论</a></li>
-                                <li><a href="#">转发</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p class="navbar-text navbar-right">
-                        <a href="#" class="navbar-link indexA"><span class="glyphicon glyphicon-home"
-                                                                     aria-hidden="true"></span>&nbsp;首页</a>
-                    </p>
-                </div>
-
-
-            </div>
-        </div>
-
-    </div>
-</nav>
+<jsp:include page="head.jsp" flush="true"></jsp:include>
 
 <div class="container contentContainer">
     <div class="row">
@@ -181,77 +116,7 @@
             </ul>
             <hr/>
             <c:forEach items="${myWeiboList}" var="weibo">
-                <div class="weiboBox">
-                    <div class="weiboHead" align="center">
-                        <img class="user_head" src="<%=request.getContextPath()%>/imgs/head/default.jpg">
-                    </div>
-                    <div class="weiboBody">
-                        <div class="user_name">${weibo.user.nickName}</div>
-                        <div class="weibo_text">
-                            ${weibo.weiboContent}
-                        </div>
-                        <table class="weibo_img_table" cellpadding="0" cellspacing="0" border="0">
-                            <tbody>
-                            <tr>
-                                <c:forEach items="${fn:split(weibo.pics, ',')}" var="pic" varStatus="status">
-                                    <c:if test="${status.index==0}">
-                                        <td rowspan="2" class="mainImgTd">
-                                            <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/1.jpg')"></div>
-                                        </td>
-                                    </c:if>
-                                    <c:if test="${status.index>0}">
-                                        <td class="smallImgTd">
-                                            <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/2.jpg')"></div>
-                                        </td>
-                                    </c:if>
-                                </c:forEach>
-                            </tr>
-                            <tr>
-                                <td class="smallImgTd">
-                                    <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/6.jpg')"></div>
-                                </td>
-                                <td class="smallImgTd">
-                                    <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/7.jpg')"></div>
-                                </td>
-                                <td class="smallImgTd">
-                                    <div  style="background-image: url('<%=request.getContextPath()%>/imgs/test/8.jpg')"></div>
-                                </td>
-                                <td class="smallImgTd" >
-                                    <div style="background-image: url('<%=request.getContextPath()%>/imgs/test/9.jpg')"></div>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                        <div class="optionBox">
-                            <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-                            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
-                        </div>
-                        <div class="who_like">
-                            &nbsp;<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
-                            &nbsp;&nbsp;&nbsp;
-                            <a href="#">张三</a>、
-                            <a href="#">李四</a>、
-                            <a href="#">王五</a>
-                        </div>
-                        <div class="commentBox">
-                            <ul>
-                                <li>张三：********************
-                                    <ul>
-                                        <li>李四回复张三：********************</li>
-                                        <li>王五回复李四：********************</li>
-                                    </ul>
-                                </li>
-                                <li>张三：********************
-                                    <ul>
-                                        <li>李四回复张三：********************</li>
-                                        <li>王五回复李四：********************</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <hr/>
+                <%@include file="weibo.jsp" %>
             </c:forEach>
 
         </div>
@@ -265,6 +130,8 @@
 <script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/bootstrap-treeview.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/iconfont.js"></script>
+<script src="<%=request.getContextPath()%>/js/head.js"></script>
 <script src="<%=request.getContextPath()%>/js/user_center.js"></script>
+<script src="<%=request.getContextPath()%>/js/weibo.js"></script>
 </body>
 </html>

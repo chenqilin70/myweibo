@@ -2,15 +2,6 @@
     font-family: "Microsoft YaHei UI";
     color: #222222;
 }
-.brandIcon,.userHead{
-    height: 100%;
-}
-.userHead{
-    display: inline-block;
-    height: 14px;
-    width: 14px;
-    background-size: 14px 14px;
-}
 .userHeadBox{
     float: right;
 }

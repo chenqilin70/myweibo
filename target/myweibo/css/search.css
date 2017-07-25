@@ -1,0 +1,138 @@
+.searchLogo{
+    height: 80px;
+    margin-top: 10px;
+}
+.contentContainer{
+    margin-top:50px;
+}
+.searchEn{
+    font-size: 20px;
+    letter-spacing: 7px;
+    line-height: 0px;
+}
+.searchLogoRow{
+    margin-bottom:40px;
+}
+.userUL{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.userUL li{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.userHr{
+    margin:0;
+    padding:0;
+}
+.search_user_head{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-size: cover;
+    margin-right: 10px;
+}
+.search_user_head_td{
+    width:80px;
+}
+.userTable{
+    table-layout: fixed;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+.relativeUserPanel{
+    margin-top: 37px;
+}
+.nickNameTd{
+    padding-top:12px;
+}
+.introTd{
+    padding-bottom:12px;
+}
+.userBox{
+    margin-bottom: 10px;
+}
+.user_result_head{
+    height: 70px;
+    width: 70px;
+    -webkit-background-size:cover;
+    background-size:cover;
+    border-radius: 5px;
+}
+.user_resultTd{
+    height: 70px;
+    width: 70px;
+    vertical-align: top;
+}
+.user_result_row{
+    margin-top:60px;
+}
+.user_result_table{
+    table-layout: fixed;
+    width: 100%;
+}
+.user_result_info_box{
+    width: 100%;
+    height: 100%;
+    margin-left:10px;
+}
+.user_result_info_box ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+.user_result_info_box li{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+
+}
+.user_result_info_box li p{
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: normal;
+
+}
+.sexIcon{
+    background-position: 0,0;
+    background-size: 15px,15px;
+    height: 15px;
+    width: 15px;
+    display:inline-block;
+    vertical-align: -2px;
+}
+.manIcon{
+    background-image: url('/myweibo/imgs/man.png');
+}
+.womanIcon{
+    background-image: url('/myweibo/imgs/women.png');
+}
+.unknownsex{
+    background-image: url('/myweibo/imgs/unknown_sex.png');
+}
+.nickNameLi{
+    font-weight: 800;
+    color: #5CB85C;
+}
+.info_item{
+    color: #5CB85C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

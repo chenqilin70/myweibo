@@ -2,6 +2,7 @@ package com.huwl.oracle.myweibo.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class User  implements Serializable {
     private static final long serialVersionUID = -7898194272883238670L;
@@ -70,6 +71,16 @@ public class User  implements Serializable {
      * @mbggenerated Tue Jul 18 08:02:56 CST 2017
      */
     private String headImg;
+
+    private List<UserGroup> groups;
+
+    public List<UserGroup> getGroups() {
+        return groups;
+    }
+
+    public void setGroups(List<UserGroup> groups) {
+        this.groups = groups;
+    }
 
     public String getHeadImg() {
         return headImg;
@@ -239,7 +250,7 @@ public class User  implements Serializable {
         this.password = password == null ? null : password.trim();
     }
 
-    public User(Integer userId, String nickName, Date birthday, String intro, Boolean sex, String address, String password) {
+    public User(Integer userId, String nickName, Date birthday, String intro, Boolean sex, String address, String password, String headImg) {
         this.userId = userId;
         this.nickName = nickName;
         this.birthday = birthday;
@@ -247,6 +258,7 @@ public class User  implements Serializable {
         this.sex = sex;
         this.address = address;
         this.password = password;
+        this.headImg = headImg;
     }
 
     @Override

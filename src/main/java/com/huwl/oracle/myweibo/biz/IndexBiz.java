@@ -74,7 +74,7 @@ public class IndexBiz extends BaseBiz{
 
     public User register(String nickname, String password) {
         if(!existNickname(nickname)){
-            User user=new User(null,nickname,null,null,null,null,password);
+            User user=new User(null,nickname,null,null,null,null,password,"default.jpg");
             userMapper.insert(user);
             if(user!=null){
                 userCacheDao.addUser(user);

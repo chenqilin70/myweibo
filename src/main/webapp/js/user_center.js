@@ -1,5 +1,4 @@
 var contextPah=$("#contextPath").val();
-$(".userHead").css("background-image","url("+contextPah+"/imgs/head/"+$("#userImgHidden").val()+")");
 var $userInfo=$(".userInfo");
 var $num=$(".num");
 var $dataType=$(".dataType");

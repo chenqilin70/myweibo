@@ -27,6 +27,11 @@
         <mvc:interceptor>
             <mvc:mapping path="/inner/*"/>
             <bean class="com.huwl.oracle.myweibo.Interceptor.LoginHandlerInterceptor"/>
+
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <bean class="com.huwl.oracle.myweibo.Interceptor.EncodingInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
     <mvc:default-servlet-handler/>

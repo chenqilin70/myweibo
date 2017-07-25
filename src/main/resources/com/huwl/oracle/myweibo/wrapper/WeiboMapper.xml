@@ -5,7 +5,7 @@
             parameterType="com.huwl.oracle.myweibo.pojo.Weibo"
             useGeneratedKeys="true" keyProperty="weiboId">
         insert into WEI_BO values(#{weiboId},#{user.userId},#{weiboContent}
-        ,#{publishTime},#{readTimes},#{isRepost},#{repostId},#{pics});
+        ,#{publishTime},#{readTimes},#{isRepost},#{repost.weiboId},#{pics});
     </insert>
     <resultMap id="weiboMap" type="com.huwl.oracle.myweibo.pojo.Weibo">
         <id property="weiboId" column="WEIBO_ID"></id>
@@ -19,17 +19,36 @@
             <id property="userId" column="USER_ID"></id>
             <result property="nickName" column="NICK_NAME"></result>
         </association>
+        <collection property="likes" javaType="java.util.ArrayList"
+                    ofType="com.huwl.oracle.myweibo.pojo.Like">
+            <id property="likeId" column="LIKE_ID"></id>
+            <association property="user" javaType="com.huwl.oracle.myweibo.pojo.User" >
+                <id property="userId" column="LU_USER_ID"></id>
+                <result property="nickName" column="LU_NICKNAME"></result>
+            </association>
+        </collection>
     </resultMap>
-    <select id="getWeiboByPage" resultMap="weiboMap">
+    <sql id="weiboRequire">
         select w.WEIBO_ID as WEIBO_ID  ,w.WEIBO_CONTENT as WEIBO_CONTENT
         ,w.PUBLISH_TIME as PUBLISH_TIME  ,w.READ_TIMES as READ_TIMES
         ,w.IS_REPOST as IS_REPOST  ,w.REPOST_ID as REPOST_ID  ,w.PICS as PICS
         ,u.USER_ID as USER_ID,u.NICK_NAME as NICK_NAME
-        from WEI_BO w left join USERS u
-        on w.USER_ID=u.USER_ID
-        <where>
-          u.USER_ID=#{param2}
-        </where>
-          limit #{param1.offsetInDB},#{param1.pageSize}
+        ,l.LIKE_ID as LIKE_ID
+        ,lu.USER_ID as LU_USER_ID,lu.NICK_NAME LU_NICKNAME
+        from WEI_BO w left join USERS u on w.USER_ID=u.USER_ID
+        left join LIKES l  on w.WEIBO_ID=l.WEIBO_ID
+        left JOIN  USERS lu on l.USER_ID = lu.USER_ID
+    </sql>
+    <select id="getWeiboByPage" resultMap="weiboMap">
+        <include refid="weiboRequire"></include>
+        where w.USER_ID=#{param2}
+        order by w.PUBLISH_TIME
+        limit #{param1.offsetInDB},#{param1.pageSize}
+    </select>
+    <select id="searchWeiboByStr" resultMap="weiboMap">
+        <include refid="weiboRequire"></include>
+        where w.WEIBO_CONTENT LIKE CONCAT('%',#{param2},'%')
+        order by w.PUBLISH_TIME
+        limit #{param1.offsetInDB},#{param1.pageSize}
     </select>
 </mapper>

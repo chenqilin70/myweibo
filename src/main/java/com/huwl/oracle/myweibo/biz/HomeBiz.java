@@ -29,10 +29,7 @@ public class HomeBiz extends BaseBiz{
             uuids=new StringBuffer("");
             try {
                 for(CommonsMultipartFile p:pics){
-                   String originName=p.getFileItem().getName();
-                   if(originName.lastIndexOf(".")==-1)
-                   String suffix=originName.substring(?:);
-                    String filename=UUID.randomUUID().toString()+p.getFileItem().getName().subs;
+                    String filename=UUID.randomUUID().toString();
                     uuids.append(filename+",");
                     File file=new File(root.getAbsolutePath(), ""+filename);
                     FileUtils.copyInputStreamToFile(p.getInputStream(),file);
@@ -40,9 +37,7 @@ public class HomeBiz extends BaseBiz{
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            System.out.println("before-->"+uuids);
-            uuids.substring(0,uuids.lastIndexOf(","));
-            System.out.println("after-->"+uuids);
+            uuids=new StringBuffer(uuids.substring(0,uuids.lastIndexOf(",")));
         }
         Weibo weibo=new Weibo();
         weibo.setIsRepost(false)

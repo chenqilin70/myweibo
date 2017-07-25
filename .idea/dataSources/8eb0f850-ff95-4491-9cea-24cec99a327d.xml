@@ -269,7 +269,7 @@
     </column>
     <column id="68" parent="11" name="PICS">
       <Position>8</Position>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>varchar(500)|0</DataType>
     </column>
     <index id="69" parent="11" name="REPOST_ID">
       <ColNames>REPOST_ID</ColNames>
