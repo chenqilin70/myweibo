@@ -3,6 +3,7 @@ package com.huwl.oracle.myweibo.controller;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.huwl.oracle.myweibo.biz.SearchBiz;
 import com.huwl.oracle.myweibo.pojo.PageBean;
+import com.huwl.oracle.myweibo.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
@@ -65,7 +67,7 @@ public class SearchController {
     }
     @RequestMapping("/search_user")
     public ModelAndView search_user_ajax(@RequestParam("searchStr") String searchStr
-            ,@RequestParam("page") Integer pageNo){
+            , @RequestParam("page") Integer pageNo, HttpSession session){
         System.out.println("search_user_ajax");
         ModelAndView mv=new ModelAndView("user_search_result");
         try {
@@ -75,7 +77,13 @@ public class SearchController {
         }
         mv.addObject("pageBean",searchBiz.getSearchUserPageBean(searchStr,pageNo));
         mv.addObject("user_search_result"
-                ,searchBiz.searchUserByStr(pageNo,searchStr));
+                ,searchBiz.searchUserByStr(pageNo,searchStr,(User) session.getAttribute("user")));
         return mv;
+    }
+    @ResponseBody
+    @RequestMapping("/inner/{userid}")
+    public boolean addCared(@PathVariable Integer userid,HttpSession session){
+        User loginedUser= (User) session.getAttribute("user");
+        return searchBiz.addCared(userid,loginedUser);
     }
 }

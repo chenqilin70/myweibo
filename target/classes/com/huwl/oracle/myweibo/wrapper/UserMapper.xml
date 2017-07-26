@@ -20,15 +20,56 @@
         where NICK_NAME LIKE CONCAT('%',#{searchStr},'%')
         limit 10
     </select>
-    <select id="searchUserByStr" resultType="com.huwl.oracle.myweibo.pojo.User">
-        select u.USER_ID,u.NICK_NAME,u.BIRTHDAY,u.INTRO,u.SEX,ADDRESS,u.HEAD_IMG,r.STAR_ID
+    <resultMap id="userBrieftMap" type="com.huwl.oracle.myweibo.pojo.User">
+        <id property="userId" column="USER_ID"></id>
+        <result property="nickName" column="NICK_NAME"></result>
+        <result property="birthday" column="BIRTHDAY"></result>
+        <result property="intro" column="INTRO"></result>
+        <result property="sex" column="SEX"></result>
+        <result property="address" column="ADDRESS"></result>
+        <result property="headImg" column="HEAD_IMG"></result>
+        <result property="isCared" column="IS_CARED"></result>
+    </resultMap>
+    <select id="searchUserByStr" resultMap="userBrieftMap">
+        select u.USER_ID USER_ID,u.NICK_NAME NICK_NAME,u.BIRTHDAY BIRTHDAY,u.INTRO INTRO,u.SEX SEX
+        ,u.ADDRESS ADDRESS,u.HEAD_IMG HEAD_IMG,(g.USER_ID=33) IS_CARED
         from USERS u
-        left join USER_GROUP g on g.USER_ID=u.USER_ID
-        left join RELATIONSHIP r on r.GROUP_ID =g.GROUP_ID
+        left JOIN RELATIONSHIP r on r.STAR_ID=u.USER_ID
+        LEFT JOIN USER_GROUP g on g.GROUP_ID=r.GROUP_ID
         where u.NICK_NAME LIKE CONCAT('%',#{param2},'%')
         limit #{param1.offsetInDB},#{param1.pageSize}
     </select>
     <select id="getSearchUserByStrCount" resultType="java.lang.Integer">
         select count(*) from USERS where NICK_NAME like CONCAT('%',#{pageNo},'%')
     </select>
+    <select id="select" resultType="com.huwl.oracle.myweibo.pojo.User">
+        select * from USERS
+        <where>
+            <if test="userId!=null">
+                USER_ID=#{userId}
+            </if>
+            <if test="nickName!=null">
+                NICK_NAME=#{nickName}
+            </if>
+            <if test="birthday!=null">
+              BIRTHDAY=#{birthday}
+            </if>
+            <if test="intro!=null">
+              INTRO like CONCAT('%',#{intro},'%')
+            </if>
+            <if test="sex!=null">
+              SEX =#{sex}
+            </if>
+            <if test="address!=null">
+              ADDRESS=#{address}
+            </if>
+            <if test="password!=null">
+              PASSWORD=#{password}
+            </if>
+            <if test="headImg!=null">
+              HEAD_IMG=#{headImg}
+            </if>
+        </where>
+    </select>
+
 </mapper>

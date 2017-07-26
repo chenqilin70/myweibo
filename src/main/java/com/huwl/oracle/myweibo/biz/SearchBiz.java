@@ -1,11 +1,11 @@
 package com.huwl.oracle.myweibo.biz;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.huwl.oracle.myweibo.pojo.PageBean;
-import com.huwl.oracle.myweibo.pojo.User;
-import com.huwl.oracle.myweibo.pojo.Weibo;
+import com.huwl.oracle.myweibo.pojo.*;
+import com.huwl.oracle.myweibo.wrapper.UserGroupMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service("searchBiz")
@@ -22,9 +22,9 @@ public class SearchBiz extends BaseBiz{
         return userMapper.searchIncidentalUserByStr(searchStr);
     }
 
-    public List<User> searchUserByStr(Integer pageNo, String searchStr) {
+    public List<User> searchUserByStr(Integer pageNo, String searchStr,User user) {
         PageBean pageBean=new PageBean(50,pageNo,0);
-        List<User> list=userMapper.searchUserByStr(pageBean,searchStr);
+        List<User> list=userMapper.searchUserByStr(pageBean,searchStr,user);
         return list;
     }
 
@@ -50,5 +50,18 @@ public class SearchBiz extends BaseBiz{
             e.printStackTrace();
         }
         return jsonBean.replace("\"","\'");
+    }
+
+    public boolean addCared(Integer userid, User loginedUser) {
+        UserGroup userGroup=new UserGroup();
+        userGroup.setGroupId(userGroupMapper.getDefaultGroupId(loginedUser.getUserId()));
+        loginedUser.setDefaultGroup(userGroup);
+        Relationship relationship=new Relationship();
+        User star=new User();
+        star.setUserId(userid);
+        relationship.setStar(star);
+        relationship.setCareTime(new Date());
+        int count=relationshipMapper.insert(relationship);
+        return count>0?true:false;
     }
 }

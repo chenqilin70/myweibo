@@ -74,6 +74,15 @@ public class User  implements Serializable {
 
     private List<UserGroup> groups;
     private boolean isCared;
+    private UserGroup defaultGroup;
+
+    public UserGroup getDefaultGroup() {
+        return defaultGroup;
+    }
+
+    public void setDefaultGroup(UserGroup defaultGroup) {
+        this.defaultGroup = defaultGroup;
+    }
 
     public boolean getIsCared() {
         return isCared;

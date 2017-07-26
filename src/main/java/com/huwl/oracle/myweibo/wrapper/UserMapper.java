@@ -14,7 +14,8 @@ public interface UserMapper  extends BaseMapper<User>{
 
     List<User> searchIncidentalUserByStr(String searchStr);
 
-    List<User> searchUserByStr(PageBean pageBean, String searchStr);
+    List<User> searchUserByStr(PageBean pageBean, String searchStr,User user);
 
     Integer getSearchUserByStrCount(String searchStr);
+
 }

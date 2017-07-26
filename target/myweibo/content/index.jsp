@@ -43,14 +43,14 @@
                                             <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                                         </span>
                                         <input type="text" class="form-control" placeholder="用户名" name="nickname"
-                                               aria-describedby="basic-addon1" id="loginNicknameInput">
+                                         value="k测试1"      aria-describedby="basic-addon1" id="loginNicknameInput">
                                     </div>
                                     <div class="input-group">
                                         <span class="input-group-addon">
                                             <span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span>
                                         </span>
                                         <input type="password" class="form-control" placeholder="密码（不少于6位）"
-                                               aria-describedby="basic-addon1" id="loginPasswordInput" name="password">
+                                        value="111111"       aria-describedby="basic-addon1" id="loginPasswordInput" name="password">
                                     </div>
                                     <input type="submit" class="btn btn-success" value="登录" id="loginBtn" />
                                 </form>

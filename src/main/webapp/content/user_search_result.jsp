@@ -10,10 +10,25 @@
     <td class="user_resultTd">
         <div class="user_result_head"
              style="background-image: url(<%=request.getContextPath()%>/imgs/head/${user.headImg})"></div>
-        <div class="addCareBtn">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-            加关注
-        </div>
+
+            <c:if test="${user.isCared}">
+                <div class="btn-group">
+                    <div class="hasCaredBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        已关注 <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">取消关注</a></li>
+                        <li><a href="#">设置分组</a></li>
+                    </ul>
+                </div>
+            </c:if>
+            <c:if test="${!user.isCared}">
+                <div class="addCareBtn" userid="${user.userId}">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        加关注
+                </div>
+            </c:if>
+
     </td>
     <td>
     <div class="user_result_info_box">

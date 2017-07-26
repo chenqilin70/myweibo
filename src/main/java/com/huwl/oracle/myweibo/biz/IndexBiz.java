@@ -1,6 +1,8 @@
 package com.huwl.oracle.myweibo.biz;
 
 import com.huwl.oracle.myweibo.pojo.User;
+import com.huwl.oracle.myweibo.pojo.UserGroup;
+import com.huwl.oracle.myweibo.wrapper.UserGroupMapper;
 import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
@@ -8,10 +10,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
-import java.util.Random;
 
 @Service
 public class IndexBiz extends BaseBiz{
@@ -76,6 +76,11 @@ public class IndexBiz extends BaseBiz{
         if(!existNickname(nickname)){
             User user=new User(null,nickname,null,null,null,null,password,"default.jpg");
             userMapper.insert(user);
+            UserGroup userGroup=new UserGroup();
+            userGroup.setGroupName("未分组");
+            userGroup.setSetUpTime(new Date());
+            userGroup.setUser(user);
+            userGroupMapper.insert(userGroup);
             if(user!=null){
                 userCacheDao.addUser(user);
                 userCacheDao.addExistUser(nickname);
