@@ -1,5 +1,6 @@
 package com.huwl.oracle.myweibo.biz;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.huwl.oracle.myweibo.cache_dao.UserCacheDao;
 import com.huwl.oracle.myweibo.pojo.Like;
 import com.huwl.oracle.myweibo.wrapper.LikeMapper;
@@ -16,6 +17,8 @@ public class BaseBiz {
     protected WeiboMapper  weiboMapper;
     @Autowired
     protected LikeMapper likeMapper;
+    @Autowired
+    protected ObjectMapper objectMapper;
 
 
 

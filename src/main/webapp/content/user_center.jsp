@@ -14,6 +14,7 @@
 
     <!-- Bootstrap -->
     <link href="<%=request.getContextPath()%>/css/bootstrap.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/css/page.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/user_center.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/head.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/weibo.css" rel="stylesheet">
@@ -115,9 +116,12 @@
                 <li role="presentation"><a href="#">转</a></li>
             </ul>
             <hr/>
-            <c:forEach items="${myWeiboList}" var="weibo">
-                <%@include file="weibo.jsp" %>
-            </c:forEach>
+            <div id="result_box">
+
+            </div>
+            <div style="text-align: center;margin:20px auto;">
+                <div id="pager"  class="pager clearfix"></div>
+            </div>
 
         </div>
 
@@ -127,6 +131,7 @@
 
 
 <script src="<%=request.getContextPath()%>/js/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/js/jquery.z-pager.js"></script>
 <script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/bootstrap-treeview.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/iconfont.js"></script>

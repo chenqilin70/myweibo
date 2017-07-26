@@ -53,6 +53,8 @@
 }
 .userBox{
     margin-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
 }
 .user_result_head{
     height: 70px;
@@ -95,7 +97,6 @@
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: normal;
-
 }
 .sexIcon{
     background-position: 0,0;
@@ -106,13 +107,13 @@
     vertical-align: -2px;
 }
 .manIcon{
-    background-image: url('/myweibo/imgs/man.png');
+    background-image: url(../imgs/man.png);
 }
 .womanIcon{
-    background-image: url('/myweibo/imgs/women.png');
+    background-image: url(../imgs/women.png);
 }
 .unknownsex{
-    background-image: url('/myweibo/imgs/unknown_sex.png');
+    background-image: url(../imgs/unknown_sex.png);
 }
 .nickNameLi{
     font-weight: 800;
@@ -120,6 +121,16 @@
 }
 .info_item{
     color: #5CB85C;
+}
+.addCareBtn{
+    width: 70px;
+    height: 20px;
+    border-radius: 3px;
+    color: #222222;
+    text-align: center;
+    background-color: #5CB85C;
+    margin-top: 3px;
+    cursor: pointer;
 }
 
 

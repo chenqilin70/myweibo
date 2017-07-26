@@ -21,9 +21,14 @@
         limit 10
     </select>
     <select id="searchUserByStr" resultType="com.huwl.oracle.myweibo.pojo.User">
-        select USER_ID,NICK_NAME,BIRTHDAY,INTRO,SEX,ADDRESS,HEAD_IMG
-        from USERS
-        where NICK_NAME LIKE CONCAT('%',#{param2},'%')
-        limit #{param1.offsetInDB},50
+        select u.USER_ID,u.NICK_NAME,u.BIRTHDAY,u.INTRO,u.SEX,ADDRESS,u.HEAD_IMG,r.STAR_ID
+        from USERS u
+        left join USER_GROUP g on g.USER_ID=u.USER_ID
+        left join RELATIONSHIP r on r.GROUP_ID =g.GROUP_ID
+        where u.NICK_NAME LIKE CONCAT('%',#{param2},'%')
+        limit #{param1.offsetInDB},#{param1.pageSize}
+    </select>
+    <select id="getSearchUserByStrCount" resultType="java.lang.Integer">
+        select count(*) from USERS where NICK_NAME like CONCAT('%',#{pageNo},'%')
     </select>
 </mapper>

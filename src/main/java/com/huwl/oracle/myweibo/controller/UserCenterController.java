@@ -21,9 +21,15 @@ public class UserCenterController {
     @RequestMapping("/user_center")
     public ModelAndView userCenter(HttpSession session){
         ModelAndView mav=new ModelAndView("user_center");
-        Integer userid=((User)session.getAttribute("user")).getUserId();
-        mav.addObject("myWeiboList"
-                , userCenterBiz.getUserWeiboList(1,15,userid));
+        return mav;
+    }
+    @RequestMapping("/user_center_weibo")
+    public ModelAndView userCenterWeibo(HttpSession session,@RequestParam("page") Integer pageNo){
+        ModelAndView mav=new ModelAndView("weibo");
+        User user= (User) session.getAttribute("user");
+        mav.addObject("weibo_search_result"
+                , userCenterBiz.getUserWeiboList(pageNo,15,user));
+        mav.addObject("pageBean",userCenterBiz.getUserWeiboPageBean(pageNo,user));
         return mav;
     }
     @RequestMapping("/like")

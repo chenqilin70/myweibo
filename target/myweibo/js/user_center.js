@@ -44,3 +44,14 @@ function isWrapElement(e, thisElement) {
     var flag = thisElement.compareDocumentPosition($relatedElement);
     return !(flag == 0 || flag == 20);
 }
+var $pager=$("#pager");
+function myReCall(data){
+    console.log(data)
+    $('#result_box').html(data);
+    $.getScript(contextPah+"/js/weibo.js");
+}
+$pager.zPager({
+    pageData:15 , //每页数据条数
+    url: contextPah+'/inner/user_center_weibo', //ajax路由
+    ajaxSetData: true
+});

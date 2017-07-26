@@ -14,4 +14,7 @@ public interface WeiboMapper  extends BaseMapper<Weibo>{
     List<Weibo> searchWeiboByStr(PageBean pageBean,String searchStr);
 
 
+    Integer getSearchWeiboByStrCount(String searchStr);
+
+    Integer getUsersWeiboCount(User user);
 }

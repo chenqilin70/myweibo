@@ -73,6 +73,15 @@ public class User  implements Serializable {
     private String headImg;
 
     private List<UserGroup> groups;
+    private boolean isCared;
+
+    public boolean getIsCared() {
+        return isCared;
+    }
+
+    public void setIsCared(boolean cared) {
+        isCared = cared;
+    }
 
     public List<UserGroup> getGroups() {
         return groups;

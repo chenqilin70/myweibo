@@ -1,5 +1,6 @@
 package com.huwl.oracle.myweibo.biz;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.huwl.oracle.myweibo.pojo.Like;
 import com.huwl.oracle.myweibo.pojo.PageBean;
 import com.huwl.oracle.myweibo.pojo.User;
@@ -11,8 +12,11 @@ import java.util.List;
 
 @Service
 public class UserCenterBiz extends BaseBiz{
-    public List<Weibo> getUserWeiboList(Integer pageNo,Integer pageSize,Integer userid) {
-        return weiboMapper.getWeiboByPage(new PageBean(pageSize,pageNo,0),userid);
+    public List<Weibo> getUserWeiboList(Integer pageNo
+            ,Integer pageSize,User user) {
+        List<Weibo> list=
+            weiboMapper.getWeiboByPage(new PageBean(pageSize,pageNo,0),user.getUserId());
+        return list;
     }
 
     public boolean like(User user, Integer weiboid) {
@@ -23,5 +27,16 @@ public class UserCenterBiz extends BaseBiz{
         weibo.setWeiboId(weiboid);
         like.setWeibo(weibo);
         return likeMapper.addLike(like);
+    }
+
+    public String getUserWeiboPageBean(Integer pageNo,User user) {
+        PageBean pageBean=new PageBean(15,pageNo,weiboMapper.getUsersWeiboCount(user));
+        String result="";
+        try {
+            result=objectMapper.writeValueAsString(pageBean);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return result.replace("\"","\'");
     }
 }

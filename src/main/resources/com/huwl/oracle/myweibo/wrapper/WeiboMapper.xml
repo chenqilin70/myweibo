@@ -51,4 +51,11 @@
         order by w.PUBLISH_TIME
         limit #{param1.offsetInDB},#{param1.pageSize}
     </select>
+    <select id="getSearchWeiboByStrCount" resultType="java.lang.Integer">
+        select count(*) from WEI_BO where WEIBO_CONTENT LIKE CONCAT('%',#{searchStr},'%')
+    </select>
+    <select id="getUsersWeiboCount" resultType="java.lang.Integer"
+            parameterType="com.huwl.oracle.myweibo.pojo.User">
+        select count(*) from WEI_BO where USER_ID=#{userId}
+    </select>
 </mapper>

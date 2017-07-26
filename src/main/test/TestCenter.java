@@ -43,9 +43,18 @@ public class TestCenter {
             mapper.insert(user);
             System.out.println("插入一条用户："+i);
         }*/
-        UserMapper mapper= (UserMapper) ctx.getBean("userMapper");
-        PageBean pageBean=new PageBean(50,1,0);
-        List<User> list=mapper.searchUserByStr(pageBean,"测试");
-        System.out.println(list);
+        WeiboMapper mapper= (WeiboMapper) ctx.getBean("weiboMapper");
+        for(int i=0;i<800;i++){
+            Weibo weibo=new Weibo();
+            weibo.setPics("577b8692-eeec-44ab-acf5-ca3996e6e9e0,9aa62a27-5fc8-4c12-93f1-377093493e0f,3cfc1412-93a1-48f3-96e7-ffc20ea5fb80,c5b48bd8-d52c-4e79-b828-e199f96ae201,18e00ba8-b624-4e2e-b57f-2cf61c0d822a,4b1bcda9-fb23-4c13-9944-f68cc123d5af,f35f11ce-a222-42cb-bdaa-24d1d3043f4e,ab171073-5df0-4b7f-8da7-06a079e2b959");
+            weibo.setWeiboContent("<p>测试微博<img src=\"http://img.baidu.com/hi/face/i_f14.gif\"/>是打发打发</p>");
+            weibo.setPublishTime(new Date());
+            weibo.setIsRepost(false);
+            User user=new User();
+            user.setUserId(33);
+            weibo.setUser(user);
+            mapper.insert(weibo);
+            System.out.println("插入一条微博");
+        }
     }
 }

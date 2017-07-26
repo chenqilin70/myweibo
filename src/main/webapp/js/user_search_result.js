@@ -1,0 +1,10 @@
+$(".userBox").mouseover(function(e){
+    if(isWrapElement(e,this)){
+        $(this).css("background-color","#EEEEEE");
+    }
+});
+$(".userBox").mouseout(function(e){
+    if(isWrapElement(e,this)){
+        $(this).css("background-color","");
+    }
+});
