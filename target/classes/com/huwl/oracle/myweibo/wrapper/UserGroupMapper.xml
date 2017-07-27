@@ -4,7 +4,4 @@
     <insert id="insert"  parameterType="com.huwl.oracle.myweibo.pojo.UserGroup">
         insert into USER_GROUP VALUES (null,#{groupName},#{user.userId},#{setUpTime})
     </insert>
-    <select id="getDefaultGroupId" resultType="java.lang.Integer">
-        select GROUP_ID FROM USER_GROUP WHERE USER_ID=${id} and GROUP_NAME='未分组'
-    </select>
 </mapper>

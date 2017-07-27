@@ -51,7 +51,7 @@
         order by w.PUBLISH_TIME
         limit #{param1.offsetInDB},#{param1.pageSize}
     </select>
-    <select id="getSearchWeiboByStrCount" resultType="java.lang.Integer">
+    <select id="getSearchWeiboByStrCount" useCache="true"  resultType="java.lang.Integer">
         select count(*) from WEI_BO where WEIBO_CONTENT LIKE CONCAT('%',#{searchStr},'%')
     </select>
     <select id="getUsersWeiboCount" resultType="java.lang.Integer"

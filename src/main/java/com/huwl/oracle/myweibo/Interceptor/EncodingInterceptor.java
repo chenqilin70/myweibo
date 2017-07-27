@@ -13,6 +13,7 @@ public class EncodingInterceptor  implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
         httpServletRequest.setCharacterEncoding("UTF-8");
         httpServletResponse.setCharacterEncoding("UTF-8");
+        System.out.println("Encodding is running");
         return true;
     }
 

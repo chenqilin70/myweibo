@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.huwl.oracle.myweibo.wrapper.UserMapper" >
+
     <insert id="insert"  parameterType="com.huwl.oracle.myweibo.pojo.User"
             useGeneratedKeys="true" keyProperty="userId">
         insert into USERS values(
@@ -15,7 +16,8 @@
         select * from USERS
         where NICK_NAME=#{nickName} and PASSWORD=#{password}
     </select>
-    <select id="searchIncidentalUserByStr" resultType="com.huwl.oracle.myweibo.pojo.User">
+    <select id="searchIncidentalUserByStr"
+            resultType="com.huwl.oracle.myweibo.pojo.User">
         select USER_ID,NICK_NAME,INTRO,HEAD_IMG from USERS
         where NICK_NAME LIKE CONCAT('%',#{searchStr},'%')
         limit 10

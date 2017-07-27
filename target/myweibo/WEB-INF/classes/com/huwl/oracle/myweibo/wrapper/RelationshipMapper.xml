@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.huwl.oracle.myweibo.wrapper.RelationshipMapper" >
-    <insert id="insert" parameterType="com.huwl.oracle.myweibo.pojo.Relationship">
-        insert into RELATIONSHIP VALUES(null,#{star.userId},#{careTime},#{})
+    <insert id="insert" useGeneratedKeys="true" parameterType="com.huwl.oracle.myweibo.pojo.Relationship">
+        insert into RELATIONSHIP VALUES(null,#{star.userId},#{careTime},#{userGroup.groupId})
     </insert>
 </mapper>

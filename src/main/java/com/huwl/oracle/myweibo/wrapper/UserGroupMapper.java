@@ -7,5 +7,5 @@ import java.util.List;
 @Repository("userGroupMapper")
 public interface UserGroupMapper  extends BaseMapper<UserGroup>{
 
-    Integer getDefaultGroupId(Integer userId);
+
 }

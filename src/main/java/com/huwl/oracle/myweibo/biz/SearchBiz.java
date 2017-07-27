@@ -2,7 +2,6 @@ package com.huwl.oracle.myweibo.biz;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.huwl.oracle.myweibo.pojo.*;
-import com.huwl.oracle.myweibo.wrapper.UserGroupMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -31,6 +30,10 @@ public class SearchBiz extends BaseBiz{
     public String getSearchUserPageBean(String searchStr,Integer pageNo) {
         String jsonBean="";
         try {
+            System.out.println(userMapper.getSearchUserByStrCount(searchStr));
+            System.out.println(userMapper.getSearchUserByStrCount(searchStr));
+            System.out.println(userMapper.getSearchUserByStrCount(searchStr));
+
             jsonBean=objectMapper.writeValueAsString(
                     new PageBean(50,pageNo,userMapper.getSearchUserByStrCount(searchStr))
             );
@@ -54,7 +57,7 @@ public class SearchBiz extends BaseBiz{
 
     public boolean addCared(Integer userid, User loginedUser) {
         UserGroup userGroup=new UserGroup();
-        userGroup.setGroupId(userGroupMapper.getDefaultGroupId(loginedUser.getUserId()));
+        userGroup.setGroupId(redisCacheMapper.getDefaultGroupId(loginedUser.getUserId()));
         loginedUser.setDefaultGroup(userGroup);
         Relationship relationship=new Relationship();
         User star=new User();

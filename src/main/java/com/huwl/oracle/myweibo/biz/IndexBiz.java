@@ -2,7 +2,6 @@ package com.huwl.oracle.myweibo.biz;
 
 import com.huwl.oracle.myweibo.pojo.User;
 import com.huwl.oracle.myweibo.pojo.UserGroup;
-import com.huwl.oracle.myweibo.wrapper.UserGroupMapper;
 import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
@@ -10,6 +9,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 import java.util.List;
 
@@ -73,7 +73,8 @@ public class IndexBiz extends BaseBiz{
     }
 
     public User register(String nickname, String password) {
-        if(!existNickname(nickname)){
+        boolean flag=userMapper.existNickname(nickname)>0?true:false;
+        if(!flag){
             User user=new User(null,nickname,null,null,null,null,password,"default.jpg");
             userMapper.insert(user);
             UserGroup userGroup=new UserGroup();
@@ -81,25 +82,9 @@ public class IndexBiz extends BaseBiz{
             userGroup.setSetUpTime(new Date());
             userGroup.setUser(user);
             userGroupMapper.insert(userGroup);
-            if(user!=null){
-                userCacheDao.addUser(user);
-                userCacheDao.addExistUser(nickname);
-                return user;
-            }
+            return user;
         }
         return null;
-    }
-
-    public boolean existNickname(String nickname) {
-        Boolean flag=userCacheDao.existNickname(nickname);
-        if(!flag){
-
-            flag=userMapper.existNickname(nickname)>0?true:false;
-            if(!flag){
-                return false;
-            }
-        }
-        return true;
     }
 
     public User login(String nickname, String password) {
@@ -111,5 +96,10 @@ public class IndexBiz extends BaseBiz{
             user.setPassword("******");
         }
         return user;
+    }
+
+    public boolean existNickname(String nickname) {
+        nickname=correctEncoding(nickname);
+        return userMapper.existNickname(nickname)>0?true:false;
     }
 }

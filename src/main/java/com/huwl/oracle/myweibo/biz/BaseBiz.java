@@ -1,17 +1,16 @@
 package com.huwl.oracle.myweibo.biz;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.huwl.oracle.myweibo.cache_dao.UserCacheDao;
 import com.huwl.oracle.myweibo.pojo.Like;
 import com.huwl.oracle.myweibo.pojo.Relationship;
 import com.huwl.oracle.myweibo.wrapper.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.io.UnsupportedEncodingException;
+
 public class BaseBiz {
     @Autowired
     protected UserMapper userMapper;
-    @Autowired
-    protected UserCacheDao userCacheDao;
     @Autowired
     protected WeiboMapper  weiboMapper;
     @Autowired
@@ -22,6 +21,17 @@ public class BaseBiz {
     protected UserGroupMapper userGroupMapper;
     @Autowired
     protected RelationshipMapper relationshipMapper;
+    @Autowired
+    protected RedisCacheMapper redisCacheMapper;
+
+    protected String correctEncoding(String s){
+        try {
+            return new String(s.getBytes("ISO-8859-1"),"utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+            return s;
+        }
+    }
 
 
 

@@ -18,7 +18,7 @@ import java.net.URLDecoder;
 
 @RequestMapping("/inner")
 @Controller("searchController")
-public class SearchController {
+public class SearchController{
     @Autowired
     private SearchBiz searchBiz;
 
