@@ -3,7 +3,7 @@
 <mapper namespace="com.huwl.oracle.myweibo.wrapper.LikeMapper" >
     <insert id="addLike"
             parameterType="com.huwl.oracle.myweibo.pojo.Like"
-            useGeneratedKeys="true">
+            useGeneratedKeys="true" keyProperty="likeId">
         insert into LIKES(USER_ID, LIKE_TIME, WEIBO_ID)
         values(#{user.userId},#{likeTime},#{weibo.weiboId})
     </insert>

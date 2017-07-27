@@ -21,9 +21,22 @@
                         <li><a href="#">设置分组</a></li>
                     </ul>
                 </div>
+                <div class="addCareBtn hidden" userid="${user.userId}" nickname="${user.nickName}">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    加关注
+                </div>
             </c:if>
             <c:if test="${!user.isCared}">
-                <div class="addCareBtn" userid="${user.userId}">
+                <div class="btn-group hidden">
+                    <div class="hasCaredBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        已关注 <span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">取消关注</a></li>
+                        <li><a href="#">设置分组</a></li>
+                    </ul>
+                </div>
+                <div class="addCareBtn" userid="${user.userId}" nickname="${user.nickName}">
                         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                         加关注
                 </div>
@@ -80,3 +93,35 @@
 </table>
 </div>
 </c:forEach>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+                    <table cellspacing="0" cellpadding="0" border="0" class="groupsTable">
+                        <tr>
+                            <c:forEach items="${groups}" var="group" varStatus="status">
+                                <c:if test="${status.index%3==0 and status.index!=0}">
+                                    </tr><tr>
+                                </c:if>
+                                <td  align="left" class="groupNameTd">
+                                    <input type="radio" name="iCheck" id="group${group['GROUP_ID']}" groupid="${group['GROUP_ID']}">
+                                    <label for="group${group['GROUP_ID']}">${group['GROUP_NAME']}</label>
+                                </td>
+                            </c:forEach>
+                        </tr>
+                    </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-success" id="groupingBtn" userid="">确定</button>
+            </div>
+        </div>
+    </div>
+</div>

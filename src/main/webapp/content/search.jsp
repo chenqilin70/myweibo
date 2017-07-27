@@ -14,9 +14,13 @@
     <!-- Bootstrap -->
     <link href="<%=request.getContextPath()%>/css/bootstrap.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/page.css" rel="stylesheet">
+    <%--<link href="http://cdn.bootcss.com/iCheck/1.0.2/skins/all.css" rel="stylesheet">--%>
+    <link href="<%=request.getContextPath()%>/css/skins/minimal/_all.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/head.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/search.css" rel="stylesheet">
     <link href="<%=request.getContextPath()%>/css/weibo.css" rel="stylesheet">
+
+
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -24,6 +28,7 @@
     <!--[if lt IE 9]>
     <script src="<%=request.getContextPath()%>/js/html5shiv.min.js"></script>
     <script src="<%=request.getContextPath()%>/js/respond.min.js"></script>
+
     <![endif]-->
 
 </head>
@@ -122,11 +127,12 @@
 
 </div>
 <script src="<%=request.getContextPath()%>/js/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/js/icheck.js"></script>
 <script src="<%=request.getContextPath()%>/js/bootstrap.min.js"></script>
 <script src="<%=request.getContextPath()%>/js/jquery.z-pager.js"></script>
-
 <script src="<%=request.getContextPath()%>/js/head.js"></script>
 <script src="<%=request.getContextPath()%>/js/search.js"></script>
 <script src="<%=request.getContextPath()%>/js/weibo.js"></script>
+
 </body>
 </html>

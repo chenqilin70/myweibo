@@ -38,11 +38,11 @@
         from USERS u
         left JOIN RELATIONSHIP r on r.STAR_ID=u.USER_ID
         LEFT JOIN USER_GROUP g on g.GROUP_ID=r.GROUP_ID
-        where u.NICK_NAME LIKE CONCAT('%',#{param2},'%')
+        where u.NICK_NAME LIKE CONCAT('%',#{param2},'%') and u.USER_ID!=#{param3.userId}
         limit #{param1.offsetInDB},#{param1.pageSize}
     </select>
     <select id="getSearchUserByStrCount" resultType="java.lang.Integer">
-        select count(*) from USERS where NICK_NAME like CONCAT('%',#{pageNo},'%')
+        select count(*) from USERS where NICK_NAME like CONCAT('%',#{param1},'%') and USER_ID!=#{param2.userId}
     </select>
     <select id="select" resultType="com.huwl.oracle.myweibo.pojo.User">
         select * from USERS

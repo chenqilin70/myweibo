@@ -102,4 +102,5 @@ public class Relationship  implements Serializable {
     public void setUserGroup(UserGroup userGroup) {
         this.userGroup = userGroup;
     }
+
 }

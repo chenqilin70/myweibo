@@ -75,15 +75,17 @@ public class SearchController{
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        mv.addObject("pageBean",searchBiz.getSearchUserPageBean(searchStr,pageNo));
+        User loginUser=(User) session.getAttribute("user");
+        mv.addObject("groups",searchBiz.getGroupsByUser(loginUser));
+        mv.addObject("pageBean",searchBiz.getSearchUserPageBean(searchStr,pageNo,loginUser));
         mv.addObject("user_search_result"
-                ,searchBiz.searchUserByStr(pageNo,searchStr,(User) session.getAttribute("user")));
+                ,searchBiz.searchUserByStr(pageNo,searchStr,loginUser));
         return mv;
     }
     @ResponseBody
-    @RequestMapping("/inner/{userid}")
-    public boolean addCared(@PathVariable Integer userid,HttpSession session){
+    @RequestMapping("/addCare/{userid}")
+    public boolean addCare(@PathVariable Integer userid,HttpSession session){
         User loginedUser= (User) session.getAttribute("user");
-        return searchBiz.addCared(userid,loginedUser);
+        return searchBiz.addCare(userid,loginedUser);
     }
 }

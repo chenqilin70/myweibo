@@ -141,6 +141,15 @@
     margin-top: 3px;
     cursor: pointer;
 }
+.groupsTable{
+    width: 90%;
+    margin-left:5%;
+}
+.groupNameTd{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
 
 
 

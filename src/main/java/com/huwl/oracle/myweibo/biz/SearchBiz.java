@@ -6,14 +6,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @Service("searchBiz")
 public class SearchBiz extends BaseBiz{
     public List<Weibo> searchWeiboByStr(Integer pageNo,String searchStr) {
         PageBean pageBean=new PageBean(20,pageNo,0);
         List<Weibo> list=weiboMapper.searchWeiboByStr(pageBean,searchStr);
-        System.out.println(list.size());
-        System.out.println(list);
         return list;
     }
 
@@ -27,15 +26,11 @@ public class SearchBiz extends BaseBiz{
         return list;
     }
 
-    public String getSearchUserPageBean(String searchStr,Integer pageNo) {
+    public String getSearchUserPageBean(String searchStr,Integer pageNo,User user) {
         String jsonBean="";
         try {
-            System.out.println(userMapper.getSearchUserByStrCount(searchStr));
-            System.out.println(userMapper.getSearchUserByStrCount(searchStr));
-            System.out.println(userMapper.getSearchUserByStrCount(searchStr));
-
             jsonBean=objectMapper.writeValueAsString(
-                    new PageBean(50,pageNo,userMapper.getSearchUserByStrCount(searchStr))
+                    new PageBean(50,pageNo,userMapper.getSearchUserByStrCount(searchStr,user))
             );
         } catch (JsonProcessingException e) {
             e.printStackTrace();
@@ -55,7 +50,7 @@ public class SearchBiz extends BaseBiz{
         return jsonBean.replace("\"","\'");
     }
 
-    public boolean addCared(Integer userid, User loginedUser) {
+    public boolean addCare(Integer userid, User loginedUser) {
         UserGroup userGroup=new UserGroup();
         userGroup.setGroupId(redisCacheMapper.getDefaultGroupId(loginedUser.getUserId()));
         loginedUser.setDefaultGroup(userGroup);
@@ -63,8 +58,13 @@ public class SearchBiz extends BaseBiz{
         User star=new User();
         star.setUserId(userid);
         relationship.setStar(star);
+        relationship.setUserGroup(userGroup);
         relationship.setCareTime(new Date());
         int count=relationshipMapper.insert(relationship);
         return count>0?true:false;
+    }
+
+    public List getGroupsByUser(User loginUser) {
+        return redisCacheMapper.getGroupsByUser(loginUser);
     }
 }
