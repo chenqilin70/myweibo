@@ -1,6 +1,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" pageEncoding="UTF-8" %>
 <input type="hidden" id="pageBean" value="${pageBean}"/>
 <c:forEach items="${user_search_result}" var="user" varStatus="status">
     <div class="col-md-4 col-sm-6 col-xs-12 userBox">
@@ -103,6 +103,14 @@
                 <h4 class="modal-title" id="myModalLabel"></h4>
             </div>
             <div class="modal-body">
+                <div class="input-group">
+                   <input type="text" class="form-control addGroupInput" placeholder="输入分组名称">
+                     <span class="input-group-btn">
+                        <button class="btn btn-success addGroupBtn" type="button" trigger=""
+                                data-toggle="tooltip" data-placement="bottom" title="分组名称不能为空">添加分组</button>
+                     </span>
+                </div>
+                <hr/>
                     <table cellspacing="0" cellpadding="0" border="0" class="groupsTable">
                         <tr>
                             <c:forEach items="${groups}" var="group" varStatus="status">
@@ -110,7 +118,14 @@
                                     </tr><tr>
                                 </c:if>
                                 <td  align="left" class="groupNameTd">
-                                    <input type="radio" name="iCheck" id="group${group['GROUP_ID']}" groupid="${group['GROUP_ID']}">
+                                    <c:if test="${group['GROUP_NAME']=='未分组'}">
+                                        <input type="radio" name="iCheck" id="group${group['GROUP_ID']}"
+                                               groupid="${group['GROUP_ID']}" checked/>
+                                    </c:if>
+                                    <c:if test="${group['GROUP_NAME']!='未分组'}">
+                                        <input type="radio" name="iCheck" id="group${group['GROUP_ID']}"
+                                               groupid="${group['GROUP_ID']}" />
+                                    </c:if>
                                     <label for="group${group['GROUP_ID']}">${group['GROUP_NAME']}</label>
                                 </td>
                             </c:forEach>

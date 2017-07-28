@@ -530,4 +530,258 @@
   [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f0b0a5e]
   [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f0b0a5e]
   [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6f0b0a5e]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\BaseMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\CommentMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\LikeMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\RedisCacheMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\RelationshipMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\ReplayMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\UserGroupMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\UserMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\WeiboMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'baseMapper' and 'com.huwl.oracle.myweibo.wrapper.BaseMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'baseMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'commentMapper' and 'com.huwl.oracle.myweibo.wrapper.CommentMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'commentMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'likeMapper' and 'com.huwl.oracle.myweibo.wrapper.LikeMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'likeMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'redisCacheMapper' and 'com.huwl.oracle.myweibo.wrapper.RedisCacheMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'redisCacheMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'relationshipMapper' and 'com.huwl.oracle.myweibo.wrapper.RelationshipMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'replayMapper' and 'com.huwl.oracle.myweibo.wrapper.ReplayMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'replayMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userGroupMapper' and 'com.huwl.oracle.myweibo.wrapper.UserGroupMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userGroupMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.huwl.oracle.myweibo.wrapper.UserMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'weiboMapper' and 'com.huwl.oracle.myweibo.wrapper.WeiboMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'weiboMapper'.
+  [DEBUG][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+  [INFO][com.mchange.v2.log.MLog]MLog clients using slf4j logging.
+  [DEBUG][com.mchange.v2.log.MLog]Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [INFO][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11bj54q2imw2h|69fb6037,name=1hgery99p11bj54q2imw2h|69fb6037 registered.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11bj54q2imw2h|69fb6037,name=1hgery99p11bj54q2imw2h|69fb6037 unregistered, in order to be reregistered after update.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11bj54q2imw2h|69fb6037,name=1hgery99p11bj54q2imw2h|69fb6037 registered.
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'class path resource [com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml]'
+  [INFO][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hgery99p11bj54q2imw2h|69fb6037, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hgery99p11bj54q2imw2h|69fb6037, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://120.24.244.103:3306/MyWeibo, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]com.mchange.v2.resourcepool.BasicResourcePool@e98770d config: [start -> 10; min -> 3; max -> 50; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; max_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false; force_synchronous_checkins -> false]
+  [DEBUG][com.mchange.v2.c3p0.impl.C3P0PooledConnectionPoolManager]Created new pool for auth, username (masked): 'My******'.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]awaitAvailable(): [unknown]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6f0b0a5e [wrapping: com.mysql.jdbc.JDBC4Connection@6035b93b]] will be managed by Spring
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]==>  Preparing: select RELAT_ID from RELATIONSHIP r left JOIN USER_GROUP g on r.GROUP_ID=g.GROUP_ID left join USERS u on u.USER_ID=g.GROUP_ID where u.USER_ID=? and r.STAR_ID=? 
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]==> Parameters: 33(Integer), 72(Integer)
+  [DEBUG][com.mchange.v2.c3p0.impl.NewProxyPreparedStatement]com.mchange.v2.c3p0.impl.NewProxyPreparedStatement@57fd91c9 [wrapping: com.mysql.jdbc.JDBC42PreparedStatement@3f792b9b: select RELAT_ID from RELATIONSHIP r
+        left JOIN USER_GROUP g on r.GROUP_ID=g.GROUP_ID
+        left join USERS u on u.USER_ID=g.GROUP_ID
+        where u.USER_ID=33 and r.STAR_ID=72] closed orphaned ResultSet: com.mchange.v2.c3p0.impl.NewProxyResultSet@a5bd950 [wrapping: null]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\BaseMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\CommentMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\LikeMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\RedisCacheMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\RelationshipMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\ReplayMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\UserGroupMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\UserMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\WeiboMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'baseMapper' and 'com.huwl.oracle.myweibo.wrapper.BaseMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'baseMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'commentMapper' and 'com.huwl.oracle.myweibo.wrapper.CommentMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'commentMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'likeMapper' and 'com.huwl.oracle.myweibo.wrapper.LikeMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'likeMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'redisCacheMapper' and 'com.huwl.oracle.myweibo.wrapper.RedisCacheMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'redisCacheMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'relationshipMapper' and 'com.huwl.oracle.myweibo.wrapper.RelationshipMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'replayMapper' and 'com.huwl.oracle.myweibo.wrapper.ReplayMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'replayMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userGroupMapper' and 'com.huwl.oracle.myweibo.wrapper.UserGroupMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userGroupMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.huwl.oracle.myweibo.wrapper.UserMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'weiboMapper' and 'com.huwl.oracle.myweibo.wrapper.WeiboMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'weiboMapper'.
+  [DEBUG][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+  [INFO][com.mchange.v2.log.MLog]MLog clients using slf4j logging.
+  [DEBUG][com.mchange.v2.log.MLog]Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [INFO][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11bk3a81f8p1m4|69fb6037,name=1hgery99p11bk3a81f8p1m4|69fb6037 registered.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11bk3a81f8p1m4|69fb6037,name=1hgery99p11bk3a81f8p1m4|69fb6037 unregistered, in order to be reregistered after update.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11bk3a81f8p1m4|69fb6037,name=1hgery99p11bk3a81f8p1m4|69fb6037 registered.
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'class path resource [com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml]'
+  [INFO][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hgery99p11bk3a81f8p1m4|69fb6037, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hgery99p11bk3a81f8p1m4|69fb6037, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://120.24.244.103:3306/MyWeibo, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]com.mchange.v2.resourcepool.BasicResourcePool@e98770d config: [start -> 10; min -> 3; max -> 50; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; max_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false; force_synchronous_checkins -> false]
+  [DEBUG][com.mchange.v2.c3p0.impl.C3P0PooledConnectionPoolManager]Created new pool for auth, username (masked): 'My******'.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]awaitAvailable(): [unknown]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6f0b0a5e [wrapping: com.mysql.jdbc.JDBC4Connection@6035b93b]] will be managed by Spring
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]==>  Preparing: select RELAT_ID from RELATIONSHIP r left JOIN USER_GROUP g on r.GROUP_ID=g.GROUP_ID left join USERS u on u.USER_ID=g.GROUP_ID where u.USER_ID=? and r.STAR_ID=? 
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]==> Parameters: 33(Integer), 72(Integer)
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]<==      Total: 0
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\BaseMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\CommentMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\LikeMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\RedisCacheMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\RelationshipMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\ReplayMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\UserGroupMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\UserMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\WeiboMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'baseMapper' and 'com.huwl.oracle.myweibo.wrapper.BaseMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'baseMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'commentMapper' and 'com.huwl.oracle.myweibo.wrapper.CommentMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'commentMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'likeMapper' and 'com.huwl.oracle.myweibo.wrapper.LikeMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'likeMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'redisCacheMapper' and 'com.huwl.oracle.myweibo.wrapper.RedisCacheMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'redisCacheMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'relationshipMapper' and 'com.huwl.oracle.myweibo.wrapper.RelationshipMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'replayMapper' and 'com.huwl.oracle.myweibo.wrapper.ReplayMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'replayMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userGroupMapper' and 'com.huwl.oracle.myweibo.wrapper.UserGroupMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userGroupMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.huwl.oracle.myweibo.wrapper.UserMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'weiboMapper' and 'com.huwl.oracle.myweibo.wrapper.WeiboMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'weiboMapper'.
+  [DEBUG][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+  [INFO][com.mchange.v2.log.MLog]MLog clients using slf4j logging.
+  [DEBUG][com.mchange.v2.log.MLog]Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [INFO][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11br1sgaxt4dw|69fb6037,name=1hgery99p11br1sgaxt4dw|69fb6037 registered.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11br1sgaxt4dw|69fb6037,name=1hgery99p11br1sgaxt4dw|69fb6037 unregistered, in order to be reregistered after update.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11br1sgaxt4dw|69fb6037,name=1hgery99p11br1sgaxt4dw|69fb6037 registered.
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'class path resource [com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml]'
+  [INFO][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hgery99p11br1sgaxt4dw|69fb6037, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hgery99p11br1sgaxt4dw|69fb6037, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://120.24.244.103:3306/MyWeibo, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]com.mchange.v2.resourcepool.BasicResourcePool@e98770d config: [start -> 10; min -> 3; max -> 50; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; max_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false; force_synchronous_checkins -> false]
+  [DEBUG][com.mchange.v2.c3p0.impl.C3P0PooledConnectionPoolManager]Created new pool for auth, username (masked): 'My******'.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]awaitAvailable(): [unknown]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6f0b0a5e [wrapping: com.mysql.jdbc.JDBC4Connection@6035b93b]] will be managed by Spring
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]==>  Preparing: select RELAT_ID from RELATIONSHIP r left JOIN USER_GROUP g on r.GROUP_ID=g.GROUP_ID left join USERS u on u.USER_ID=g.USER_ID where u.USER_ID=? and r.STAR_ID=? 
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]==> Parameters: 33(Integer), 72(Integer)
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]<==      Total: 1
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\BaseMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\CommentMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\LikeMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\RedisCacheMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\RelationshipMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\ReplayMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\UserGroupMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\UserMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Identified candidate component class: file [D:\WorkFile\GitRepository\myweibo\target\classes\com\huwl\oracle\myweibo\wrapper\WeiboMapper.class]
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'baseMapper' and 'com.huwl.oracle.myweibo.wrapper.BaseMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'baseMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'commentMapper' and 'com.huwl.oracle.myweibo.wrapper.CommentMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'commentMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'likeMapper' and 'com.huwl.oracle.myweibo.wrapper.LikeMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'likeMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'redisCacheMapper' and 'com.huwl.oracle.myweibo.wrapper.RedisCacheMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'redisCacheMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'relationshipMapper' and 'com.huwl.oracle.myweibo.wrapper.RelationshipMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'relationshipMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'replayMapper' and 'com.huwl.oracle.myweibo.wrapper.ReplayMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'replayMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userGroupMapper' and 'com.huwl.oracle.myweibo.wrapper.UserGroupMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userGroupMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'userMapper' and 'com.huwl.oracle.myweibo.wrapper.UserMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Creating MapperFactoryBean with name 'weiboMapper' and 'com.huwl.oracle.myweibo.wrapper.WeiboMapper' mapperInterface
+  [DEBUG][org.mybatis.spring.mapper.ClassPathMapperScanner]Enabling autowire by type for MapperFactoryBean with name 'weiboMapper'.
+  [DEBUG][org.apache.ibatis.logging.LogFactory]Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+  [INFO][com.mchange.v2.log.MLog]MLog clients using slf4j logging.
+  [DEBUG][com.mchange.v2.log.MLog]Reading VM config for path list /com/mchange/v2/log/default-mchange-log.properties, /mchange-commons.properties, /c3p0.properties, hocon:/reference,/application,/c3p0,/, /mchange-log.properties, /
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.log.MLog]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [INFO][com.mchange.v2.c3p0.C3P0Registry]Initializing c3p0-0.9.5.2 [built 08-December-2015 22:06:04 -0800; debug? true; trace: 10]
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11brq57sydlcc|69fb6037,name=1hgery99p11brq57sydlcc|69fb6037 registered.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11brq57sydlcc|69fb6037,name=1hgery99p11brq57sydlcc|69fb6037 unregistered, in order to be reregistered after update.
+  [DEBUG][com.mchange.v2.c3p0.management.DynamicPooledDataSourceManagerMBean]MBean: com.mchange.v2.c3p0:type=PooledDataSource,identityToken=1hgery99p11brq57sydlcc|69fb6037,name=1hgery99p11brq57sydlcc|69fb6037 registered.
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed configuration file: 'class path resource [mybatis.xml]'
+  [DEBUG][org.mybatis.spring.SqlSessionFactoryBean]Parsed mapper file: 'class path resource [com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml]'
+  [INFO][com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource]Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hgery99p11brq57sydlcc|69fb6037, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hgery99p11brq57sydlcc|69fb6037, idleConnectionTestPeriod -> 0, initialPoolSize -> 10, jdbcUrl -> jdbc:mysql://120.24.244.103:3306/MyWeibo, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 50, maxStatements -> 0, maxStatementsPerConnection -> 0, minPoolSize -> 3, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-commons.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/mchange-log.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier '/c3p0.properties' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.cfg.MConfig]The configuration file for resource identifier 'hocon:/reference,/application,/c3p0,/' could not be found. Skipping.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]com.mchange.v2.resourcepool.BasicResourcePool@e98770d config: [start -> 10; min -> 3; max -> 50; inc -> 3; num_acq_attempts -> 30; acq_attempt_delay -> 1000; check_idle_resources_delay -> 0; max_resource_age -> 0; max_idle_time -> 0; excess_max_idle_time -> 0; destroy_unreturned_resc_time -> 0; expiration_enforcement_delay -> 0; break_on_acquisition_failure -> false; debug_store_checkout_exceptions -> false; force_synchronous_checkins -> false]
+  [DEBUG][com.mchange.v2.c3p0.impl.C3P0PooledConnectionPoolManager]Created new pool for auth, username (masked): 'My******'.
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]acquire test -- pool size: 0; target_pool_size: 10; desired target? 1
+  [DEBUG][com.mchange.v2.resourcepool.BasicResourcePool]awaitAvailable(): [unknown]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Creating a new SqlSession
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.transaction.SpringManagedTransaction]JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6f0b0a5e [wrapping: com.mysql.jdbc.JDBC4Connection@6035b93b]] will be managed by Spring
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]==>  Preparing: select RELAT_ID from RELATIONSHIP r left JOIN USER_GROUP g on r.GROUP_ID=g.GROUP_ID left join USERS u on u.USER_ID=g.USER_ID where u.USER_ID=? and r.STAR_ID=? limit 1 
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]==> Parameters: 33(Integer), 72(Integer)
+  [DEBUG][com.huwl.oracle.myweibo.wrapper.RelationshipMapper.getRelatId]<==      Total: 1
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
+  [DEBUG][org.mybatis.spring.SqlSessionUtils]Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39ad977d]
   

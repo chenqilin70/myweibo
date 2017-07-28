@@ -67,4 +67,18 @@ public class SearchBiz extends BaseBiz{
     public List getGroupsByUser(User loginUser) {
         return redisCacheMapper.getGroupsByUser(loginUser);
     }
+
+    public boolean grouping(Integer groupid, Integer userid, User loginedUser) {
+        Integer relatId=relationshipMapper.getRelatId(userid,loginedUser);
+        return relationshipMapper.updateGroup(relatId,groupid);
+    }
+
+    public UserGroup addGroup(String groupName, User loginedUser) {
+//        UserGroup userGroup=new UserGroup();
+//        userGroup.setUser(loginedUser);
+//        userGroup.setGroupName(groupName);
+//        userGroup
+//        return
+        return null;
+    }
 }

@@ -5,4 +5,16 @@
         insert into RELATIONSHIP VALUES(null
         ,#{star.userId},#{careTime},#{userGroup.groupId})
     </insert>
+    <update id="updateGroup" >
+      update RELATIONSHIP SET GROUP_ID=#{param2}
+      where RELAT_ID=#{param1}
+    </update>
+    <select id="getRelatId" resultType="java.lang.Integer" >
+        select RELAT_ID from RELATIONSHIP r
+        left JOIN USER_GROUP g on r.GROUP_ID=g.GROUP_ID
+        left join USERS u on u.USER_ID=g.USER_ID
+        where u.USER_ID=#{param2.userId} and r.STAR_ID=#{param1}
+        limit 1
+    </select>
+
 </mapper>

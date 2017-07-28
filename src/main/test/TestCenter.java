@@ -17,15 +17,9 @@ public class TestCenter {
 
     public static void main(String[] args){
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-*.xml");
-        SearchBiz biz= (SearchBiz) ctx.getBean("searchBiz");
+        RelationshipMapper mapper= (RelationshipMapper) ctx.getBean("relationshipMapper");
         User user=new User();
         user.setUserId(33);
-        List list=biz.getGroupsByUser(user);
-        for(Object o:list){
-            System.out.print(o.getClass()+o.toString()+"\n");
-        }
-//        for(Object o:map.keySet()){
-//            System.out.println(o+","+map.get(o));
-//        }
+        System.out.print(mapper.getRelatId(72,user));
     }
 }

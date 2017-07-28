@@ -1,4 +1,4 @@
-var contextPah=$("#contextPath").val();
+var contextPath=$("#contextPath").val();
 /*判断是否为最外面的元素被移出了*/
 function isWrapElement(e, thisElement) {
     $relatedElement = e.relatedTarget;
@@ -27,7 +27,7 @@ $(".addCareBtn").click(function(){
     var nickname=$(this).attr("nickname")
     var $this=$(this);
     $.ajax({
-        url:contextPah+"/inner/addCare/"+userid,
+        url:contextPath+"/inner/addCare/"+userid,
         error:function(){
             alert("请检查网络");
         },
@@ -40,7 +40,7 @@ $(".addCareBtn").click(function(){
                 $this.attr("class",thisClass+" hidden");
                 $("#myModalLabel").text("设置"+nickname+"的分组");
                 $("#groupingBtn").attr("userid",userid);
-                $('#myModal').modal();
+                $('#myModal').modal('toggle');
             }else{
                 alert("请检查网络");
             }
@@ -55,17 +55,67 @@ $(("[type='radio']")).iCheck({
 $("#groupingBtn").click(function(){
     var $this=$(this);
     var userid=$this.attr("userid");
-    var $checked=$(".groupsTable").find("input[checked]");
     $(("[type='radio']")).each(function(){
-        console.log($(this)[0].checked)
-    })
-    // $.ajax({
-    //     url:'',
-    //     data:{
-    //         ""
-    //     }
-    // });
+        var $this=$(this);
+        if($this[0].checked){
+            var groupid=$this.attr("groupid")
+            $.ajax({
+                url:contextPath+"/inner/grouping",
+                data:{
+                    groupid:groupid,
+                    userid:userid
+                },
+                error:function(){
+                    alert("请检查网络！");
+                },
+                success:function (data) {
+                    if(data){
+                        $('#myModal').modal('toggle');
+                    }else{
+                        alert("请检查网络！");
+                    }
+                }
+            });
+        }
+    });
 });
+
+$(".addGroupBtn").click(function(){
+    var $groupInput=$(this).parent().parent().find(".addGroupInput");
+    var groupName=$(this).parent().parent().find(".addGroupInput").val();
+    if(groupName==""){
+        $(".addGroupBtn").tooltip('show')
+    }else{
+        $.ajax({
+            url:contextPath+"/inner/addGroup",
+            data:{
+                "groupName":groupName
+            },
+            error:function () {
+                alert("请检查网络!")
+            },
+            success:function (newGroupId) {
+                console.log(newGroupId);
+                console.log(typeof newGroupId);
+                if(newGroupId!="null"){
+                    $groupInput.val("");
+                    var $groupsTable=$(".groupsTable");
+                    var tdLength=$groupsTable.find("td").length;
+                    if(tdLength%3==0){
+                        $groupsTable.find("tbody").append("<tr></tr>")
+                    }
+                    $groupsTable.find("tr:last").append(
+                        "<td  align='left' class='groupNameTd'>" +
+                            "<input type='radio' name='iCheck' id='group"+newGroupId+"'groupid='' checked/>"+
+                            "<label for='group"+newGroupId+"'>groupName</label>"+
+                        "</td>");
+                }else{
+                    alert("请检查网络！")
+                }
+            }
+        })
+    }
+})
 
 
 
