@@ -223,72 +223,76 @@
       <Position>4</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <index id="58" parent="10" name="USER_ID">
+    <column id="58" parent="10" name="IS_DEFAULT">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0</DataType>
+    </column>
+    <index id="59" parent="10" name="USER_ID">
       <ColNames>USER_ID</ColNames>
     </index>
-    <key id="59" parent="10" name="PRIMARY">
+    <key id="60" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>GROUP_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="60" parent="10" name="USER_GROUP_ibfk_1">
+    <foreign-key id="61" parent="10" name="USER_GROUP_ibfk_1">
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>MyWeibo</RefSchemaName>
       <RefTableName>USERS</RefTableName>
       <RefColNames>USER_ID</RefColNames>
     </foreign-key>
-    <column id="61" parent="11" name="WEIBO_ID">
+    <column id="62" parent="11" name="WEIBO_ID">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="62" parent="11" name="USER_ID">
+    <column id="63" parent="11" name="USER_ID">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="63" parent="11" name="WEIBO_CONTENT">
+    <column id="64" parent="11" name="WEIBO_CONTENT">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="64" parent="11" name="PUBLISH_TIME">
+    <column id="65" parent="11" name="PUBLISH_TIME">
       <Position>4</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="65" parent="11" name="READ_TIMES">
+    <column id="66" parent="11" name="READ_TIMES">
       <Position>5</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="66" parent="11" name="IS_REPOST">
+    <column id="67" parent="11" name="IS_REPOST">
       <Position>6</Position>
       <DataType>tinyint(1)|0</DataType>
     </column>
-    <column id="67" parent="11" name="REPOST_ID">
+    <column id="68" parent="11" name="REPOST_ID">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="68" parent="11" name="PICS">
+    <column id="69" parent="11" name="PICS">
       <Position>8</Position>
       <DataType>varchar(500)|0</DataType>
     </column>
-    <index id="69" parent="11" name="REPOST_ID">
+    <index id="70" parent="11" name="REPOST_ID">
       <ColNames>REPOST_ID</ColNames>
     </index>
-    <index id="70" parent="11" name="fk_weibo_user">
+    <index id="71" parent="11" name="fk_weibo_user">
       <ColNames>USER_ID</ColNames>
     </index>
-    <key id="71" parent="11" name="PRIMARY">
+    <key id="72" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>WEIBO_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="72" parent="11" name="WEI_BO_ibfk_3">
+    <foreign-key id="73" parent="11" name="WEI_BO_ibfk_3">
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>MyWeibo</RefSchemaName>
       <RefTableName>USERS</RefTableName>
       <RefColNames>USER_ID</RefColNames>
     </foreign-key>
-    <foreign-key id="73" parent="11" name="WEI_BO_ibfk_1">
+    <foreign-key id="74" parent="11" name="WEI_BO_ibfk_1">
       <ColNames>REPOST_ID</ColNames>
       <RefSchemaName>MyWeibo</RefSchemaName>
       <RefTableName>WEI_BO</RefTableName>

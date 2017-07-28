@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.huwl.oracle.myweibo.wrapper.RelationshipMapper" >
+    <cache type="org.mybatis.caches.redis.RedisCache" />
     <insert id="insert" useGeneratedKeys="true" keyProperty="relatId" parameterType="com.huwl.oracle.myweibo.pojo.Relationship">
         insert into RELATIONSHIP VALUES(null
         ,#{star.userId},#{careTime},#{userGroup.groupId})
     </insert>
-    <update id="updateGroup" >
-      update RELATIONSHIP SET GROUP_ID=#{param2}
-      where RELAT_ID=#{param1}
-    </update>
-    <select id="getRelatId" resultType="java.lang.Integer" >
+    <select id="getRelatId" resultType="java.lang.Integer"  useCache="false">
         select RELAT_ID from RELATIONSHIP r
         left JOIN USER_GROUP g on r.GROUP_ID=g.GROUP_ID
         left join USERS u on u.USER_ID=g.USER_ID
         where u.USER_ID=#{param2.userId} and r.STAR_ID=#{param1}
         limit 1
     </select>
+    <delete id="delete" parameterType="java.lang.Integer">
+      delete from RELATIONSHIP where RELAT_ID=#{id}
+    </delete>
 
 </mapper>

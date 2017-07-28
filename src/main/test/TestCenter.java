@@ -17,9 +17,12 @@ public class TestCenter {
 
     public static void main(String[] args){
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-*.xml");
-        RelationshipMapper mapper= (RelationshipMapper) ctx.getBean("relationshipMapper");
-        User user=new User();
-        user.setUserId(33);
-        System.out.print(mapper.getRelatId(72,user));
+        UserGroupMapper userGroupMapper= (UserGroupMapper) ctx.getBean("userGroupMapper");
+        User loginedUser=new User();
+        loginedUser.setUserId(33);
+        User targetUser=new User();
+        targetUser.setUserId(493);
+        System.out.println(userGroupMapper.getGroupIdByBoth(loginedUser,targetUser));
+
     }
 }

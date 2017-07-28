@@ -40,6 +40,16 @@ public class UserGroup  implements Serializable {
 
     private List<Relationship> relationships;
 
+    private boolean isDefault;
+
+    public boolean getIsDefault() {
+        return isDefault;
+    }
+
+    public void setIsDefault(boolean aDefault) {
+        isDefault = aDefault;
+    }
+
     public List<Relationship> getRelationships() {
         return relationships;
     }

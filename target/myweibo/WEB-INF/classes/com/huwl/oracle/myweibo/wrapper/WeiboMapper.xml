@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.huwl.oracle.myweibo.wrapper.WeiboMapper" >
+    <cache type="org.mybatis.caches.redis.RedisCache" />
     <insert id="insert"
             parameterType="com.huwl.oracle.myweibo.pojo.Weibo"
             useGeneratedKeys="true" keyProperty="weiboId">
@@ -39,22 +40,22 @@
         left join LIKES l  on w.WEIBO_ID=l.WEIBO_ID
         left JOIN  USERS lu on l.USER_ID = lu.USER_ID
     </sql>
-    <select id="getWeiboByPage" resultMap="weiboMap">
+    <select id="getWeiboByPage" resultMap="weiboMap"  useCache="false">
         <include refid="weiboRequire"></include>
         where w.USER_ID=#{param2}
         order by w.PUBLISH_TIME
         limit #{param1.offsetInDB},#{param1.pageSize}
     </select>
-    <select id="searchWeiboByStr" resultMap="weiboMap">
+    <select id="searchWeiboByStr" resultMap="weiboMap"  useCache="false">
         <include refid="weiboRequire"></include>
         where w.WEIBO_CONTENT LIKE CONCAT('%',#{param2},'%')
         order by w.PUBLISH_TIME
         limit #{param1.offsetInDB},#{param1.pageSize}
     </select>
-    <select id="getSearchWeiboByStrCount" useCache="true"  resultType="java.lang.Integer">
+    <select id="getSearchWeiboByStrCount" useCache="false"  resultType="java.lang.Integer">
         select count(*) from WEI_BO where WEIBO_CONTENT LIKE CONCAT('%',#{searchStr},'%')
     </select>
-    <select id="getUsersWeiboCount" resultType="java.lang.Integer"
+    <select id="getUsersWeiboCount" resultType="java.lang.Integer"  useCache="false"
             parameterType="com.huwl.oracle.myweibo.pojo.User">
         select count(*) from WEI_BO where USER_ID=#{userId}
     </select>

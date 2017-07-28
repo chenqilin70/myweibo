@@ -28,6 +28,7 @@ $(".addCareBtn").click(function(){
     var $this=$(this);
     $.ajax({
         url:contextPath+"/inner/addCare/"+userid,
+        type:"get",
         error:function(){
             alert("请检查网络");
         },
@@ -35,9 +36,10 @@ $(".addCareBtn").click(function(){
             if(data){
                 var $btn_group=$this.parent().find(".btn-group");
                 var btnClass=$btn_group.attr("class");
-                $btn_group.attr("class",btnClass.replace(/hidden/,"").replace(/ /,""));
+                $btn_group.attr("class",btnClass.replace(/hidden/,""));
                 var thisClass=$this.attr("class");
                 $this.attr("class",thisClass+" hidden");
+                $(".groupsTable").find("input[isdefault='true']").iCheck('check')
                 $("#myModalLabel").text("设置"+nickname+"的分组");
                 $("#groupingBtn").attr("userid",userid);
                 $('#myModal').modal('toggle');
@@ -58,7 +60,7 @@ $("#groupingBtn").click(function(){
     $(("[type='radio']")).each(function(){
         var $this=$(this);
         if($this[0].checked){
-            var groupid=$this.attr("groupid")
+            var groupid=$this.attr("groupid");
             $.ajax({
                 url:contextPath+"/inner/grouping",
                 data:{
@@ -88,6 +90,7 @@ $(".addGroupBtn").click(function(){
     }else{
         $.ajax({
             url:contextPath+"/inner/addGroup",
+            type:"post",
             data:{
                 "groupName":groupName
             },
@@ -106,16 +109,78 @@ $(".addGroupBtn").click(function(){
                     }
                     $groupsTable.find("tr:last").append(
                         "<td  align='left' class='groupNameTd'>" +
-                            "<input type='radio' name='iCheck' id='group"+newGroupId+"'groupid='' checked/>"+
-                            "<label for='group"+newGroupId+"'>groupName</label>"+
+                            "<input type='radio' name='iCheck' id='group"+newGroupId+"'groupid=''/>"+
+                            "<label for='group"+newGroupId+"'>"+groupName+"</label>"+
                         "</td>");
+                    var $newCheck=$groupsTable.find("#group"+newGroupId);
+                    $newCheck.iCheck({
+                        checkboxClass: 'icheckbox_minimal',
+                        radioClass: 'iradio_minimal',
+                        increaseArea: '20%'
+                    });
+                    $newCheck.iCheck('check');
                 }else{
                     alert("请检查网络！")
                 }
             }
         })
     }
-})
+});
+$(".cancelCare").click(function(){
+    var userid=$(this).attr("userid");
+    $.ajax({
+        url:contextPath+"/inner/cancelCare",
+        type:"POST",
+        data:{
+            "userId":userid
+        },
+        error:function(){
+            alert("请检查网络");
+        },
+        success:function(data){
+            if(data=="true"){
+                var $hasCaredBox=$(".hasCaredBox[userid='"+userid+"']");
+                console.log("已关注的:"+$hasCaredBox[0])
+                var $class=$hasCaredBox.attr("class");
+                $hasCaredBox.attr("class",$class+" hidden");
+
+                var $addCareBtn=$(".addCareBtn[userid='"+userid+"']")
+                $addCareBtn.attr("class",$addCareBtn.attr("class").replace(/hidden/g,""));
+                console.log("加关注的class:"+$addCareBtn.attr("class"))
+            }else{
+                alert("请检查网络");
+            }
+        }
+    })
+    return false;
+});
+$(".setGroup").click(function(){
+    var userid=$(this).attr("userid");
+    var nickname=$(this).attr("nickname");
+    $.ajax({
+        url:contextPath+"/inner/getGroupIdByFans",
+        type:"post",
+        data:{
+            "userId":userid
+        },
+        error:function(){
+            alert("请检查网络！")
+        },
+        success:function(data){
+            var groupid = Number(data);
+            if (!isNaN(groupid))
+            {
+                console.log(groupid);
+                $(".groupsTable").find("input[groupid='"+groupid+"']").iCheck('check');
+                $("#myModalLabel").text("设置"+nickname+"的分组");
+                $("#groupingBtn").attr("userid",userid);
+                $('#myModal').modal('toggle');
+            }else{
+                alert("请检查网络！");
+            }
+        }
+    })
+});
 
 
 

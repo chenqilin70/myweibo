@@ -60,7 +60,7 @@ public class SearchController extends BaseController{
         System.out.println("search_user_ajax");
         ModelAndView mv=new ModelAndView("user_search_result");
         searchStr=correctEncoding(searchStr);
-        User loginUser=(User) session.getAttribute("user");
+        User loginUser=getLoginedUser(session);
         mv.addObject("groups",searchBiz.getGroupsByUser(loginUser));
         mv.addObject("pageBean",searchBiz.getSearchUserPageBean(searchStr,pageNo,loginUser));
         mv.addObject("user_search_result"
@@ -70,24 +70,35 @@ public class SearchController extends BaseController{
     @ResponseBody
     @RequestMapping("/addCare/{userid}")
     public boolean addCare(@PathVariable Integer userid,HttpSession session){
-        User loginedUser= (User) session.getAttribute("user");
+        User loginedUser= getLoginedUser(session);
         return searchBiz.addCare(userid,loginedUser);
     }
     @ResponseBody
     @RequestMapping("/grouping")
     public boolean grouping(@RequestParam("groupid") Integer groupid
             ,@RequestParam("userid") Integer userid,HttpSession session){
-        User loginedUser= (User) session.getAttribute("user");
+        User loginedUser= getLoginedUser(session);
         return searchBiz.grouping(groupid,userid,loginedUser);
     }
     @ResponseBody
     @RequestMapping("/addGroup")
     public String addGroup(UserGroup userGroup,HttpSession session){
-//        userGroup.setGroupName(correctEncoding(userGroup.getGroupName()));
-        System.out.println(userGroup.getGroupName());
-        /*User loginedUser= (User) session.getAttribute("user");
-        UserGroup group=searchBiz.addGroup(groupName,loginedUser);
-        return group.getGroupId()+"";*/
-        return null;
+        User loginedUser= getLoginedUser(session);
+        UserGroup group=searchBiz.addGroup(userGroup,loginedUser);
+        return group.getGroupId()+"";
     }
+    @ResponseBody
+    @RequestMapping("/cancelCare")
+    public String cancelCare(User targetUser,HttpSession session){
+        User loginedUser= getLoginedUser(session);
+        return searchBiz.cancelCare(loginedUser,targetUser)+"";
+    }
+    @ResponseBody
+    @RequestMapping("/getGroupIdByFans")
+    public String getGroupIdByFans(HttpSession session,User targetUser){
+        User loginedUser= getLoginedUser(session);
+        return searchBiz.getGroupIdByFans(loginedUser,targetUser);
+    }
+
+
 }

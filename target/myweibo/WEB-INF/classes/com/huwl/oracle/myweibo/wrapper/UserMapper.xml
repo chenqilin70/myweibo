@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.huwl.oracle.myweibo.wrapper.UserMapper" >
-
+    <cache type="org.mybatis.caches.redis.RedisCache" />
     <insert id="insert"  parameterType="com.huwl.oracle.myweibo.pojo.User"
             useGeneratedKeys="true" keyProperty="userId">
         insert into USERS values(
         #{userId},#{nickName},#{password},#{birthday}
         ,#{intro},#{sex},#{address},#{headImg})
     </insert>
-    <select id="existNickname" resultType="int">
+    <select id="existNickname" resultType="int" useCache="false">
         select count(*) from USERS where NICK_NAME=#{nickname}
     </select>
-    <select id="getUserByCondition"
+    <select id="getUserByCondition"  useCache="false"
             resultType="com.huwl.oracle.myweibo.pojo.User" parameterType="com.huwl.oracle.myweibo.pojo.User">
         select * from USERS
         where NICK_NAME=#{nickName} and PASSWORD=#{password}
     </select>
-    <select id="searchIncidentalUserByStr"
+    <select id="searchIncidentalUserByStr"  useCache="false"
             resultType="com.huwl.oracle.myweibo.pojo.User">
         select USER_ID,NICK_NAME,INTRO,HEAD_IMG from USERS
         where NICK_NAME LIKE CONCAT('%',#{searchStr},'%')
@@ -32,19 +32,19 @@
         <result property="headImg" column="HEAD_IMG"></result>
         <result property="isCared" column="IS_CARED"></result>
     </resultMap>
-    <select id="searchUserByStr" resultMap="userBrieftMap">
+    <select id="searchUserByStr"  useCache="false" resultMap="userBrieftMap">
         select u.USER_ID USER_ID,u.NICK_NAME NICK_NAME,u.BIRTHDAY BIRTHDAY,u.INTRO INTRO,u.SEX SEX
-        ,u.ADDRESS ADDRESS,u.HEAD_IMG HEAD_IMG,(g.USER_ID=33) IS_CARED
+        ,u.ADDRESS ADDRESS,u.HEAD_IMG HEAD_IMG,(g.USER_ID=${param3.userId}) IS_CARED
         from USERS u
         left JOIN RELATIONSHIP r on r.STAR_ID=u.USER_ID
         LEFT JOIN USER_GROUP g on g.GROUP_ID=r.GROUP_ID
         where u.NICK_NAME LIKE CONCAT('%',#{param2},'%') and u.USER_ID!=#{param3.userId}
         limit #{param1.offsetInDB},#{param1.pageSize}
     </select>
-    <select id="getSearchUserByStrCount" resultType="java.lang.Integer">
+    <select id="getSearchUserByStrCount"  useCache="false" resultType="java.lang.Integer">
         select count(*) from USERS where NICK_NAME like CONCAT('%',#{param1},'%') and USER_ID!=#{param2.userId}
     </select>
-    <select id="select" resultType="com.huwl.oracle.myweibo.pojo.User">
+    <select id="select"  useCache="false" resultType="com.huwl.oracle.myweibo.pojo.User">
         select * from USERS
         <where>
             <if test="userId!=null">

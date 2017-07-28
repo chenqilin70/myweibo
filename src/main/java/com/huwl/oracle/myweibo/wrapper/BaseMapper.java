@@ -8,4 +8,5 @@ import java.util.List;
 public interface BaseMapper<T> {
     int insert(T o);
     List<T> select(T t);
+    boolean delete(Integer id);
 }

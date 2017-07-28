@@ -52,7 +52,7 @@ public class SearchBiz extends BaseBiz{
 
     public boolean addCare(Integer userid, User loginedUser) {
         UserGroup userGroup=new UserGroup();
-        userGroup.setGroupId(redisCacheMapper.getDefaultGroupId(loginedUser.getUserId()));
+        userGroup.setGroupId(userGroupMapper.getDefaultGroupId(loginedUser.getUserId()));
         loginedUser.setDefaultGroup(userGroup);
         Relationship relationship=new Relationship();
         User star=new User();
@@ -65,20 +65,32 @@ public class SearchBiz extends BaseBiz{
     }
 
     public List getGroupsByUser(User loginUser) {
-        return redisCacheMapper.getGroupsByUser(loginUser);
+        return userGroupMapper.getGroupsByUser(loginUser);
     }
 
     public boolean grouping(Integer groupid, Integer userid, User loginedUser) {
         Integer relatId=relationshipMapper.getRelatId(userid,loginedUser);
-        return relationshipMapper.updateGroup(relatId,groupid);
+        return userGroupMapper.updateGroup(relatId,groupid);
     }
 
-    public UserGroup addGroup(String groupName, User loginedUser) {
-//        UserGroup userGroup=new UserGroup();
-//        userGroup.setUser(loginedUser);
-//        userGroup.setGroupName(groupName);
-//        userGroup
-//        return
-        return null;
+    public UserGroup addGroup(UserGroup group, User loginedUser) {
+        group.setUser(loginedUser);
+        group.setSetUpTime(new Date());
+        group.setIsDefault(false);
+        userGroupMapper.insert(group);
+        return group;
+    }
+
+    public String cancelCare(User loginedUser, User targetUser) {
+        Integer relatId=relationshipMapper.getRelatId(targetUser.getUserId(),loginedUser);
+        if(relatId==null){
+            return false+"";
+        }else{
+            return ""+relationshipMapper.delete(relatId);
+        }
+    }
+
+    public String getGroupIdByFans(User loginedUser, User targetUser) {
+        return ""+userGroupMapper.getGroupIdByBoth(loginedUser,targetUser);
     }
 }

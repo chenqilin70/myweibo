@@ -81,6 +81,7 @@ public class IndexBiz extends BaseBiz{
             userGroup.setGroupName("未分组");
             userGroup.setSetUpTime(new Date());
             userGroup.setUser(user);
+            userGroup.setIsDefault(true);
             userGroupMapper.insert(userGroup);
             return user;
         }

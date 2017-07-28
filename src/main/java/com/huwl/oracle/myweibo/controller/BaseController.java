@@ -1,5 +1,8 @@
 package com.huwl.oracle.myweibo.controller;
 
+import com.huwl.oracle.myweibo.pojo.User;
+
+import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -13,5 +16,8 @@ public class BaseController {
             e.printStackTrace();
             return s;
         }
+    }
+    protected User getLoginedUser(HttpSession session){
+        return (User) session.getAttribute("user");
     }
 }

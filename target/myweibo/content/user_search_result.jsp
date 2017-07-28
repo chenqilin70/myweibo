@@ -12,13 +12,13 @@
              style="background-image: url(<%=request.getContextPath()%>/imgs/head/${user.headImg})"></div>
 
             <c:if test="${user.isCared}">
-                <div class="btn-group">
+                <div class="btn-group hasCaredBox"  userid="${user.userId}">
                     <div class="hasCaredBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         已关注 <span class="caret"></span>
                     </div>
                     <ul class="dropdown-menu">
-                        <li><a href="#">取消关注</a></li>
-                        <li><a href="#">设置分组</a></li>
+                        <li ><a href="#"  class="cancelCare" userid="${user.userId}">取消关注</a></li>
+                        <li><a href="#" class="setGroup"  nickname="${user.nickName}" userid="${user.userId}">设置分组</a></li>
                     </ul>
                 </div>
                 <div class="addCareBtn hidden" userid="${user.userId}" nickname="${user.nickName}">
@@ -27,13 +27,13 @@
                 </div>
             </c:if>
             <c:if test="${!user.isCared}">
-                <div class="btn-group hidden">
+                <div class="btn-group hasCaredBox hidden"  userid="${user.userId}">
                     <div class="hasCaredBtn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         已关注 <span class="caret"></span>
                     </div>
                     <ul class="dropdown-menu">
-                        <li><a href="#">取消关注</a></li>
-                        <li><a href="#">设置分组</a></li>
+                        <li ><a href="#"  class="cancelCare" userid="${user.userId}">取消关注</a></li>
+                        <li><a href="#"  class="setGroup" nickname="${user.nickName}"  userid="${user.userId}">设置分组</a></li>
                     </ul>
                 </div>
                 <div class="addCareBtn" userid="${user.userId}" nickname="${user.nickName}">
@@ -118,12 +118,12 @@
                                     </tr><tr>
                                 </c:if>
                                 <td  align="left" class="groupNameTd">
-                                    <c:if test="${group['GROUP_NAME']=='未分组'}">
-                                        <input type="radio" name="iCheck" id="group${group['GROUP_ID']}"
+                                    <c:if test="${group['IS_DEFAULT']}">
+                                        <input type="radio" name="iCheck" isdefault="true" id="group${group['GROUP_ID']}"
                                                groupid="${group['GROUP_ID']}" checked/>
                                     </c:if>
-                                    <c:if test="${group['GROUP_NAME']!='未分组'}">
-                                        <input type="radio" name="iCheck" id="group${group['GROUP_ID']}"
+                                    <c:if test="${!group['IS_DEFAULT']}">
+                                        <input type="radio" name="iCheck"  isdefault="false" id="group${group['GROUP_ID']}"
                                                groupid="${group['GROUP_ID']}" />
                                     </c:if>
                                     <label for="group${group['GROUP_ID']}">${group['GROUP_NAME']}</label>

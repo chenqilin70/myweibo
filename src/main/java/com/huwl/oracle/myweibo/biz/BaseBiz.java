@@ -21,8 +21,6 @@ public class BaseBiz {
     protected UserGroupMapper userGroupMapper;
     @Autowired
     protected RelationshipMapper relationshipMapper;
-    @Autowired
-    protected RedisCacheMapper redisCacheMapper;
 
     protected String correctEncoding(String s){
         try {
