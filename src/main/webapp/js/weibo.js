@@ -46,3 +46,13 @@ $(".likeLi").click(function(){
     })
     return false;
 });
+$(".commentLi").click(function(){
+    var $weiboid=$(this).attr("weiboid")
+    var ue = UE.getEditor('commentEditor'+$weiboid,{
+        toolbars:[['emotion']],
+        elementPathEnabled:false,
+        maximumWords:140,
+        wordCount:false,
+        initialFrameHeight:50
+    });
+});

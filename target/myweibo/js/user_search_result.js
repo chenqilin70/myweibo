@@ -140,13 +140,11 @@ $(".cancelCare").click(function(){
         success:function(data){
             if(data=="true"){
                 var $hasCaredBox=$(".hasCaredBox[userid='"+userid+"']");
-                console.log("已关注的:"+$hasCaredBox[0])
                 var $class=$hasCaredBox.attr("class");
                 $hasCaredBox.attr("class",$class+" hidden");
 
                 var $addCareBtn=$(".addCareBtn[userid='"+userid+"']")
                 $addCareBtn.attr("class",$addCareBtn.attr("class").replace(/hidden/g,""));
-                console.log("加关注的class:"+$addCareBtn.attr("class"))
             }else{
                 alert("请检查网络");
             }
@@ -175,6 +173,13 @@ $(".setGroup").click(function(){
                 $("#myModalLabel").text("设置"+nickname+"的分组");
                 $("#groupingBtn").attr("userid",userid);
                 $('#myModal').modal('toggle');
+            }else if(groupid==null){
+                alert("您并未添加该用户为好友！");
+                var $hasCaredBox=$(".hasCaredBox[userid='"+userid+"']");
+                var $class=$hasCaredBox.attr("class");
+                $hasCaredBox.attr("class",$class+" hidden");
+                var $addCareBtn=$(".addCareBtn[userid='"+userid+"']")
+                $addCareBtn.attr("class",$addCareBtn.attr("class").replace(/hidden/g,""));
             }else{
                 alert("请检查网络！");
             }

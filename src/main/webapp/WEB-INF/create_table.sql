@@ -32,7 +32,9 @@ COMMENT_ID INT auto_increment primary key,
 COMMENT_CONTENT VARCHAR(255),
 COMMENT_TIME DATETIME,
 USER_ID INT,
-foreign key(USER_ID) references USERS(USER_ID)
+WEIBO_ID INT,
+foreign key(USER_ID) references USERS(USER_ID),
+foreign key(WEIBO_ID) references WEI_BO(WEIBO_ID)
 );
 CREATE TABLE REPLAY(
 REPLAY_ID INT  auto_increment primary key,
@@ -40,8 +42,10 @@ REPLAY_CONTENT VARCHAR(255),
 REPLAY_TIMIE DATETIME,
 TO_USER INT,
 USER_ID INT,
+COMMENT_ID INT,
 foreign key(USER_ID) references USERS(USER_ID),
-foreign key(TO_USER) references USERS(USER_ID)
+foreign key(TO_USER) references USERS(USER_ID),
+foreign key(COMMENT_ID) references COMMENTS(COMMENT_ID)
 );
 CREATE TABLE USER_GROUP(
 GROUP_ID INT  auto_increment primary key,
