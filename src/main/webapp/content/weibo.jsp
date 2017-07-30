@@ -62,7 +62,14 @@
                     <li class="repostLi"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></li>
                 </ul>
             </div>
-            <script id="commentEditor${weibo.weiboId}" name="content" type="text/plain"></script>
+            <div id="commentDiv${weibo.weiboId}" class="commentDiv">
+                <div class="ueditorBox">
+                    <script id="commentEditor${weibo.weiboId}" class="commentEditor" name="content" type="text/plain"></script>
+                </div>
+                <div class="commentBtn" weiboid="${weibo.weiboId}">评论</div>
+            </div>
+
+
             <c:if test="${fn:length(weibo.likes)>0}">
                 <div class="who_like">
                     &nbsp;<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>

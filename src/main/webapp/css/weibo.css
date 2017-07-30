@@ -93,3 +93,25 @@
 .commentBox ul{
     list-style: none;
 }
+.ueditorBox{
+    display: inline-block;
+    width:80%;
+}
+.commentBtn{
+    display: inline-block;
+    width: 15%;
+    background-color: #222222;
+    color: #ffffff;
+    height: 83px;
+    vertical-align: top;
+    border-radius: 5px;
+    font-size: 23px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 83px;
+    cursor: pointer;
+}
+.commentDiv{
+    display: none;
+}
+

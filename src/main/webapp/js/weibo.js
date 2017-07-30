@@ -1,4 +1,4 @@
-var contextPah=$("#contextPath").val();
+var contextPath=$("#contextPath").val();
 var $imgTd=$(".mainImgTd , .smallImgTd");
 var $user_head=$(".user_head");
 window.onresize=function(){
@@ -47,7 +47,7 @@ $(".likeLi").click(function(){
     return false;
 });
 $(".commentLi").click(function(){
-    var $weiboid=$(this).attr("weiboid")
+    var $weiboid=$(this).attr("weiboid");
     var ue = UE.getEditor('commentEditor'+$weiboid,{
         toolbars:[['emotion']],
         elementPathEnabled:false,
@@ -55,4 +55,26 @@ $(".commentLi").click(function(){
         wordCount:false,
         initialFrameHeight:50
     });
+    $(".commentEditor > .edui-editor").css("width","100%");
+    $("#commentDiv"+$weiboid).css("display","block")
 });
+$(".commentBtn").click(function(){
+    var $this=$(this);
+    var weiboid=$this.attr("weiboid");
+    var content=UE.getEditor('commentEditor'+weiboid).getContent();
+    console.log(content)
+    $.ajax({
+        url:contextPath+"/inner/addComment",
+        type:"post",
+        data:{
+            "content":content
+        },
+        error:function(){
+            alert("请检查网络！")
+        },
+        success:function(data){
+            alert(data)
+        }
+    });
+
+})

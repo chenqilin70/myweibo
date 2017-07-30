@@ -6,22 +6,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6fa0bb-6ef4-4979-8378-971ecd336dd0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/pojo/Comment.class" afterPath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/pojo/Comment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/pojo/Replay.class" afterPath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/pojo/Replay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/pojo/Comment.class" afterPath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/pojo/Comment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/pojo/Replay.class" afterPath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/pojo/Replay.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/imgs/btn.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Comment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Replay.java" afterPath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Replay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/create_table.sql" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/create_table.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/content/search.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/content/search.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/content/weibo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/content/weibo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/user_search_result.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/user_search_result.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/weibo.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/weibo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/ueditor/ueditor.all.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/ueditor/ueditor.all.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/weibo.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/weibo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/WEB-INF/create_table.sql" afterPath="$PROJECT_DIR$/target/myweibo/WEB-INF/create_table.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/content/search.jsp" afterPath="$PROJECT_DIR$/target/myweibo/content/search.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/content/weibo.jsp" afterPath="$PROJECT_DIR$/target/myweibo/content/weibo.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/js/user_search_result.js" afterPath="$PROJECT_DIR$/target/myweibo/js/user_search_result.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/css/weibo.css" afterPath="$PROJECT_DIR$/target/myweibo/css/weibo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/js/ueditor/ueditor.all.js" afterPath="$PROJECT_DIR$/target/myweibo/js/ueditor/ueditor.all.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/js/weibo.js" afterPath="$PROJECT_DIR$/target/myweibo/js/weibo.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -90,8 +83,8 @@
       <file leaf-file-name="weibo.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/content/weibo.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="61" column="75" lean-forward="false" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+            <state relative-caret-position="147">
+              <caret line="68" column="47" lean-forward="false" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -100,8 +93,8 @@
       <file leaf-file-name="search.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/content/search.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2278">
-              <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
+            <state relative-caret-position="-800">
+              <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -110,8 +103,8 @@
       <file leaf-file-name="weibo.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/weibo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -120,8 +113,8 @@
       <file leaf-file-name="weibo.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/weibo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="567">
+              <caret line="115" column="1" lean-forward="true" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -144,14 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ISO-</find>
-      <find>u</find>
-      <find>user</find>
-      <find>use</find>
-      <find>useG</find>
-      <find>useGe</find>
-      <find>useGen</find>
-      <find>useGener</find>
       <find>useGenera</find>
       <find>useGenerat</find>
       <find>useGenerate</find>
@@ -174,6 +159,14 @@
       <find>myModal</find>
       <find>container</find>
       <find>commentLi</find>
+      <find>16px</find>
+      <find>fontsize</find>
+      <find>comment</find>
+      <find>hidden</find>
+      <find>hi</find>
+      <find>commentBtn</find>
+      <find>getContent</find>
+      <find>Editor</find>
     </findStrings>
     <replaceStrings>
       <replace>|&amp;nbsp;</replace>
@@ -206,8 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/UserCenterBiz.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/UserCenterController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/content/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/user_center.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/User.java" />
@@ -255,6 +246,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Replay.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/content/search.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/ueditor/ueditor.all.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/weibo.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/content/weibo.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/weibo.js" />
       </list>
@@ -367,7 +360,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -730,6 +722,7 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -746,20 +739,20 @@
     <property name="SearchEverywhereHistoryKey" value="redisCache&#9;FILE&#9;file://D:/WorkFile/GitRepository/myweibo/src/main/java/com/huwl/oracle/myweibo/util/MybatisRedisCache.java&#10;UserDaoIm&#9;FILE&#9;file://D:/WorkFile/GitRepository/myweibo/src/main/java/com/huwl/oracle/myweibo/daoimpl/UserDaoImpl.java" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\css" />
-      <recent name="D:\WorkFile\GitRepository\myweibo\src\main\resources" />
-      <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\content" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\js" />
       <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\imgs" />
+      <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\js" />
       <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\css" />
       <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\imgs\test" />
       <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\js\ueditor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\css" />
+      <recent name="D:\WorkFile\GitRepository\myweibo\src\main\resources" />
+      <recent name="D:\WorkFile\GitRepository\myweibo\src\main\webapp\content" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1548,7 +1541,8 @@
       <workItem from="1501025769741" duration="29244000" />
       <workItem from="1501112505975" duration="31329000" />
       <workItem from="1501198460602" duration="23746000" />
-      <workItem from="1501290471202" duration="5887000" />
+      <workItem from="1501290471202" duration="6798000" />
+      <workItem from="1501374380036" duration="8652000" />
     </task>
     <servers />
   </component>
@@ -1573,7 +1567,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367390000" />
+    <option name="totallyTimeSpent" value="376953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1608,10 +1602,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13340564" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37852496" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19189766" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19189766" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -1649,7 +1643,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13340564" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29826465" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38069415" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1703,34 +1697,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="67" column="17" lean-forward="true" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
-          <caret line="15" column="41" lean-forward="false" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/util/MybatisRedisCache.java" />
-    <entry file="dbDummy://dbtable:/cda65553/8eb0f850-ff95-4491-9cea-24cec99a327d/MyWeibo.RELATIONSHIP">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/cda65553/8eb0f850-ff95-4491-9cea-24cec99a327d/MyWeibo.USERS">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1769,15 +1735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4640">
-          <caret line="145" column="19" lean-forward="false" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1792,7 +1749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1857,7 +1813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1865,11 +1820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="564">
           <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#551#552#0" expanded="false" />
-            <element signature="e#609#610#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1917,7 +1867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1963,9 +1912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="23" column="34" lean-forward="false" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2002,9 +1948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2012,9 +1955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="14" column="57" lean-forward="false" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2022,10 +1962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2432">
           <caret line="84" column="29" lean-forward="false" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
-          <folding>
-            <element signature="e#2417#2418#0" expanded="false" />
-            <element signature="e#2482#2483#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2033,9 +1969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2080">
           <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2043,22 +1976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="19" column="59" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user_search_result.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="142" column="53" lean-forward="false" selection-start-line="142" selection-start-column="53" selection-end-line="142" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/weibo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2072,7 +1989,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2080,7 +1996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2088,12 +2003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="512">
           <caret line="44" column="26" lean-forward="false" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
-          <folding>
-            <element signature="e#1190#1191#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
-            <element signature="e#1293#1294#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2101,7 +2010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2109,12 +2017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
-          <folding>
-            <element signature="e#1409#1410#0" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1486#1487#0" expanded="true" />
-            <element signature="e#1524#1525#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2126,26 +2028,121 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ueditor/ueditor.all.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="28342" column="91" lean-forward="true" selection-start-line="28342" selection-start-column="91" selection-end-line="28342" selection-end-column="91" />
+          <folding>
+            <marker date="1501375893979" expanded="true" signature="354654:354667" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="359197:359214" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="364535:364553" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="458430:458456" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="604769:604899" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="825611:825706" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="862457:862533" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="874692:874710" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="874757:874799" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="874884:874914" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="893300:893372" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="903263:903289" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="903485:903576" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="903833:903908" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="904095:904110" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="904330:904382" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="916304:916393" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="980602:980674" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="999684:999696" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="1001928:1001952" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="1027021:1027027" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1027027:1027033" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1027137:1027143" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1027143:1027149" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1027253:1027259" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1027259:1027265" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1029434:1029440" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1029440:1029446" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1030413:1030419" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1030419:1030425" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1030565:1030571" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1030571:1030577" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1030719:1030725" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1030725:1030731" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1030875:1030881" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1030881:1030887" ph="&amp;nbsp;" />
+            <marker date="1501375893979" expanded="true" signature="1031697:1031708" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="1035645:1035658" ph="..." />
+            <marker date="1501375893979" expanded="true" signature="1036035:1036071" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ueditor/ueditor.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user_search_result.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-672">
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ueditor/themes/default/images/icons.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="148" column="20" lean-forward="false" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/weibo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="115" column="1" lean-forward="true" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="208" column="70" lean-forward="false" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/content/weibo.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="61" column="75" lean-forward="false" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+        <state relative-caret-position="147">
+          <caret line="68" column="47" lean-forward="false" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/content/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2278">
-          <caret line="124" column="6" lean-forward="false" selection-start-line="124" selection-start-column="6" selection-end-line="124" selection-end-column="6" />
+        <state relative-caret-position="-800">
+          <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/weibo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="70" column="10" lean-forward="false" selection-start-line="70" selection-start-column="10" selection-end-line="70" selection-end-column="10" />
           <folding />
         </state>
       </provider>
