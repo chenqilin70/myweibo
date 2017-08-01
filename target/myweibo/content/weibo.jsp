@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"  isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <input type="hidden" id="pageBean" value="${pageBean}"/>
 <c:forEach items="${weibo_search_result}" var="weibo">
     <div class="weiboBox" weiboid="${weibo.weiboId}">
@@ -85,18 +86,14 @@
 
             <div class="commentBox">
                 <ul>
-                    <li>张三：********************
-                        <ul>
-                            <li>李四回复张三：********************</li>
-                            <li>王五回复李四：********************</li>
-                        </ul>
-                    </li>
-                    <li>张三：********************
-                        <ul>
-                            <li>李四回复张三：********************</li>
-                            <li>王五回复李四：********************</li>
-                        </ul>
-                    </li>
+                    <c:forEach items="${weibo.comments}" var="comment">
+                        <li>
+                            <a class="user_name">${comment.user.nickName}</a>
+                            :${comment.commentContent}
+                            <span class="commentTimeSpan">(<fmt:formatDate value="${comment.commentTime}" pattern="yyyy-MM-dd HH:mm:ss"/>)</span>
+                        <hr class="commentHr">
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
         </div>

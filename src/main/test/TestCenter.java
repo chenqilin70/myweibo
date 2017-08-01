@@ -1,4 +1,6 @@
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.huwl.oracle.myweibo.biz.SearchBiz;
 import com.huwl.oracle.myweibo.pojo.*;
 import com.huwl.oracle.myweibo.wrapper.*;
@@ -15,14 +17,12 @@ import java.util.*;
  */
 public class TestCenter {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws JsonProcessingException {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-*.xml");
-        UserGroupMapper userGroupMapper= (UserGroupMapper) ctx.getBean("userGroupMapper");
-        User loginedUser=new User();
-        loginedUser.setUserId(33);
-        User targetUser=new User();
-        targetUser.setUserId(493);
-        System.out.println(userGroupMapper.getGroupIdByBoth(loginedUser,targetUser));
+        SearchBiz biz= (SearchBiz) ctx.getBean("searchBiz");
+        ObjectMapper objectMapper=new ObjectMapper();
+        List<Weibo> list=biz.searchWeiboByStr(1,"测试");
+        System.out.println(list.size());
 
     }
 }

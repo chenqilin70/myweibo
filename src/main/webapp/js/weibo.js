@@ -67,13 +67,19 @@ $(".commentBtn").click(function(){
         url:contextPath+"/inner/addComment",
         type:"post",
         data:{
-            "content":content
+            "commentContent":content,
+            "weibo.weiboId":weiboid
         },
         error:function(){
             alert("请检查网络！")
         },
         success:function(data){
-            alert(data)
+            if(data=="null"){
+                alert("请检查网络！")
+            }else{
+                var commentJson=JSON.parse(data);
+                console.log(commentJson);
+            }
         }
     });
 

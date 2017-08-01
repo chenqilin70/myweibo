@@ -21,6 +21,8 @@ public class BaseBiz {
     protected UserGroupMapper userGroupMapper;
     @Autowired
     protected RelationshipMapper relationshipMapper;
+    @Autowired
+    protected CommentMapper commentMapper;
 
     protected String correctEncoding(String s){
         try {

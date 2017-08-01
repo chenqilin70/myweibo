@@ -92,6 +92,7 @@
 }
 .commentBox ul{
     list-style: none;
+    padding-left: 15px;
 }
 .ueditorBox{
     display: inline-block;
@@ -114,4 +115,8 @@
 .commentDiv{
     display: none;
 }
+.commentTimeSpan{
+    color: #BBBBBB;
+}
+
 

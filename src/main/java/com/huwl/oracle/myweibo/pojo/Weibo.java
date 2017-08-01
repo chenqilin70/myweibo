@@ -64,7 +64,14 @@ public class Weibo  implements Serializable {
 
     private String pics;
     private List<Like> likes;
+    private List<Comment> comments;
 
+    public List<Comment> getComments() {
+        return comments;
+    }
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
     public List<Like> getLikes() {
         return likes;
     }

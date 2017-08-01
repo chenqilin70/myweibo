@@ -28,6 +28,16 @@
                 <result property="nickName" column="LU_NICKNAME"></result>
             </association>
         </collection>
+        <collection property="comments" javaType="java.util.ArrayList"
+                    ofType="com.huwl.oracle.myweibo.pojo.Comment">
+            <id property="commentId" column="COMMENT_ID"></id>
+            <result property="commentContent" column="COMMENT_CONTENT"></result>
+            <result property="commentTime" column="COMMENT_TIME"></result>
+            <association property="user" javaType="com.huwl.oracle.myweibo.pojo.User">
+                <id property="userId" column="COMMENT_USER_ID"></id>
+                <result property="nickName" column="COMMENT_USER_NICKNAME"></result>
+            </association>
+        </collection>
     </resultMap>
     <sql id="weiboRequire">
         select w.WEIBO_ID as WEIBO_ID  ,w.WEIBO_CONTENT as WEIBO_CONTENT
@@ -36,9 +46,14 @@
         ,u.USER_ID as USER_ID,u.NICK_NAME as NICK_NAME
         ,l.LIKE_ID as LIKE_ID
         ,lu.USER_ID as LU_USER_ID,lu.NICK_NAME LU_NICKNAME
-        from WEI_BO w left join USERS u on w.USER_ID=u.USER_ID
-        left join LIKES l  on w.WEIBO_ID=l.WEIBO_ID
-        left JOIN  USERS lu on l.USER_ID = lu.USER_ID
+        ,c.COMMENT_ID as COMMENT_ID , c.COMMENT_CONTENT as COMMENT_CONTENT
+        ,c.COMMENT_TIME COMMENT_TIME, c.USER_ID as COMMENT_USER_ID,cu.NICK_NAME as COMMENT_USER_NICKNAME
+        from WEI_BO w
+        LEFT JOIN COMMENTS c on c.WEIBO_ID=w.WEIBO_ID
+        LEFT JOIN USERS cu on c.USER_ID=cu.USER_ID
+        LEFT join USERS u on w.USER_ID=u.USER_ID
+        LEFT JOIN LIKES l  on w.WEIBO_ID=l.WEIBO_ID
+        LEFT JOIN  USERS lu on l.USER_ID = lu.USER_ID
     </sql>
     <select id="getWeiboByPage" resultMap="weiboMap"  useCache="false">
         <include refid="weiboRequire"></include>

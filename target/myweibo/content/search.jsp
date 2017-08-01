@@ -132,7 +132,7 @@
 <script src="<%=request.getContextPath()%>/js/jquery.z-pager.js"></script>
 <script src="<%=request.getContextPath()%>/js/head.js"></script>
 <script src="<%=request.getContextPath()%>/js/search.js"></script>
-<script src="<%=request.getContextPath()%>/js/weibo.js"></script>
+<%--<script src="<%=request.getContextPath()%>/js/weibo.js"></script>--%>
 
 </body>
 </html>
