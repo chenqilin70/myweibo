@@ -25,7 +25,6 @@ public class SearchController extends BaseController{
 
     @RequestMapping("/search/{searchStr}")
     public ModelAndView search_weibo(@PathVariable(value = "searchStr") String searchStr){
-        System.out.println("search_weibo"+searchStr);
         searchStr=correctEncoding(searchStr);
         ModelAndView mv=new ModelAndView("search");
 
@@ -38,7 +37,6 @@ public class SearchController extends BaseController{
     @RequestMapping("/search")
     public ModelAndView search_weibo_ajax(@RequestParam("searchStr") String searchStr
             ,@RequestParam("page") Integer pageNo){
-        System.out.println("search_weibo_ajax"+searchStr+pageNo);
         ModelAndView mv=new ModelAndView("weibo");
         searchStr=correctEncoding(searchStr);
         mv.addObject("pageBean",searchBiz.getSearchWeiboPageBean(searchStr,pageNo));

@@ -5,13 +5,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.huwl.oracle.myweibo.biz.WeiboBiz;
 import com.huwl.oracle.myweibo.pojo.Comment;
 import com.huwl.oracle.myweibo.pojo.Weibo;
+import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 @Controller("weiboController")
 @RequestMapping("/inner")
@@ -21,8 +24,7 @@ public class WeiboController extends BaseController {
     @Autowired
     private ObjectMapper objectMapper;
     @RequestMapping("/addComment")
-    @ResponseBody
-    public String addComment(Comment comment, HttpSession session){
+    public void addComment(Comment comment, HttpSession session, HttpServletResponse response){
         String result="";
         comment.setCommentContent(comment.getCommentContent()
                 .replaceAll("<p>","").replaceAll("</p>",""));
@@ -32,7 +34,12 @@ public class WeiboController extends BaseController {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return result;
+        System.out.println(result);
+        try {
+            response.getWriter().print(result);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
 

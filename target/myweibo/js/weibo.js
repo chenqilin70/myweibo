@@ -62,7 +62,6 @@ $(".commentBtn").click(function(){
     var $this=$(this);
     var weiboid=$this.attr("weiboid");
     var content=UE.getEditor('commentEditor'+weiboid).getContent();
-    console.log(content)
     $.ajax({
         url:contextPath+"/inner/addComment",
         type:"post",
@@ -78,7 +77,17 @@ $(".commentBtn").click(function(){
                 alert("请检查网络！")
             }else{
                 var commentJson=JSON.parse(data);
-                console.log(commentJson);
+                console.log(data);
+                console.log(commentJson)
+                $(".commentBox ul").append(
+                    "<li>" +
+                        "<a class='user_name'>" +
+                            commentJson.user.nickName +
+                        "</a>" +
+                        ":"+commentJson.commentContent +
+                        "<span class='commentTimeSpan'>(<fmt:formatDate value='${comment.commentTime}' pattern='yyyy-MM-dd HH:mm:ss'/>)</span>"+
+                        "<hr class='commentHr'>" +
+                    "</li>")
             }
         }
     });
