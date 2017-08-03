@@ -2,6 +2,7 @@ package com.huwl.oracle.myweibo.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class Comment implements Serializable{
     private static final long serialVersionUID = -7898194272883238670L;
@@ -37,6 +38,15 @@ public class Comment implements Serializable{
      */
     private User user;
     private Weibo weibo;
+    private List<Replay> replays;
+
+    public List<Replay> getReplays() {
+        return replays;
+    }
+
+    public void setReplays(List<Replay> replays) {
+        this.replays = replays;
+    }
 
     public Weibo getWeibo() {
         return weibo;

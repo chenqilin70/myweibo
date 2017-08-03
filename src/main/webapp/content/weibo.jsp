@@ -87,11 +87,22 @@
             <div class="commentBox">
                 <ul>
                     <c:forEach items="${weibo.comments}" var="comment">
-                        <li>
+                        <li id="commentLi${comment.commentId}">
                             <a class="user_name">${comment.user.nickName}</a>
                             :<span class="targetcontent">${comment.commentContent}</span>
                             <span class="commentTimeSpan">(<fmt:formatDate value="${comment.commentTime}" pattern="yyyy-MM-dd HH:mm:ss"/>)</span>
                             <a class="replyLink" nickname="${comment.user.nickName}" touserid="${comment.user.userId}" commentid="${comment.commentId}">回复</a>
+
+                            <ul class="replyUl">
+                                <c:forEach items="${comment.replays}" var="replay">
+                                    <li>
+                                        <a class="user_name">${replay.user.nickName}</a>:@
+                                        <a class="user_name">${replay.toUser.nickName}</a>&nbsp;&nbsp;
+                                        ${replay.replayContent}
+                                        <a class="replyLink" nickname="${replay.user.nickName}" touserid="${replay.user.userId}" commentid="${comment.commentId}">回复</a>
+                                    </li>
+                                </c:forEach>
+                            </ul>
                             <hr class="commentHr">
                         </li>
                     </c:forEach>

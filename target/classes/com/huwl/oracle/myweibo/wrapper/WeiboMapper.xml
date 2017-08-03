@@ -37,6 +37,20 @@
                 <id property="userId" column="COMMENT_USER_ID"></id>
                 <result property="nickName" column="COMMENT_USER_NICKNAME"></result>
             </association>
+            <collection property="replays" javaType="java.util.ArrayList"
+                        ofType="com.huwl.oracle.myweibo.pojo.Replay">
+                <id property="replayId" column="REPLAY_ID"></id>
+                <result property="replayContent" column="REPLAY_CONTENT"></result>
+                <result property="replayTimie" column="REPLAY_TIMIE"></result>
+                <association property="user" javaType="com.huwl.oracle.myweibo.pojo.User">
+                    <id column="REPLAY_USER_ID" property="userId"></id>
+                    <result property="nickName" column="REPLAY_USER_NICKNAME"></result>
+                </association>
+                <association property="toUser" javaType="com.huwl.oracle.myweibo.pojo.User">
+                    <id  property="userId" column="REPLAY_TO_USER_ID"></id>
+                    <result property="nickName" column="REPLAY_TO_USER_NICKNAME"></result>
+                </association>
+            </collection>
         </collection>
     </resultMap>
     <sql id="weiboRequire">
@@ -48,12 +62,19 @@
         ,lu.USER_ID as LU_USER_ID,lu.NICK_NAME LU_NICKNAME
         ,c.COMMENT_ID as COMMENT_ID , c.COMMENT_CONTENT as COMMENT_CONTENT
         ,c.COMMENT_TIME COMMENT_TIME, c.USER_ID as COMMENT_USER_ID,cu.NICK_NAME as COMMENT_USER_NICKNAME
+        ,r.REPLAY_ID as REPLAY_ID,r.REPLAY_CONTENT as REPLAY_CONTENT,r.USER_ID as REPLAY_USER_ID
+        ,r.REPLAY_TIMIE as REPLAY_TIMIE ,r.TO_USER as REPLAY_TO_USER_ID
+        ,ru.NICK_NAME as REPLAY_USER_NICKNAME
+        ,r2u.NICK_NAME as REPLAY_TO_USER_NICKNAME
         from WEI_BO w
         LEFT JOIN COMMENTS c on c.WEIBO_ID=w.WEIBO_ID
         LEFT JOIN USERS cu on c.USER_ID=cu.USER_ID
         LEFT join USERS u on w.USER_ID=u.USER_ID
         LEFT JOIN LIKES l  on w.WEIBO_ID=l.WEIBO_ID
         LEFT JOIN  USERS lu on l.USER_ID = lu.USER_ID
+        LEFT JOIN REPLAY r on r.COMMENT_ID=c.COMMENT_ID
+        LEFT JOIN USERS ru on ru.USER_ID=r.USER_ID
+        LEFT JOIN USERS r2u on r2u.USER_ID=r.TO_USER
     </sql>
     <select id="getWeiboByPage" resultMap="weiboMap"  useCache="false">
         <include refid="weiboRequire"></include>

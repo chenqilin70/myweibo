@@ -119,13 +119,16 @@ $(".replyLink").click(function(){
     var $this=$(this);
     $replyModal.find(".replyTargetNickname").text($this.attr("nickname"));
     $replyModal.find(".targetContent").html($this.parent().find(".targetcontent").html());
-    $replyModal.find(".publishReply").attr("touserid",$this.attr("touserid")).attr("commentid",$this.attr("commentid"));
+    $replyModal.find(".publishReply").attr("touserid",$this.attr("touserid"))
+                    .attr("commentid",$this.attr("commentid")).attr("tousernickname",$this.attr("nickname"));
     $replyModal.modal('show');
 });
 $(".publishReply").click(function(){
     var replyContent=replyEditor.getContent();
     var touserid=$(this).attr("touserid")
+    var tousernickname=$(this).attr("tousernickname")
     var commentId=$(this).attr("commentid");
+    var $commentLi=$("#commentLi"+commentId);
     $.ajax({
         url:contextPath+"/inner/addReply",
         type:"post",
@@ -139,7 +142,14 @@ $(".publishReply").click(function(){
             alert("请检查网络！")
         },
         success:function(data){
-
+            console.log(data)
+            $commentLi.find(".replyUl").append(
+                "<li>" +
+                    "<a class='user_name'>"+data.user.nickName+"</a>:@" +
+                    "<a class='user_name'>"+tousernickname+"</a>&nbsp;&nbsp;" +
+                    data.replayContent+"<a class='replyLink' nickname='"+data.user.nickName+"' touserid='"+data.user.userId+"' commentid='"+commentId+"'>回复</a>" +
+                "</li>"
+            );
             $replyModal.modal('hide')
         }
     })

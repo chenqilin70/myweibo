@@ -22,7 +22,7 @@ public class TestCenter {
         SearchBiz biz= (SearchBiz) ctx.getBean("searchBiz");
         ObjectMapper objectMapper=new ObjectMapper();
         List<Weibo> list=biz.searchWeiboByStr(1,"测试");
-        System.out.println(list.size());
+        System.out.println(objectMapper.writeValueAsString(list.get(0)));
 
     }
 }

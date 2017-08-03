@@ -19,6 +19,7 @@ public class WeiboBiz extends BaseBiz {
     public void addReply(Replay replay,User loginedUser) {
         replay.setReplayTimie(new Date());
         replay.setUser(loginedUser);
+        replay.setReplayContent(replay.getReplayContent().replaceAll("<p>","").replaceAll("</p>",""));
         replayMapper.insert(replay);
     }
 }
