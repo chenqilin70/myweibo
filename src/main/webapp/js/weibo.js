@@ -58,6 +58,30 @@ $(".commentLi").click(function(){
     $(".commentEditor > .edui-editor").css("width","100%");
     $("#commentDiv"+$weiboid).css("display","block")
 });
+var replyEditor = UE.getEditor('replyEditor',{
+    toolbars:[['emotion']],
+    elementPathEnabled:false,
+    maximumWords:140,
+    wordCount:false,
+    initialFrameHeight:50
+});
+replyEditor.ready(function(){
+    $(".replyEditor > .edui-editor").css("width","100%");
+    var $emjBtn=$("div[class='edui-box edui-icon edui-default']");
+    $emjBtn.click(function(){
+        var $edui_fixedlayer=$("#edui_fixedlayer");
+        var t1;
+        t1=window.setInterval(function(){
+            var zIndex=$edui_fixedlayer.css("z-index");
+            console.log(zIndex)
+            if(zIndex=='1008'){
+                $edui_fixedlayer.css("z-index","1500");
+                window.clearInterval(t1);
+            }
+        },100);
+    })
+})
+
 $(".commentBtn").click(function(){
     var $this=$(this);
     var weiboid=$this.attr("weiboid");
@@ -77,8 +101,6 @@ $(".commentBtn").click(function(){
                 alert("请检查网络！")
             }else{
                 var commentJson=JSON.parse(data);
-                console.log(data);
-                console.log(commentJson)
                 $(".commentBox ul").append(
                     "<li>" +
                         "<a class='user_name'>" +
@@ -91,5 +113,34 @@ $(".commentBtn").click(function(){
             }
         }
     });
+});
+var $replyModal=$("#replyModal")
+$(".replyLink").click(function(){
+    var $this=$(this);
+    $replyModal.find(".replyTargetNickname").text($this.attr("nickname"));
+    $replyModal.find(".targetContent").html($this.parent().find(".targetcontent").html());
+    $replyModal.find(".publishReply").attr("touserid",$this.attr("touserid")).attr("commentid",$this.attr("commentid"));
+    $replyModal.modal('show');
+});
+$(".publishReply").click(function(){
+    var replyContent=replyEditor.getContent();
+    var touserid=$(this).attr("touserid")
+    var commentId=$(this).attr("commentid");
+    $.ajax({
+        url:contextPath+"/inner/addReply",
+        type:"post",
+        dataType:"json",
+        data:{
+            "replayContent":replyContent,
+            "toUser.userId":touserid,
+            "comment.commentId":commentId
+        },
+        error:function(){
+            alert("请检查网络！")
+        },
+        success:function(data){
 
-})
+            $replyModal.modal('hide')
+        }
+    })
+});

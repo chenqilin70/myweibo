@@ -1,6 +1,7 @@
 package com.huwl.oracle.myweibo.biz;
 
 import com.huwl.oracle.myweibo.pojo.Comment;
+import com.huwl.oracle.myweibo.pojo.Replay;
 import com.huwl.oracle.myweibo.pojo.User;
 import org.springframework.stereotype.Service;
 
@@ -13,5 +14,11 @@ public class WeiboBiz extends BaseBiz {
         comment.setCommentTime(new Date());
         comment.setUser(user);
         commentMapper.insert(comment);
+    }
+
+    public void addReply(Replay replay,User loginedUser) {
+        replay.setReplayTimie(new Date());
+        replay.setUser(loginedUser);
+        replayMapper.insert(replay);
     }
 }

@@ -89,9 +89,10 @@
                     <c:forEach items="${weibo.comments}" var="comment">
                         <li>
                             <a class="user_name">${comment.user.nickName}</a>
-                            :${comment.commentContent}
+                            :<span class="targetcontent">${comment.commentContent}</span>
                             <span class="commentTimeSpan">(<fmt:formatDate value="${comment.commentTime}" pattern="yyyy-MM-dd HH:mm:ss"/>)</span>
-                        <hr class="commentHr">
+                            <a class="replyLink" nickname="${comment.user.nickName}" touserid="${comment.user.userId}" commentid="${comment.commentId}">回复</a>
+                            <hr class="commentHr">
                         </li>
                     </c:forEach>
                 </ul>
@@ -100,3 +101,25 @@
     </div>
     <hr/>
 </c:forEach>
+<!-- Modal -->
+<div class="modal fade" id="replyModal" tabindex="-1" role="dialog" aria-labelledby="replyModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header replyModalHeader">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+            </div>
+            <div class="modal-body replyModalBody">
+                <h4 class="modal-title" id="replyModalLabel">
+                    回复<span class="replyTargetNickname"></span>的评论
+                </h4>
+                <div class="targetContent"></div>
+                <script id="replyEditor" class="replyEditor" name="content" type="text/plain"></script>
+            </div>
+            <div class="modal-footer replyModalFooter">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary publishReply">回复</button>
+            </div>
+        </div>
+    </div>
+</div>

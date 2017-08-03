@@ -23,6 +23,8 @@ public class BaseBiz {
     protected RelationshipMapper relationshipMapper;
     @Autowired
     protected CommentMapper commentMapper;
+    @Autowired
+    protected ReplayMapper replayMapper;
 
     protected String correctEncoding(String s){
         try {

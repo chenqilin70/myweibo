@@ -27,6 +27,15 @@
     color:#5CB85C;
     text-decoration: underline;
 }
+.replyLink{
+    font-size: 14px;
+    color:#5CB85C;
+    cursor: pointer;
+}
+.replyLink:hover{
+    color:#5CB85C;
+    text-decoration: underline;
+}
 .weibo_img_table{
     width: 100%;
     height: 100px;
@@ -118,5 +127,28 @@
 .commentTimeSpan{
     color: #BBBBBB;
 }
+.commentHr{
+    margin-top:5px;
+    margin-bottom: 5px;
+    border-color: #ffffff;
+}
+.replyModalFooter{
+    border-top:none;
+}
+.replyModalHeader{
+    border-bottom:none;
+}
+.targetContent{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.replyModalHeader{
+    height: 0;
+}
+.replyModalBody{
+    padding-top:0;
+}
+
+
 
 

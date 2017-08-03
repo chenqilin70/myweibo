@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.huwl.oracle.myweibo.biz.WeiboBiz;
 import com.huwl.oracle.myweibo.pojo.Comment;
+import com.huwl.oracle.myweibo.pojo.Replay;
 import com.huwl.oracle.myweibo.pojo.Weibo;
 import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,16 @@ public class WeiboController extends BaseController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @RequestMapping("/addReply")
+    public void addReply(Replay replay,HttpServletResponse response,HttpSession session){
+        weiboBiz.addReply(replay,getLoginedUser(session));
+        try {
+            response.getWriter().print(objectMapper.writeValueAsString(replay));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
 

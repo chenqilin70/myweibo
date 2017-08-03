@@ -11,5 +11,15 @@
       <user-name>MyWeibo</user-name>
       <introspection-schemas>*:MyWeibo</introspection-schemas>
     </data-source>
+    <data-source name="TestMybatis@120.24.244.103" uuid="1c58b4fc-79c9-4c34-a724-387a82773714">
+      <database-info product="MySQL" version="5.5.37-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>kylin</user-name>
+      <introspection-schemas>*:TestMybatis</introspection-schemas>
+    </data-source>
   </component>
 </project>

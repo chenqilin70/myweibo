@@ -6,22 +6,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6fa0bb-6ef4-4979-8378-971ecd336dd0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/Interceptor/EncodingInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/Interceptor/EncodingInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/controller/SearchController.class" afterPath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/controller/SearchController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/controller/WeiboController.class" afterPath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/controller/WeiboController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/Interceptor/EncodingInterceptor.class" afterPath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/Interceptor/EncodingInterceptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/controller/SearchController.class" afterPath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/controller/SearchController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/controller/WeiboController.class" afterPath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/controller/WeiboController.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/controller/WeiboController.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/ssm.log" afterPath="$PROJECT_DIR$/logs/ssm.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/Interceptor/EncodingInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/Interceptor/EncodingInterceptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/SearchController.java" afterPath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/SearchController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/BaseBiz.java" afterPath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/BaseBiz.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/WeiboBiz.java" afterPath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/WeiboBiz.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/WeiboController.java" afterPath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/WeiboController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/springmvc-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/ReplayMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/ReplayMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/ReplayMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/ReplayMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/content/weibo.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/content/weibo.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/weibo.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/weibo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/ueditor/themes/default/css/ueditor.css" afterPath="$PROJECT_DIR$/src/main/webapp/js/ueditor/themes/default/css/ueditor.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/weibo.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/weibo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/WEB-INF/springmvc-servlet.xml" afterPath="$PROJECT_DIR$/target/myweibo/WEB-INF/springmvc-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml" afterPath="$PROJECT_DIR$/target/classes/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml" afterPath="$PROJECT_DIR$/target/myweibo/WEB-INF/classes/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/content/weibo.jsp" afterPath="$PROJECT_DIR$/target/myweibo/content/weibo.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/css/weibo.css" afterPath="$PROJECT_DIR$/target/myweibo/css/weibo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/js/ueditor/themes/default/css/ueditor.css" afterPath="$PROJECT_DIR$/target/myweibo/js/ueditor/themes/default/css/ueditor.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/myweibo/js/weibo.js" afterPath="$PROJECT_DIR$/target/myweibo/js/weibo.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,6 +45,48 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="TestMybatis@120.24.244.103" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="TestMybatis@120.24.244.103" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="TestMybatis" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="TestMybatis@120.24.244.103" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="TestMybatis" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+    </PATH>
     <PATH>
       <PATH_ELEMENT>
         <option name="myItemId" />
@@ -97,7 +143,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="COMMENTS" />
+        <option name="myItemId" value="REPLAY" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -105,8 +151,30 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MyWeibo.COMMENTS" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/cda65553/8eb0f850-ff95-4491-9cea-24cec99a327d/MyWeibo.COMMENTS">
+      <file leaf-file-name="weibo.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/content/weibo.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="92" column="65" lean-forward="false" selection-start-line="92" selection-start-column="65" selection-end-line="92" selection-end-column="65" />
+              <folding>
+                <element signature="e#5387#5394#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weibo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/weibo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyWeibo.REPLAY" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/cda65553/8eb0f850-ff95-4491-9cea-24cec99a327d/MyWeibo.REPLAY">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -120,27 +188,75 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeiboMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml">
+      <file leaf-file-name="ReplayMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/ReplayMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="65" column="8" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="67" selection-end-column="53" />
+            <state relative-caret-position="128">
+              <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Replay.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Replay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="47" column="27" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReplayMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/ReplayMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               <folding>
-                <marker date="1501655343807" expanded="true" signature="426:569" ph="insert into WEI_BO... " />
-                <marker date="1501655343807" expanded="true" signature="2506:3323" ph="select w.WEI... WEI_BO" />
-                <marker date="1501655343807" expanded="true" signature="3415:3575" ph="select w.WEI... WEI_BO" />
-                <marker date="1501655343807" expanded="true" signature="3974:4055" ph="select count... WEI_BO" />
-                <marker date="1501655343807" expanded="true" signature="4226:4277" ph="select count... WEI_BO" />
+                <marker date="1501760333158" expanded="true" signature="373:495" ph="INSERT INTO REPLAY... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8eb0f850-ff95-4491-9cea-24cec99a327d/console.sql">
+      <file leaf-file-name="WeiboController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/WeiboController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="5" column="68" lean-forward="true" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+            <state relative-caret-position="198">
+              <caret line="46" column="58" lean-forward="true" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeiboBiz.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/WeiboBiz.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseBiz.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/BaseBiz.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="weibo.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/weibo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,36 +279,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>useGeneratedK</find>
-      <find>wr</find>
-      <find>radio</find>
-      <find>addGroupBtn</find>
-      <find>contextPah</find>
-      <find>getSearchWeiboByStrCount</find>
-      <find>addCareBtn</find>
-      <find>hasCatedBox</find>
-      <find>searchUserByStr</find>
-      <find>hasCaredBox</find>
-      <find>param3</find>
-      <find>iCheck</find>
-      <find>updateGroup</find>
-      <find>cancelCare</find>
-      <find>myModal</find>
-      <find>container</find>
-      <find>commentLi</find>
-      <find>16px</find>
-      <find>fontsize</find>
-      <find>comment</find>
-      <find>hidden</find>
-      <find>hi</find>
-      <find>getContent</find>
-      <find>Editor</find>
-      <find>weiboMap</find>
-      <find>weiboRequire</find>
-      <find>searchWeiboByStr</find>
-      <find>commentBtn</find>
-      <find>&quot;</find>
       <find>EncodingInterceptor</find>
+      <find>user_name</find>
+      <find>myModal</find>
+      <find>&lt;script</find>
+      <find>1009;</find>
+      <find>z-</find>
+      <find>z-ind</find>
+      <find>z-index</find>
+      <find>7</find>
+      <find>7028</find>
+      <find>702</find>
+      <find>70</find>
+      <find>1</find>
+      <find>1008</find>
+      <find>z</find>
+      <find>zI</find>
+      <find>zInd</find>
+      <find>zIndex*1008</find>
+      <find>zIndex*100</find>
+      <find>zIndex*10</find>
+      <find>zIndex*1</find>
+      <find>zIndex*</find>
+      <find>zIndex</find>
+      <find>v=1.1</find>
+      <find>v=1.1</find>
+      <find>?v=1.1</find>
+      <find>replyModal</find>
+      <find>getContent</find>
+      <find>commentEditor</find>
+      <find>replyLink</find>
     </findStrings>
     <replaceStrings>
       <replace>|&amp;nbsp;</replace>
@@ -209,6 +325,7 @@
       <replace>'hasCaredBox</replace>
       <replace>commentModal</replace>
       <replace>'</replace>
+      <replace>replyModal</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\WorkFile\GitRepository\myweibo</dir>
@@ -225,12 +342,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/cache_dao/BaseCacheDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/cache_dao/UserCacheDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/util/MybatisRedisCache.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring-redis.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Relationship.java" />
@@ -240,7 +351,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/search.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/LikeMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/ReplayMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/WeiboMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/RedisCacheMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/RedisCacheMapper.java" />
@@ -259,23 +369,30 @@
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Replay.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/ueditor/ueditor.all.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/BaseBiz.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/CommentMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/WeiboBiz.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/CommentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Weibo.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/content/search.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/weibo.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/SearchBiz.java" />
-        <option value="$PROJECT_DIR$/src/main/test/TestCenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/SearchController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/weibo.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/content/weibo.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/Interceptor/EncodingInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/springmvc-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/WeiboController.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1c58b4fc-79c9-4c34-a724-387a82773714/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/test/TestCenter.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/8eb0f850-ff95-4491-9cea-24cec99a327d/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/ueditor/themes/default/css/ueditor.min.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/ueditor/themes/default/css/ueditor.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/ueditor/dialogs/emotion/emotion.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/ueditor/dialogs/emotion/emotion.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/weibo.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/content/weibo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/BaseBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/ReplayMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/WeiboController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/WeiboBiz.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/ReplayMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/weibo.js" />
       </list>
     </option>
   </component>
@@ -386,7 +503,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -444,6 +560,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myweibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myweibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ueditor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -721,8 +867,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -732,7 +879,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Practice/test_spring_aspect" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -1545,6 +1692,7 @@
       <workItem from="1501374380036" duration="8703000" />
       <workItem from="1501546159809" duration="12413000" />
       <workItem from="1501654618558" duration="4479000" />
+      <workItem from="1501729944785" duration="14526000" />
     </task>
     <servers />
   </component>
@@ -1569,7 +1717,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="393896000" />
+    <option name="totallyTimeSpent" value="408422000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1582,6 +1730,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1591,8 +1740,7 @@
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15191898" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14072494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24093817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1603,12 +1751,12 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21366595" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3470716" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28958786" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17110874" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15618221" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17270789" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1616,6 +1764,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15191898" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1631,7 +1780,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15191898" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14072494" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24093817" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1643,12 +1792,12 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38069415" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3470716" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28741866" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17110874" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15618221" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17270789" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1698,133 +1847,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/cda65553/8eb0f850-ff95-4491-9cea-24cec99a327d/MyWeibo.USER_GROUP">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/UserGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="49" column="29" lean-forward="false" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/BaseMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/IndexBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="83" column="39" lean-forward="false" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/HomeBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="76" lean-forward="false" selection-start-line="16" selection-start-column="72" selection-end-line="16" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="34" column="49" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="49" />
-          <folding>
-            <marker date="1501226487013" expanded="true" signature="412:539" ph="insert into USERS... " />
-            <marker date="1501226487013" expanded="true" signature="628:682" ph="select count... USERS" />
-            <marker date="1501226487013" expanded="true" signature="869:949" ph="select * fro... USERS" />
-            <marker date="1501226487013" expanded="true" signature="1093:1218" ph="select * fro... USERS" />
-            <marker date="1501226487013" expanded="true" signature="1894:2345" ph="select u.USE... USERS" />
-            <marker date="1501226487013" expanded="true" signature="2202:2345" ph="select USER_... USERS" />
-            <marker date="1501226487013" expanded="true" signature="2459:2532" ph="select count... USERS" />
-            <marker date="1501226487013" expanded="true" signature="2459:2562" ph="select count... USERS" />
-            <marker date="1501226487013" expanded="true" signature="2675:2694" ph="select * fro... USERS" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/UserGroupMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="27" />
-          <folding>
-            <marker date="1501227167041" expanded="true" signature="422:512" ph="insert into USER_GROUP... " />
-            <marker date="1501227167041" expanded="true" signature="618:685" ph="select GROUP... USER_GROUP" />
-            <marker date="1501227167041" expanded="true" signature="618:689" ph="select GROUP... USER_GROUP" />
-            <marker date="1501227167041" expanded="true" signature="830:944" ph="select GROUP... USER_GROUP" />
-            <marker date="1501227167041" expanded="true" signature="1049:1186" ph="select GROUP... USER_GROUP" />
-            <marker date="1501227167041" expanded="true" signature="1049:1217" ph="select GROUP... USER_GROUP" />
-            <marker date="1501227167041" expanded="true" signature="1049:1233" ph="select g.GRO... USER_GROUP" />
-            <marker date="1501227167041" expanded="true" signature="1304:1379" ph="update RELAT... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/RelationshipMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <marker date="1501227179297" expanded="true" signature="416:510" ph="insert into RELATIONSHIP... " />
-            <marker date="1501227179297" expanded="true" signature="611:832" ph="select RELAT... RELATIONSHIP" />
-            <marker date="1501227179297" expanded="true" signature="912:957" ph="delete from " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/RelationshipMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/UserGroupMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="14" column="57" lean-forward="false" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/user_search_result.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" column="59" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/create_table.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
           <caret line="39" column="42" lean-forward="true" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Replay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="47" column="16" lean-forward="false" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1843,13 +1869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ueditor/ueditor.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user_search_result.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-672">
@@ -1863,25 +1882,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="148" column="20" lean-forward="false" selection-start-line="148" selection-start-column="14" selection-end-line="148" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="208" column="70" lean-forward="false" selection-start-line="208" selection-start-column="32" selection-end-line="208" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -1900,14 +1904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/BaseBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="22" column="42" lean-forward="false" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/CommentMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1922,14 +1918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="66" column="34" lean-forward="false" selection-start-line="66" selection-start-column="26" selection-end-line="66" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/weibo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="118" column="19" lean-forward="true" selection-start-line="118" selection-start-column="19" selection-end-line="118" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2003,27 +1991,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/cda65553/8eb0f850-ff95-4491-9cea-24cec99a327d/MyWeibo.WEI_BO">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/test/TestCenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -2032,44 +1999,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="37" column="14" lean-forward="false" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/weibo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="80" column="39" lean-forward="false" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/WeiboBiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/Interceptor/EncodingInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
           <caret line="15" column="65" lean-forward="true" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/weibo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2688">
-          <caret line="0" column="82" lean-forward="false" selection-start-line="0" selection-start-column="82" selection-end-line="0" selection-end-column="82" />
           <folding />
         </state>
       </provider>
@@ -2090,12 +2023,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/WeiboController.java">
+    <entry file="dbDummy://dbtable:/cda65553/8eb0f850-ff95-4491-9cea-24cec99a327d/MyWeibo.WEI_BO">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1c58b4fc-79c9-4c34-a724-387a82773714/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="30" column="53" lean-forward="false" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
+        <state relative-caret-position="160">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cda65553/1c58b4fc-79c9-4c34-a724-387a82773714/TestMybatis.tbl_employee">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cda65553/1c58b4fc-79c9-4c34-a724-387a82773714/TestMybatis.tbl_dept">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8eb0f850-ff95-4491-9cea-24cec99a327d/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="12" column="47" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/TestCenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="62" column="13" lean-forward="true" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1501742493331" expanded="true" signature="426:569" ph="insert into WEI_BO... " />
+            <marker date="1501742493331" expanded="true" signature="2506:3323" ph="select w.WEI... WEI_BO" />
+            <marker date="1501742493331" expanded="true" signature="3415:3575" ph="select w.WEI... WEI_BO" />
+            <marker date="1501742493331" expanded="true" signature="4155:4236" ph="select count... WEI_BO" />
+            <marker date="1501742493331" expanded="true" signature="4407:4458" ph="select count... WEI_BO" />
           </folding>
         </state>
       </provider>
@@ -2113,25 +2113,179 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/WeiboMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mybatis-tx.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="65" column="8" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="67" selection-end-column="53" />
+        <state relative-caret-position="384">
+          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ueditor/ueditor.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="139" column="15" lean-forward="true" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ueditor/themes/default/css/ueditor.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="7" column="4363" lean-forward="true" selection-start-line="7" selection-start-column="4363" selection-end-line="7" selection-end-column="4367" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ueditor/themes/default/css/ueditor.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="271" column="4" lean-forward="false" selection-start-line="271" selection-start-column="4" selection-end-line="271" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ueditor/dialogs/emotion/emotion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="164" column="20" lean-forward="true" selection-start-line="164" selection-start-column="20" selection-end-line="164" selection-end-column="20" />
           <folding>
-            <marker date="1501655343807" expanded="true" signature="426:569" ph="insert into WEI_BO... " />
-            <marker date="1501655343807" expanded="true" signature="2506:3323" ph="select w.WEI... WEI_BO" />
-            <marker date="1501655343807" expanded="true" signature="3415:3575" ph="select w.WEI... WEI_BO" />
-            <marker date="1501655343807" expanded="true" signature="3974:4055" ph="select count... WEI_BO" />
-            <marker date="1501655343807" expanded="true" signature="4226:4277" ph="select count... WEI_BO" />
+            <marker date="1501753780191" expanded="true" signature="4551:4576" ph="..." />
+            <marker date="1501753780191" expanded="true" signature="4867:4909" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8eb0f850-ff95-4491-9cea-24cec99a327d/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/ueditor/dialogs/emotion/emotion.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" column="68" lean-forward="true" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="68" />
+        <state relative-caret-position="32">
+          <caret line="1" column="55" lean-forward="false" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="55" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1621">
+          <caret line="146" column="1" lean-forward="false" selection-start-line="146" selection-start-column="1" selection-end-line="146" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/weibo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/BaseBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/biz/WeiboBiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/pojo/Replay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="47" column="27" lean-forward="false" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/huwl/oracle/myweibo/wrapper/ReplayMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding>
+            <marker date="1501760333158" expanded="true" signature="373:495" ph="INSERT INTO REPLAY... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cda65553/8eb0f850-ff95-4491-9cea-24cec99a327d/MyWeibo.REPLAY">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/wrapper/ReplayMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/huwl/oracle/myweibo/controller/WeiboController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="46" column="58" lean-forward="true" selection-start-line="46" selection-start-column="58" selection-end-line="46" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/weibo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="141" column="0" lean-forward="false" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/content/weibo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="92" column="65" lean-forward="false" selection-start-line="92" selection-start-column="65" selection-end-line="92" selection-end-column="65" />
+          <folding>
+            <element signature="e#5387#5394#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
