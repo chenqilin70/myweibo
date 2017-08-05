@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 
-@Service
+@Service("userCenterBiz")
 public class UserCenterBiz extends BaseBiz{
     public List<Weibo> getUserWeiboList(Integer pageNo
             ,Integer pageSize,User user) {
@@ -19,14 +19,21 @@ public class UserCenterBiz extends BaseBiz{
         return list;
     }
 
-    public boolean like(User user, Integer weiboid) {
-        Like like=new Like();
-        like.setLikeTime(new Date());
-        like.setUser(user);
-        Weibo weibo=new Weibo();
-        weibo.setWeiboId(weiboid);
-        like.setWeibo(weibo);
-        return likeMapper.addLike(like);
+    public String like(User user, Integer weiboid) {
+        //查看是否已经点过赞
+        Integer likeId=likeMapper.getLikeId(user,weiboid);
+        if(likeId==null){
+            Like like=new Like();
+            like.setLikeTime(new Date());
+            like.setUser(user);
+            Weibo weibo=new Weibo();
+            weibo.setWeiboId(weiboid);
+            like.setWeibo(weibo);
+            return likeMapper.addLike(like)?"addLikeSuccess":"addLikeError";
+        }else{
+            return likeMapper.delete(likeId)?"deleteLikeSuccess":"deleteLikeError";
+        }
+
     }
 
     public String getUserWeiboPageBean(Integer pageNo,User user) {

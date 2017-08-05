@@ -37,8 +37,15 @@ $(".likeLi").click(function(){
             alert("请检查网络！");
         },
         success:function(data){
-            if(data=="true"){
+            var $who_like=$(".who_like[weiboid="+weiboid+"]");
+            if(data=="addLikeSuccess"){
                 $icon.attr("class","glyphicon glyphicon-heart");
+                $who_like.append(
+                    "<a href='#' userid='"+$("#loginedUserId").val()+"' >"+$("#loginedUserNickname").val()+"</a>"
+                )
+            }else if("deleteLikeSuccess"){
+                $icon.attr("class","glyphicon glyphicon-heart-empty");
+                $who_like.find("a").remove();
             }else{
                 alert("请检查网络！");
             }
@@ -85,7 +92,8 @@ replyEditor.ready(function(){
 $(".commentBtn").click(function(){
     var $this=$(this);
     var weiboid=$this.attr("weiboid");
-    var content=UE.getEditor('commentEditor'+weiboid).getContent();
+    var commentEditor=UE.getEditor('commentEditor'+weiboid);
+    var content=commentEditor.getContent();
     $.ajax({
         url:contextPath+"/inner/addComment",
         type:"post",
@@ -101,28 +109,32 @@ $(".commentBtn").click(function(){
                 alert("请检查网络！")
             }else{
                 var commentJson=JSON.parse(data);
-                $(".commentBox ul").append(
+                var commentTime=new Date(commentJson.commentTime);
+                $(".commentBox > ul").append(
                     "<li>" +
                         "<a class='user_name'>" +
                             commentJson.user.nickName +
                         "</a>" +
                         ":"+commentJson.commentContent +
-                        "<span class='commentTimeSpan'>(<fmt:formatDate value='${comment.commentTime}' pattern='yyyy-MM-dd HH:mm:ss'/>)</span>"+
+                        "<span class='commentTimeSpan'>("+
+                         commentTime.getFullYear()+"-"+(commentTime.getMonth()+1)+"-"+commentTime.getDate()+"- "+commentTime.getHours()+":"+commentTime.getMinutes()+":"+commentTime.getSeconds()+")</span>"+
                         "<hr class='commentHr'>" +
-                    "</li>")
+                    "</li>");
+                commentEditor.execCommand('cleardoc');
             }
         }
     });
 });
-var $replyModal=$("#replyModal")
-$(".replyLink").click(function(){
+var $replyModal=$("#replyModal");
+function replyLinkClick(){
     var $this=$(this);
     $replyModal.find(".replyTargetNickname").text($this.attr("nickname"));
     $replyModal.find(".targetContent").html($this.parent().find(".targetcontent").html());
     $replyModal.find(".publishReply").attr("touserid",$this.attr("touserid"))
-                    .attr("commentid",$this.attr("commentid")).attr("tousernickname",$this.attr("nickname"));
+        .attr("commentid",$this.attr("commentid")).attr("tousernickname",$this.attr("nickname"));
     $replyModal.modal('show');
-});
+}
+$(".replyLink").click(replyLinkClick);
 $(".publishReply").click(function(){
     var replyContent=replyEditor.getContent();
     var touserid=$(this).attr("touserid")
@@ -142,15 +154,17 @@ $(".publishReply").click(function(){
             alert("请检查网络！")
         },
         success:function(data){
-            console.log(data)
+            console.log(data.replayContent)
             $commentLi.find(".replyUl").append(
                 "<li>" +
-                    "<a class='user_name'>"+data.user.nickName+"</a>:@" +
-                    "<a class='user_name'>"+tousernickname+"</a>&nbsp;&nbsp;" +
-                    data.replayContent+"<a class='replyLink' nickname='"+data.user.nickName+"' touserid='"+data.user.userId+"' commentid='"+commentId+"'>回复</a>" +
+                    "<a class='user_name'>"+data.user.nickName+"</a>:" +
+                    "<a class='user_name'>@"+tousernickname+"</a>&nbsp;&nbsp;" +
+                    "<span class='targetcontent'>"+data.replayContent+"</span>"+"<a class='replyLink' id='replyLink"+data.replayId+"'  nickname='"+data.user.nickName+"' touserid='"+data.user.userId+"' commentid='"+commentId+"'>回复</a>" +
                 "</li>"
             );
-            $replyModal.modal('hide')
+            $commentLi.find("#replyLink"+data.replayId).click(replyLinkClick);
+            $replyModal.modal('hide');
+            replyEditor.execCommand('cleardoc');
         }
     })
 });

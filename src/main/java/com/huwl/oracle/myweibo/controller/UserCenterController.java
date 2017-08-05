@@ -15,7 +15,7 @@ import java.io.IOException;
 
 @RequestMapping("/inner")
 @Controller
-public class UserCenterController {
+public class UserCenterController extends BaseController{
     @Autowired
     private UserCenterBiz userCenterBiz;
     @RequestMapping("/user_center")
@@ -35,7 +35,7 @@ public class UserCenterController {
     @RequestMapping("/like")
     public void like(@RequestParam("weiboid")Integer weiboid
             ,HttpSession session,HttpServletResponse response) {
-        boolean flag=userCenterBiz.like(((User)session.getAttribute("user")),weiboid);
+        String flag=userCenterBiz.like(getLoginedUser(session),weiboid);
         try {
             response.getWriter().write(flag+"");
         } catch (IOException e) {

@@ -2,6 +2,7 @@
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.huwl.oracle.myweibo.biz.SearchBiz;
+import com.huwl.oracle.myweibo.biz.UserCenterBiz;
 import com.huwl.oracle.myweibo.pojo.*;
 import com.huwl.oracle.myweibo.wrapper.*;
 import org.mybatis.caches.redis.RedisCache;
@@ -19,10 +20,11 @@ public class TestCenter {
 
     public static void main(String[] args) throws JsonProcessingException {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-*.xml");
-        SearchBiz biz= (SearchBiz) ctx.getBean("searchBiz");
+        UserCenterBiz biz= (UserCenterBiz) ctx.getBean("userCenterBiz");
         ObjectMapper objectMapper=new ObjectMapper();
-        List<Weibo> list=biz.searchWeiboByStr(1,"测试");
-        System.out.println(objectMapper.writeValueAsString(list.get(0)));
+        User u=new User();
+        u.setUserId(33);
+        System.out.println(biz.like(u,10));
 
     }
 }

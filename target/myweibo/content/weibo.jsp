@@ -3,6 +3,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <input type="hidden" id="pageBean" value="${pageBean}"/>
+<input type="hidden" id="loginedUserId" value="${sessionScope.user.userId}" />
+<input type="hidden" id="loginedUserNickname" value="${sessionScope.user.nickName}" />
 <c:forEach items="${weibo_search_result}" var="weibo">
     <div class="weiboBox" weiboid="${weibo.weiboId}">
         <div class="weiboHead" align="center">
@@ -55,9 +57,22 @@
             <div class="optionBox">
                 <ul>
                     <li class="likeLi" weiboid="${weibo.weiboId}">
-                        <span class="glyphicon glyphicon-heart-empty"  aria-hidden="true"></span>
+
+                        <c:set var="flag" value="false" scope="page"></c:set>
+                        <c:forEach items="${weibo.likes}" var="like" varStatus="status">
+                            <c:choose>
+                                <c:when test="${like.user.userId==sessionScope.user.userId}">
+                                    <span class="glyphicon glyphicon-heart"  aria-hidden="true"></span>
+                                    <c:set var="flag" value="true" scope="page"></c:set>
+                                </c:when>
+                            </c:choose>
+                        </c:forEach>
+                        <c:if test="${!flag}">
+                            <span class="glyphicon glyphicon-heart-empty"  aria-hidden="true"></span>
+                        </c:if>
                     </li>
                     <li class="commentLi" weibohost="${weibo.user.nickName}" weiboid="${weibo.weiboId}">
+
                         <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                     </li>
                     <li class="repostLi"><span class="glyphicon glyphicon-share-alt" aria-hidden="true"></span></li>
@@ -71,21 +86,24 @@
             </div>
 
 
-            <c:if test="${fn:length(weibo.likes)>0}">
-                <div class="who_like">
+
+                <div class="who_like" weiboid="${weibo.weiboId}">
                     &nbsp;<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
                     &nbsp;&nbsp;&nbsp;
-                    <c:forEach items="${weibo.likes}" var="like" varStatus="status">
-                        <a href="#">${like.user.nickName}</a>
-                        <c:if test="${!status.last}">
-                            、
-                        </c:if>
-                    </c:forEach>
+                    <c:if test="${fn:length(weibo.likes)>0}">
+                        <c:forEach items="${weibo.likes}" var="like" varStatus="status">
+                            <!--此处修改后weibo.js中的也要修改-->
+                            <a href="#" userid="${like.user.userId}" >${like.user.nickName}</a>
+                            <c:if test="${!status.last}">
+                                、
+                            </c:if>
+                        </c:forEach>
+                    </c:if>
                 </div>
-            </c:if>
+
 
             <div class="commentBox">
-                <ul>
+                <ul><!--如果需要对此ul内的代码进行修改，需要同步对weibo.js内的代码修改-->
                     <c:forEach items="${weibo.comments}" var="comment">
                         <li id="commentLi${comment.commentId}">
                             <a class="user_name">${comment.user.nickName}</a>
@@ -96,9 +114,9 @@
                             <ul class="replyUl">
                                 <c:forEach items="${comment.replays}" var="replay">
                                     <li>
-                                        <a class="user_name">${replay.user.nickName}</a>:@
-                                        <a class="user_name">${replay.toUser.nickName}</a>&nbsp;&nbsp;
-                                        ${replay.replayContent}
+                                        <a class="user_name">${replay.user.nickName}</a>:
+                                        <a class="user_name">@${replay.toUser.nickName}</a>&nbsp;&nbsp;
+                                        <span class='targetcontent'>${replay.replayContent}</span>
                                         <a class="replyLink" nickname="${replay.user.nickName}" touserid="${replay.user.userId}" commentid="${comment.commentId}">回复</a>
                                     </li>
                                 </c:forEach>

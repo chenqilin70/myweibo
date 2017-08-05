@@ -27,11 +27,10 @@ public class WeiboController extends BaseController {
     @RequestMapping("/addComment")
     public void addComment(Comment comment, HttpSession session, HttpServletResponse response){
         String result="";
-        comment.setCommentContent(comment.getCommentContent()
-                .replaceAll("<p>","").replaceAll("</p>",""));
+
         weiboBiz.addComment(comment,getLoginedUser(session));
         try {
-            result=comment.getCommentContent()==null?"null":objectMapper.writeValueAsString(comment);
+            result=comment.getCommentId()==null?"null":objectMapper.writeValueAsString(comment);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }

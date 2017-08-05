@@ -79,8 +79,10 @@
     <select id="getWeiboByPage" resultMap="weiboMap"  useCache="false">
         <include refid="weiboRequire"></include>
         where w.USER_ID=#{param2}
+        and w.WEIBO_ID in (
+        select  t.WEIBO_ID from
+          (select WEIBO_ID from WEI_BO where USER_ID=#{param2}  LIMIT ${param1.offsetInDB},${param1.pageSize}) t  )
         order by w.PUBLISH_TIME
-        limit #{param1.offsetInDB},#{param1.pageSize}
     </select>
     <select id="searchWeiboByStr" resultMap="weiboMap"  useCache="false">
         <include refid="weiboRequire"></include>

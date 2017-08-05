@@ -8,4 +8,12 @@
         insert into LIKES(USER_ID, LIKE_TIME, WEIBO_ID)
         values(#{user.userId},#{likeTime},#{weibo.weiboId})
     </insert>
+    <select id="getLikeId" resultType="java.lang.Integer" useCache="false" >
+        select LIKE_ID from LIKES
+         WHERE USER_ID = #{param1.userId} and WEIBO_ID = #{param2}
+         limit 1
+    </select>
+    <delete id="delete" parameterType="java.lang.Integer" >
+      delete from LIKES where LIKE_ID=#{id}
+    </delete>
 </mapper>
